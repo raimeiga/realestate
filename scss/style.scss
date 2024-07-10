@@ -22,3 +22,81 @@ body {
  padding-top: 80px; // 高さ80pxのheaderを固定しているための措置 
 }
 
+picture img {
+ width: 100%;
+}
+
+
+
+// -------header-------
+
+header {
+ height: 8rem;  
+ position: fixed;
+ z-index: 999;
+ top: 0;
+ left: 0;
+ width: 100%;
+ background-color: yellow;
+}
+
+ .header-inner {
+   max-width: calc(1000 / 1080 * 100vw);
+   width: 100%; 
+   height: inherit;
+   padding-inline: calc(40 / 1080 * 100vw);
+   margin-inline: auto; 
+   display: flex;    
+   justify-content: space-between;
+   align-items: center;
+ }
+    .header-logo-box {
+      width: calc(200 / 1080 *100vw);
+      padding-top: 0px;
+      .header-name {  
+      //  font-size: 2rem;
+       font-size: calc(20 / 1080 * 100vw);
+       line-height: calc(33 / 20);
+       padding-top: 1.1rem;
+      }
+    }
+
+    .header-nav-wrap {
+     width: calc(610 / 1080 *100vw);
+     height: inherit;
+     display: flex; 
+        align-items: center;   
+     
+    }
+     .header-nav {
+       height: inherit;
+        &-list {       
+        height: inherit;  
+        display: flex;
+        align-items: center;       
+        column-gap: calc(30 / 1080 * 100vw);
+          &-li {    
+            height: inherit;
+            display: flex;
+            align-items: center; 
+            &-link {  
+              height: 8rem;       
+              // font-size: 1.8rem;
+              font-size: calc(18 / 1080 * 100vw);
+              line-height: calc(33 / 18);
+              display: flex;
+              align-items: center;              
+              padding-top: 0.5rem;
+              transition: color 0.4s linear;   
+              background-color: red;
+              &:hover  {
+                color: #fff;
+              }
+            }
+          } 
+        }
+     }    
+         
+      
+   
+ 
