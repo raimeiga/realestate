@@ -1,14 +1,17 @@
-.text-block {
-  background: #e6e9ec;
-  text-align: center;
+@charset "UTF-8";
+html {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-size: 10px;
 }
-.text-block h1 {
-  font-size: 2.5rem;
-}
-.text-block p {
-  width: 50%;
-  margin: 0 auto 40px;
-}
-.text-block a {
-  color: blue;
+
+body {
+  background-color: #fff;
+  font-family: "YuMincho", "Yu Mincho", "游明朝体", "游明朝", sans-serif;
+  font-size: 1.8rem;
+  font-weight: Regular;
+  color: #000;
+  letter-spacing: 0;
+  padding-top: 80px;
 }/*# sourceMappingURL=style.css.map */
