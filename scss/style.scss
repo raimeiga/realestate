@@ -89,13 +89,14 @@ header {
               padding-top: 0.5rem;
               transition: color 0.4s linear;   
               background-color: red;
-              &:hover  {
-                color: #fff;
+              // &:hover  {
+              //   color: #fff;
+              // jQueryで実装
               }
             }
           } 
         }
-     }    
+     
          
       
    
