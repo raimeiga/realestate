@@ -14,9 +14,14 @@
    <!-- リセットCSS -->
    <link rel="stylesheet" href="css/reset.css"> 
    <!-- スタイルシート　-->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" type="text/css"   href="css/style.css">   
    
- </head>
+   <!-- slickの読み込み（css） -->
+   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+   <!-- slickの読み込み（js） -->
+   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   
+  </head>
 
  
  <body id="page-top">
@@ -28,44 +33,86 @@
             <h1 class="header-name">株式会社北村建設興業</h1>
           </a>
         </div>        
-        <div class="header-nav-wrap">
-        <nav class="header-nav">
-            <ul class="header-nav-list">
-              <li class="header-nav-list-li">
-                <a href="index.html#about" class="header-nav-list-li-link"><p class="nav-item">ABOUT</p></a>
-              </li>
-              <li class="header-nav-list-li">
-                <a href="index.html#service" class="header-nav-list-li-link">SERVICE</a>
-              </li>
-              <li class="header-nav-list-li">
-                  <a href="index.html#works" class="header-nav-list-li-link">WORKS</a>
-              </li>
-              <li class="header-nav-list-li">
-                  <a href="index.html#news" class="header-nav-list-li-link">NEWS</a>
-              </li>
-              <li class="header-nav-list-li">
-                  <a href="index.html#company" class="header-nav-list-li-link">COMPANY</a>
-              </li>
-              <li class="header-nav-list-li">
-                  <a href="index.html#contact" class="header-nav-list-li-link">CONTACT</a>
-              </li>
-            </ul>
-        </nav>
-       </div>
-    </div>
+        <div class="header-nav-wrap pc">
+          <nav class="header-nav">
+              <ul class="header-nav-list">
+                <li class="header-nav-list-li">
+                  <a href="index.html#about" class="header-nav-btn"><p class="nav-item">ABOUT</p></a>
+                </li>
+                <li class="header-nav-list-li">
+                  <a href="index.html#service" class="header-nav-btn">SERVICE</a>
+                </li>
+                <li class="header-nav-list-li">
+                    <a href="index.html#works" class="header-nav-btn">WORKS</a>
+                </li>
+                <li class="header-nav-list-li">
+                    <a href="index.html#news" class="header-nav-btn">NEWS</a>
+                </li>
+                <li class="header-nav-list-li">
+                    <a href="index.html#company" class="header-nav-btn">COMPANY</a>
+                </li>
+                <li class="header-nav-list-li">
+                    <a href="index.html#contact" class="header-nav-btn">CONTACT</a>
+                </li>
+              </ul>
+          </nav>
+        </div>
+        <!-- タブレット用ナビ（ハンバーガーメニュー） -->
+        <div class="hamburger-menu-mark sp">
+          <div class="line-wrap">           
+            <img src="./images/グループ 69.svg" alt="トップ画像">  
+          </div>
+        </div>
+
+   </div>
   </header>
   <main>
+  <div class="main">
+    <!-- mv -->
+    <div class="mv-slick">
+      <div class="mv-image">      
+        <picture id="dog-and-doctor">  
+          <source media="(max-width: 767px)" srcset="./images/SP_FirstView-1.jpg">
+          <img src="./images/FirstView_01.jpg" alt="">         
+        </picture>       
+      </div>
+      <div class="mv-image">
+        <picture id="dog-and-doctor">  
+          <source media="(max-width: 767px)" srcset="./images/SP_FirstView-2.jpg">
+          <img src="./images/FirstView_02.jpg" alt="">         
+        </picture>       
+      </div>
+      <div class="mv-image">
+        <picture id="dog-and-doctor">  
+          <source media="(max-width: 767px)" srcset="./images/SP_FirstView-3.jpg">
+          <img src="./images/FirstView_03.jpg" alt="">         
+        </picture>      
+      </div>
+    </div>
+  </div>
   
+  <section id="about">
 
+  </section>
+  <section id="service">
 
-  </main>
-  
+  </section>
+  <section id="works">
 
+  </section>
+  <section id="news">
 
- 
+  </section>
+  <section id="company">
 
-  <!-- Javascriptの読み込み -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  </section>
+  <section id="contact">
+
+  </section>
+  </main> 
+
   <!-- jQueryの読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- Javascriptの読み込み -->
   <script src="js/main.js"></script>
  </body>
