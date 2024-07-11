@@ -27,7 +27,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: yellow;
+  background-color: green;
 }
 
 .header-inner {
@@ -52,6 +52,7 @@ header {
   padding-top: 0px;
 }
 .header-logo-box .header-name {
+  color: #fff;
   font-size: 1.8518518519vw;
   line-height: 1.65;
   padding-top: 1.1rem;
@@ -93,9 +94,6 @@ header {
           align-items: center;
 }
 .header-nav-list-li-link {
-  height: 8rem;
-  font-size: 1.6666666667vw;
-  line-height: 1.8333333333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,7 +101,8 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 0.5rem;
-  -webkit-transition: color 0.4s linear;
-  transition: color 0.4s linear;
-  background-color: red;
+  color: #fff;
+  font-size: 1.6666666667vw;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
 }/*# sourceMappingURL=style.css.map */
