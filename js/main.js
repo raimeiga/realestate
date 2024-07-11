@@ -1,43 +1,29 @@
-// $(function() {
-  // ボタンがクリックされた場合
-  // $('.header-nav-list-li-link').on('mouseenter', function(){
-  //   $(this).animate({
-  //     opacity: 0.5
-  //   })
-  //   $(this).css('border-bottom','1px');
-  //   });
-  // });
 
 
-  $('.header-nav-list-li-link').hover(
-    function() {
+$('.header-nav-btn').hover(
+  function() {
       $(this).animate({
-            opacity: 0.5}),
+            opacity: 0.5,}),
       $(this).css(
-        'border-bottom', ' 1px solid #fff'
-      );
+       'border-bottom', 'solid 1px #fff'
+      )
     },
     function() {
       $(this).animate({
             opacity: 1}),
       $(this).css(
-        'border-bottom', ' none'
-      );
+        'border-bottom', 'none'
+      )
     }
   );
 
-  // $('.header-nav-list-li-link').hover(
-  //   function() {
-  //     $(this).animate({
-  //           opacity: 0.5
-  //          }
-  //     ),
-  //     $(this).animate({
-  //       opacity: 1
-  //      }
-  //     ),
-     
-  //     $(this).css('border-bottom', ' 1px solid #fff'),
-  //     $(this).css('border-bottom', 'none');
-  //   }
-  // );
+
+
+  // カルーセル
+  $('.mv-slick').slick({
+    autoplay: true,  //自動再生
+    dots: true,      //ドットインジケーター
+    infinite: true,
+    autoplaySpeed: 50,  //自動再生の切り替え速度
+    arrows: false,  //左右矢印
+  });

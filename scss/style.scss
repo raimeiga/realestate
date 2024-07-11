@@ -19,13 +19,25 @@ body {
  font-weight: Regular;  // 500が最多のfont-weightなので、Regular 
  color: #000; 
  letter-spacing: 0;
- padding-top: 80px; // 高さ80pxのheaderを固定しているための措置 
 }
 
 picture img {
  width: 100%;
 }
 
+//------------common--------------
+// PC、SPの非表示 とりあえず記述し、あとでhtmlで使う感じか？*/
+        
+@media (max-width: 767px) {
+  .pc {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .sp {
+    display: none !important;
+  }
+}
 
 
 // -------header-------
@@ -36,74 +48,119 @@ header {
  z-index: 999;
  top: 0;
  left: 0;
- width: 100%;
- background-color: green;
+ width: 100%; 
+}
+@media (max-width: 767px) {
+  header { 
+    height: 5rem;  
+ }
 }
 
- .header-inner {
-   max-width: calc(1000 / 1080 * 100vw);
-   width: 100%; 
-   height: inherit;
-   padding-inline: calc(40 / 1080 * 100vw);
-   margin-inline: auto; 
-   display: flex;    
-   justify-content: space-between;
-   align-items: center;
- }
-    .header-logo-box {
-      width: calc(200 / 1080 *100vw);
-      padding-top: 0px;
-      .header-name {  
-      //  font-size: 2rem;
-       color:#fff;
-       font-size: calc(20 / 1080 * 100vw);
-       line-height: calc(33 / 20);
-       padding-top: 1.1rem;
-      }
-    }
+.header-inner {
+  max-width: calc(1000 / 1080 * 100vw);
+  width: 100%; 
+  height: inherit;
+  padding-inline: calc(40 / 1080 * 100vw);
+  margin-inline: auto; 
+  display: flex;    
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .header-inner {
+    max-width: calc(1000 / 1080 * 100vw);
+    width: 100%; 
+    height: inherit;
+    padding-inline: calc(40 / 1080 * 100vw);
+    margin-inline: auto; 
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+}
 
-    .header-nav-wrap {
-     width: calc(610 / 1080 *100vw);
-     height: inherit;
-     display: flex; 
-        align-items: center;   
-     
-    }
-     .header-nav {
-       height: inherit;
-        &-list {       
-        height: inherit;  
-        display: flex;
-        align-items: center;       
-        column-gap: calc(30 / 1080 * 100vw);
-          &-li {    
-            height: inherit;
-            display: flex;
-            align-items: center; 
-            &-link {  
-              // font-size: 1.8rem;                        
-              display: flex;
-              align-items: center;              
-              padding-top: 0.5rem;              
-              color:#fff;    
-              font-size: calc(18 / 1080 * 100vw);
-              transition: all 0.4s linear;  
-              // line-height: calc(33 / 18);
-              // &:hover  {
-              //   color: #fff;
-              // jQueryで実装
-              }
-            }
-          } 
-        }
 
-        .nav-item {
-          
-        }
+.header-logo-box {
+  width: calc(200 / 1080 *100vw);
+  padding-top: 0px;
+}
+@media (max-width: 767px) {
+  .header-logo-box {
+    width: 20rem;
+    padding-top: 0px;
+  }
+}
 
-        
-     
-         
+
+.header-name {  
+  //  font-size: 2rem;
+  color:#fff;
+  font-size: calc(20 / 1080 * 100vw);
+  line-height: calc(33 / 20);
+  padding-top: 1.1rem;
+}
+@media (max-width: 767px) {
+  .header-name {      
+    font-size: 2rem;    
+    padding-top: 0.23em;
+  }
+}
+
+
+.header-nav-wrap {
+  width: calc(610 / 1080 *100vw);
+  height: inherit;
+  display: flex; 
+  align-items: center;     
+}
+
+.header-nav {
+  height: inherit;
+}
+.header-nav-list {       
+  height: inherit;  
+  display: flex;
+  align-items: center;       
+  column-gap: calc(30 / 1080 * 100vw);
+}
+.header-nav-list-li {    
+  height: inherit;
+  display: flex;
+  align-items: center; 
+}
+.header-nav-btn {  
+  // font-size: 1.8rem;                        
+  display: flex;
+  align-items: center;              
+  padding-top: 0.5rem;              
+  color:#fff;    
+  font-size: calc(18 / 1080 * 100vw);
+  transition: all 0.4s linear; 
+}
+              
+// ハンバーガーメニュー    
+.hamburger-menu-mark {
+  // width: calc(72 / 375 * 100vw); 
+  // height: calc(50 / 375 * 100vw); 
+  width: 72px; 
+  height: 50px; 
+  background-color:yellow;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 15;
+  padding: 1.3rem 2rem;
+}
+
+.line-wrap {  
+  background-color: #fff;
+  cursor: pointer;
+}
+
+
+
       
    
  

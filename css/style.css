@@ -13,13 +13,22 @@ body {
   font-weight: Regular;
   color: #000;
   letter-spacing: 0;
-  padding-top: 80px;
 }
 
 picture img {
   width: 100%;
 }
 
+@media (max-width: 767px) {
+  .pc {
+    display: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .sp {
+    display: none !important;
+  }
+}
 header {
   height: 8rem;
   position: fixed;
@@ -27,9 +36,13 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: green;
 }
 
+@media (max-width: 767px) {
+  header {
+    height: 5rem;
+  }
+}
 .header-inner {
   max-width: 92.5925925926vw;
   width: 100%;
@@ -45,19 +58,52 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
+@media (max-width: 767px) {
+  .header-inner {
+    max-width: 92.5925925926vw;
+    width: 100%;
+    height: inherit;
+    padding-inline: 3.7037037037vw;
+    margin-inline: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+}
 .header-logo-box {
   width: 18.5185185185vw;
   padding-top: 0px;
 }
-.header-logo-box .header-name {
+
+@media (max-width: 767px) {
+  .header-logo-box {
+    width: 20rem;
+    padding-top: 0px;
+  }
+}
+.header-name {
   color: #fff;
   font-size: 1.8518518519vw;
   line-height: 1.65;
   padding-top: 1.1rem;
 }
 
+@media (max-width: 767px) {
+  .header-name {
+    font-size: 2rem;
+    padding-top: 0.23em;
+  }
+}
 .header-nav-wrap {
   width: 56.4814814815vw;
   height: inherit;
@@ -72,6 +118,7 @@ header {
 .header-nav {
   height: inherit;
 }
+
 .header-nav-list {
   height: inherit;
   display: -webkit-box;
@@ -84,6 +131,7 @@ header {
      -moz-column-gap: 2.7777777778vw;
           column-gap: 2.7777777778vw;
 }
+
 .header-nav-list-li {
   height: inherit;
   display: -webkit-box;
@@ -93,7 +141,8 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
-.header-nav-list-li-link {
+
+.header-nav-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,4 +154,20 @@ header {
   font-size: 1.6666666667vw;
   -webkit-transition: all 0.4s linear;
   transition: all 0.4s linear;
+}
+
+.hamburger-menu-mark {
+  width: 72px;
+  height: 50px;
+  background-color: yellow;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 15;
+  padding: 1.3rem 2rem;
+}
+
+.line-wrap {
+  background-color: #fff;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
