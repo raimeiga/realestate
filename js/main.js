@@ -26,17 +26,17 @@ $('.header-nav-btn').hover(
     infinite: true,
     autoplaySpeed: 5000,  //自動再生の切り替え速度
     slidesToShow: 3,
-    arrows: false,  //左右矢印
+    arrows: true,  //左右矢印
   });
 
 
-  $(function () {
-    $(".mv-image-wrap").slick({
-        autoplay: true,
-        autoplaySpeed: 3000,
-        arrows: true,
-        dots: true,
-        slidesToShow: 3,
-        speed: 2000,
-    });
-});
+//   $(function () {
+//     $(".mv-image-wrap").slick({
+//         autoplay: true,
+//         autoplaySpeed: 3000,
+//         arrows: true,
+//         dots: true,
+//         slidesToShow: 3,
+//         speed: 2000,
+//     });
+// });

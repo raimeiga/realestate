@@ -165,3 +165,109 @@ header {
 }
 
 
+// -----about-----
+.about-v {
+  position: relative;
+}
+
+
+.about-v-contents {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: calc(111 / 1080 * 100vw);
+}
+@media (max-width: 767px) {
+  .about-v-contents {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: calc(51 / 375 * 100vw);
+ }
+}
+
+.about-v-catch {
+  width: calc(642 / 1080 * 100vw);    
+  padding-left: calc(150 / 1080 * 100vw);
+  display: flex;
+  // align-items: center;
+  // justify-content: left;
+  flex-direction: row-reverse;
+}
+@media (max-width: 767px) {
+  .about-v-catch {
+    width: calc(225 / 375 * 100vw);    
+    padding-left: 0;
+    // padding-inline: calc(75 / 375 * 100vw);
+    margin-inline: calc(75 / 375 * 100vw);
+    display: grid;
+    row-gap: 24px;
+    // align-items: center;
+    // justify-content: center;
+    // flex-direction: column;
+  }
+}
+
+.about-v-catch-01 {
+writing-mode: vertical-rl;
+text-orientation: upright;
+}
+@media (max-width: 767px) {
+.about-v-catch-01 {
+  display: flex;
+  align-items: center;  
+ }
+}
+
+.about-v-catch-01 h2 {
+  font-size: calc(30 / 1080 * 100vw);
+  line-height: calc(36 / 30);
+  letter-spacing: 0.18em;
+}
+@media (max-width: 767px) {
+  .about-v-catch-01 h2 {
+    font-size: calc(25 / 375 * 100vw);
+    line-height: calc(29.75 / 25);
+    letter-spacing: 0.2em;
+  }
+}
+
+.about-v-catch-02 {
+ padding-right: calc(52 / 1080 * 100vw); 
+ writing-mode: vertical-rl;
+text-orientation: upright;
+}
+@media (max-width: 767px) {
+  .about-v-catch-02 {
+    padding-right: 0; 
+   }
+}
+
+.about-v-catch-02 div {
+  padding-left: calc(24 / 1080 * 100vw); 
+ }
+ @media (max-width: 767px) { 
+  .about-v-catch-02 div {
+  padding-left: calc(10 / 375 * 100%);  
+  // ↑なぜ100vwでなく、100%なのか不明。1次関数とかいうやつか。
+ }
+}
+
+ .about-v-catch-02 h2 {
+  font-size: calc(18 / 1080 * 100vw);
+  line-height: calc(24.66 / 18);
+  letter-spacing: 0.41em;  
+}
+@media (max-width: 767px) {
+  .about-v-catch-02 h2 {
+    font-size: calc(16 / 375 * 100vw);
+    line-height: calc(20 / 16);
+    letter-spacing: 0.25em;  
+  }
+}
+
+
