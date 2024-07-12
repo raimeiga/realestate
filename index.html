@@ -16,11 +16,13 @@
    <!-- スタイルシート　-->
    <link rel="stylesheet" type="text/css"  href="css/style.css">   
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+   <!-- 新しく追加 -->
+   <link href="css/slick-theme.css" rel="stylesheet" type="text/css">
+   <link href="css/slick.css" rel="stylesheet" type="text/css">
 
-  <!-- slickの読み込み（css） -->
-  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
+</head>
   
+
 
  
  <body id="page-top">
@@ -67,20 +69,27 @@
   </header>
 
   <main>
-  <div class="main">
+  <div class="main-v">
     <!-- mv -->
-    <div class="mv-image-wrap">
-      <div class="mv-image">   
-        <div>
-          <img src="./images/FirstView_01.jpg" alt="">    
-        </div>
-        <div>
-          <img src="./images/FirstView_02.jpg" alt="">    
-        </div>
-        <div>
-          <img src="./images/FirstView_03.jpg" alt="">    
-        </div>
-        
+    <div id="main">
+      <div id="slider">
+        <!-- <li><span>スライド１</span></li>
+        <li><span>スライド２</span></li>
+        <li><span>スライド３</span></li> -->
+
+         <div>
+          
+          <img alt="画像1" src="./images/FirstView_01.jpg"/>
+         
+          </div>
+          
+         <div><img alt="画像2" src="./images/FirstView_02.jpg"/></div>
+         <div><img alt="画像3" src="./images/FirstView_03.jpg"/></div>
+      </div>
+    </div>
+  </div>
+
+  
         <!-- <picture>  
           <source media="(max-width: 767px)" srcset="./images/SP_FirstView-1.jpg">
           <img src="./images/FirstView_01.jpg" alt="">         
@@ -98,8 +107,7 @@
           <img src="./images/FirstView_03.jpg" alt="">         
         </picture>      
       </div> -->
-    </div>
-  </div>
+ 
   
   <section id="about">
   <div class="about-v">
@@ -182,15 +190,11 @@
   </section>
   </main> 
 
-  <!-- jQueryの読み込み -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-<!-- slickの読み込み（js） -->
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-</head>
-
-<!-- Javascriptの読み込み -->
-<script src="js/main.js"></script>
-
+    <!-- jQueryの読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!-- Javascriptの読み込み -->
+    <script src="js/main.js"></script>
+    <!-- 新しく追加 -->
+    <script type="text/javascript" src="js/slick.min.js"></script>
  </body>
  </html>

@@ -22,15 +22,22 @@
 
 // メインビジュアルのスライド
 
-$(function(){
-  // スライダー
-  $('.mv-image').slick({
-    autoplay: true,  //自動再生
-    dots: true,      //ドットインジケーター
-    infinite: true,
-    autoplaySpeed: 3000,  //自動再生の切り替え速度
-    slidesToShow: 3,
-    arrows: true,  //左右矢印
-  });
+// $(function(){
+//   // スライダー
+//   $('.mv-image').slick({
+//     autoplay: true,  //自動再生
+//     dots: true,      //ドットインジケーター
+//     infinite: true,
+//     autoplaySpeed: 3000,  //自動再生の切り替え速度
+//     slidesToShow: 3,
+//     arrows: true,  //左右矢印
+//   });
 
+// });
+
+
+$(function() {
+  $("#slider").slick({
+    autoplay: true,  //自動再生
+  });
 });
