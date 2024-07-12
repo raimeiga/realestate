@@ -170,7 +170,6 @@ header {
   position: relative;
 }
 
-
 .about-v-contents {
   width: 100%;
   height: 100%;
@@ -252,8 +251,7 @@ text-orientation: upright;
  }
  @media (max-width: 767px) { 
   .about-v-catch-02 div {
-  padding-left: calc(10 / 375 * 100%);  
-  // ↑なぜ100vwでなく、100%なのか不明。1次関数とかいうやつか。
+  padding-left: calc(10 / 375 * 100%);    
  }
 }
 

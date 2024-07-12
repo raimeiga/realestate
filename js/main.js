@@ -18,7 +18,7 @@ $('.header-nav-btn').hover(
   );
 
 
-
+$(function(){
   // スライダー
   $('.mv-image-wrap').slick({
     autoplay: true,  //自動再生
@@ -28,6 +28,8 @@ $('.header-nav-btn').hover(
     slidesToShow: 3,
     arrows: true,  //左右矢印
   });
+
+});
 
 
 //   $(function () {
