@@ -37,8 +37,8 @@
 
 
 $(function() {
-  $("#slider").slick({
+  $(".mv-slider").slick({
     autoplay: true,  //自動再生
-    
+    autoplaySpeed: 5000,
   });
 });

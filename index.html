@@ -68,53 +68,51 @@
    </div>
   </header>
 
+  <!-- メインビジュアル -->
   <main>
-  <div class="main-v">
-    <!-- mv -->
-    <div id="main">
-      <div id="slider">
-        <!-- <li><span>スライド１</span></li>
-        <li><span>スライド２</span></li>
-        <li><span>スライド３</span></li> -->
-
-         <div>
-          
-          <img alt="画像1" src="./images/FirstView_01.jpg"/>
-         
-          </div>
-          
-         <div><img alt="画像2" src="./images/FirstView_02.jpg"/></div>
-         <div><img alt="画像3" src="./images/FirstView_03.jpg"/></div>
+  <div class="mv">    
+    <div class="mv-image">
+      <div class="mv-slider">        
+        <div>
+          <picture>    
+            <source media="(max-width: 767px)" srcset="./images/sp-fv-01.jpg">                                                              
+            <img src="./images/fv-01.jpg" alt="" >
+          </picture>
+        </div>
+        <div>
+          <picture>
+            <source media="(max-width: 767px)" srcset="./images/sp-fv-02.jpg">                                                              
+            <img src="./images/fv-02.jpg" alt="" >
+          </picture>
+        </div>
+        <div>
+          <picture>
+            <source media="(max-width: 767px)" srcset="./images/sp-fv-03.jpg">                                                              
+            <img src="./images/fv-03.jpg" alt="" >
+          </picture>
+        </div>
       </div>
     </div>
+    <!-- mv-imageの兄弟 -->
+    <div class="mv-contents">  
+      <div class="mv-catch">
+         <!-- ↓ pcでのみ出現 -->     
+         <h2 class="if-sp-none">永遠も。瞬間も。</h2> 
+         <h2 class="if-sp-none">あなたと共に。</h2>
+         <!-- ↓ spでのみ出現 -->
+         <h2 class="if-pc-none">永遠も。</h2>  
+         <h2 class="if-pc-none">瞬間も。</h2>
+         <h2 class="if-pc-none">あなたと共に。</h2>
+      </div>    
+    </div> 
   </div>
 
-  
-        <!-- <picture>  
-          <source media="(max-width: 767px)" srcset="./images/SP_FirstView-1.jpg">
-          <img src="./images/FirstView_01.jpg" alt="">         
-        </picture>       
-      </div>
-      <div class="mv-image">
-        <picture>  
-          <source media="(max-width: 767px)" srcset="./images/SP_FirstView-2.jpg">
-          <img src="./images/FirstView_02.jpg" alt="">         
-        </picture>       
-      </div>
-      <div class="mv-image">
-        <picture>  
-          <source media="(max-width: 767px)" srcset="./images/SP_FirstView-3.jpg">
-          <img src="./images/FirstView_03.jpg" alt="">         
-        </picture>      
-      </div> -->
- 
-  
   <section id="about">
   <div class="about-v">
     <div class="about-v-image">
       <picture>  
-        <source media="(max-width: 767px)" srcset="./images/SP_About.jpg">
-        <img src="./images/PC_About.jpg" alt="">         
+        <source media="(max-width: 767px)" srcset="./images/sp_about.jpg">
+        <img src="./images/about.jpg" alt="">         
       </picture>
     </div>
     <div class="about-v-contents">
@@ -138,7 +136,7 @@
   </div>
   </section>
 
-  <section id="service">
+<section id="service">
   <div class="inner">
     <div class="title-wrap">
       <div class="title-english-box">
@@ -149,30 +147,84 @@
       </div>
     </div>
     <div class="service-wrap">
-      <div class="service-list">
-        <div class="service-image-and-caption">
+      <div class="service-list">      
+        <div class="service-img-and-cap">  
           <picture>
-            <source media="(max-width: 767px)" srcset="/images/SP_SERVICE_01.jpg">
-            <img src="/images/PC_SERVICE01.jpg" alt="top image">
+            <source media="(max-width: 767px)" srcset="/images/sp_service_01.jpg">
+            <img src="/images/service_01.jpg" alt="top image">
           </picture>
-          <div class="immage-caption">
+          <div class="image-caption">
              <p>静岡県U.I様自宅</p>
           </div>
         </div>
-        <div class="service-text-green-box">
-          <div>
-            <h3>新築
-              （土地探し〜建築）</h3>
+        <div class="text-area">
+          <div class="service-text-box"> 
+            <div>
+              <h3>新築<br>
+                （土地探し〜建築）</h3>
+            </div>
+            <div>
+              <p>お客様にあった土地探しから<br>
+                建築、施工までサポートいたします。<br>
+                風水的観点からもご提案。</p>
+            </div>
           </div>
-          <div>
-            <p>お客様にあった土地探しから
-              建築、施工までサポートいたします。
-              風水的観点からもご提案。</p>
-          </div>
-
         </div>
-      </div>
+      </div>  
 
+      <div class="service-list">        
+        <div class="text-area">
+          <div class="service-text-box"> 
+            <div>
+              <h3>リフォーム<br>
+                リノベーション</h3>
+            </div>
+            <div>
+              <p>温かみと雰囲気をそのままに<br>
+                住み心地、使い心地を<br>
+                追求しご提供いたします。</p>
+            </div>
+          </div>
+        </div>
+        <div class="service-img-and-cap">  
+          <picture>
+            <source media="(max-width: 767px)" srcset="/images/sp_service_01.jpg">
+            <img src="/images/service_01.jpg" alt="top image">
+          </picture>
+          <div class="image-caption">
+             <p>北海道富良野市ブックカフェ</p>
+          </div>
+        </div>
+      </div>  
+
+      <div class="service-list">      
+        <div class="service-img-and-cap">  
+          <picture>
+            <source media="(max-width: 767px)" srcset="/images/sp_service_01.jpg">
+            <img src="/images/service_01.jpg" alt="top image">
+          </picture>
+          <div class="image-caption">
+             <p>広島県竹原市</p>
+          </div>
+        </div>
+        <div class="text-area">
+          <div class="service-text-box"> 
+            <div>
+              <h3>都市計画〜開発<br>
+                公共施設</h3>
+            </div>
+            <div>
+              <p>都市計画から都市開発まで<br>
+                ご提案いたします。<br>
+                公共施設もさらに居心地良く。</p>
+            </div>
+          </div>
+        </div>
+      </div>  
+      
+      
+      
+    </div> 
   </div>
 
   </section>
