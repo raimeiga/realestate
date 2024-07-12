@@ -39,5 +39,6 @@
 $(function() {
   $("#slider").slick({
     autoplay: true,  //自動再生
+    
   });
 });
