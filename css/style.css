@@ -285,4 +285,63 @@ header {
     line-height: 1.25;
     letter-spacing: 0.25em;
   }
+}
+#service {
+  background: rgba(77, 150, 0, 0.102);
+  padding-block: 80px;
+}
+
+.inner {
+  max-width: 1000px;
+  width: 100%;
+  padding-inline: 40px;
+  margin-inline: auto;
+}
+
+.title-wrap {
+  display: grid;
+  row-gap: 8px;
+  text-align: center;
+}
+
+.title-english-box h2 {
+  font-size: 3rem;
+  line-height: 1.1;
+  color: rgb(77, 150, 0);
+  letter-spacing: 0.3em;
+}
+
+.title-kana-box h2 {
+  font-size: 2rem;
+  line-height: 1.65;
+  letter-spacing: 0.3em;
+}
+
+.service-wrap {
+  margin-top: 68px;
+}
+
+.service-image-and-caption {
+  width: 600px;
+  height: 300px;
+  display: grid;
+  row-gap: 19px;
+}
+
+.service-text-green-box {
+  width: 50rem;
+  height: 25rem;
+  background-color: rgb(77, 150, 0);
+  color: #fff;
+  padding: 50px 0 17px 220px;
+}
+
+.service-text-green-box h3 {
+  font-size: 2.5rem;
+  line-height: 1.32;
+}
+
+.service-text-green-box p {
+  font-size: 1.6rem;
+  line-height: 1.5625;
 }/*# sourceMappingURL=style.css.map */

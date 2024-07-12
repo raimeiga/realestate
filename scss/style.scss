@@ -269,3 +269,67 @@ text-orientation: upright;
 }
 
 
+// -----service-----
+
+#service {
+  background: rgba(77, 150, 0, 0.102);
+  padding-block: 80px;
+}
+
+
+.inner {
+  max-width: 1000px;
+  width: 100%;
+  padding-inline: 40px;
+  margin-inline: auto;
+}
+
+
+.title-wrap {
+  display: grid;
+  row-gap: 8px;
+  text-align: center;  
+}
+
+.title-english-box h2 {
+  font-size: 3rem;
+  line-height: calc(33 / 30);   
+  color: rgba(77, 150, 0, 1);
+  letter-spacing: 0.3em;
+}
+
+.title-kana-box h2{
+  font-size: 2rem;
+  line-height: calc(33 / 20);
+  letter-spacing: 0.3em;
+}
+
+.service-wrap {
+  margin-top: 68px;
+}
+
+.service-image-and-caption {
+  width: 600px;
+  height: 300px;
+  display: grid;
+  row-gap: 19px;
+}
+
+.service-text-green-box {
+ width: 50rem;
+ height: 25rem;
+ background-color: rgba(77, 150, 0, 1);
+ color: #fff;
+ padding: 50px 0 17px 220px ;
+ 
+}
+
+.service-text-green-box h3 {
+  font-size: 2.5rem;
+  line-height: calc(33 / 25);  
+}
+
+.service-text-green-box p {
+  font-size: 1.6rem;
+  line-height: calc(25 / 16);  
+}
