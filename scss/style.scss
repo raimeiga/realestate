@@ -443,8 +443,6 @@ text-orientation: upright;
   }
 }
 
-
-
 .service-list:nth-of-type(odd){
     position: relative;  
     display: flex;
@@ -493,12 +491,12 @@ text-orientation: upright;
 //  width: 600rem;
 //  height: 300rem;
 width: calc(600 / 1080 * 100vw); 
-height: calc(300 / 1080 * 100vw);
+// height: calc(300 / 1080 * 100vw);
 }
 @media (max-width: 767px) {  
   .service-img-wrap {
   width: calc(315 / 375 * 100vw); 
-  height: calc(220 / 375 * 100vw);
+  // height: calc(220 / 375 * 100vw);
  }
 }
 
@@ -512,10 +510,6 @@ height: calc(300 / 1080 * 100vw);
 .image-caption p {
   font-size: 1.6rem;
   line-height: calc(25 / 16);  
-}
-
-.service-text-area {
-  // background-color: rgba(77, 150, 0, 1);
 }
 
 .green-box {

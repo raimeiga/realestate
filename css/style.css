@@ -501,13 +501,11 @@ header {
 }
 .service-img-wrap {
   width: 55.5555555556vw;
-  height: 27.7777777778vw;
 }
 
 @media (max-width: 767px) {
   .service-img-wrap {
     width: 84vw;
-    height: 58.6666666667vw;
   }
 }
 @media (max-width: 767px) {
