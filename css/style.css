@@ -374,12 +374,12 @@ header {
 }
 #service {
   background: rgba(77, 150, 0, 0.102);
-  padding-top: 7.4074074074vw;
+  padding-block: 7.4074074074vw;
 }
 
 @media (max-width: 767px) {
   #service {
-    padding-top: 13.3333333333vw;
+    padding-block: 13.3333333333vw;
   }
 }
 .inner {

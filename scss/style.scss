@@ -377,11 +377,11 @@ text-orientation: upright;
 
 #service {
   background: rgba(77, 150, 0, 0.102);
-  padding-top: calc(80 / 1080 * 100vw);
+  padding-block: calc(80 / 1080 * 100vw);
 }
 @media (max-width: 767px) {
   #service {    
-    padding-top: calc(50 / 375 * 100vw);
+    padding-block: calc(50 / 375 * 100vw);
   }
 }
 
@@ -623,4 +623,12 @@ width: calc(600 / 1080 * 100vw);
   .align-right {
     text-align: left;
   }
+}
+
+
+
+// -----works-----
+
+#works {
+
 }
