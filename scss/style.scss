@@ -54,7 +54,7 @@ header {
  z-index: 999;
  top: 0;
  left: 0;
- width: 100%; 
+
 }
 @media (max-width: 767px) {
   header { 
@@ -62,23 +62,20 @@ header {
  }
 }
 
-.header-inner {
-  max-width: 1000px;
+.header-inner {  
   width: 100%; 
   height: inherit;
-  padding-inline: calc(40 / 1080 * 100vw);
-  margin-inline: auto; 
+  padding-inline: 40px;
+  // margin-inline: auto; 
   display: flex;    
   justify-content: space-between;
-  align-items: center;
-  position: relative;
+  align-items: center; 
 }
 @media (max-width: 767px) {
-  .header-inner {
-    max-width: calc(1000 / 375 * 100vw);
+  .header-inner {    
     width: 100%; 
     height: inherit;
-    padding-inline: calc(40 / 375 * 100vw);
+    padding-inline: 20px;
     margin-inline: auto; 
     display: flex;    
     justify-content: space-between;
@@ -88,12 +85,12 @@ header {
 }
 
 .header-logo-box {
-  width: calc(200 / 1080 * 100vw);
+  // width: calc(200 / 1080 * 100vw);
   padding-top: 0px;
 }
 @media (max-width: 767px) {
   .header-logo-box {
-    width: 20rem;
+    // width: 20rem;
     padding-top: 0px;
   }
 }
@@ -101,19 +98,21 @@ header {
 .header-name {  
   //  font-size: 2rem;
   color:#fff;
-  font-size: calc(20 / 1080 * 100vw);
-  line-height: calc(33 / 20);
-  padding-top: 1.1rem;
+  font-size: 2rem;
+  line-height: 1.65;
+  padding-top: 11px;
 }
 @media (max-width: 767px) {
   .header-name {      
     font-size: 2rem;    
-    padding-top: 0.23em;
+    padding-top: 2.3px;
   }
 }
 
 .header-nav-wrap {
-  width: calc(610 / 1080 * 100vw);
+  // width: calc(610 / 1080 * 100vw);
+  width: 61%;
+  
   height: inherit;
   display: flex; 
   align-items: center;     
@@ -125,42 +124,42 @@ header {
 .header-nav-list {       
   height: inherit;  
   display: flex;
-  align-items: center;       
-  column-gap: calc(30 / 1080 * 100vw);
+  align-items: center; 
+  column-gap: 30px;
 }
-.header-nav-list-li {    
+.header-nav-list-li {  
   height: inherit;
   display: flex;
-  align-items: center; 
+  align-items: center;
+  
 }
 .header-nav-btn {  
-  // font-size: 1.8rem;                        
+  font-size: 1.8rem;                        
   display: flex;
   align-items: center;              
-  padding-top: 0.5rem;              
-  color:#fff;    
-  font-size: calc(18 / 1080 * 100vw);
+  padding-top: 5px;              
+  color:#fff; 
   transition: all 0.4s linear; 
 }
               
 // ハンバーガーメニュー    
-.hamburger-menu-mark {
-  // width: calc(72 / 375 * 100vw); 
-  // height: calc(50 / 375 * 100vw); 
-  width: 72px; 
-  height: 50px; 
-  background-color:yellow;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 15;
-  padding: 1.3rem 2rem;
-}
+// .hamburger-menu-mark {
+//   // width: calc(72 / 375 * 100vw); 
+//   // height: calc(50 / 375 * 100vw); 
+//   // width: 72px; 
+//   // height: 50px; 
+//   // background-color:yellow;
+//   // position: fixed;
+//   // top: 0;
+//   // right: 0;
+//   // z-index: 15;
+//   // padding: 1.3rem 2rem;
+// }
 
-.line-wrap {  
-  background-color: #fff;
-  cursor: pointer;
-}
+// .line-wrap {  
+//   background-color: #fff;
+//   cursor: pointer;
+// }
 
 
 // -----mv-----

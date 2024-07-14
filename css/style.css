@@ -35,7 +35,6 @@ header {
   z-index: 999;
   top: 0;
   left: 0;
-  width: 100%;
 }
 
 @media (max-width: 767px) {
@@ -44,11 +43,9 @@ header {
   }
 }
 .header-inner {
-  max-width: 1000px;
   width: 100%;
   height: inherit;
-  padding-inline: 3.7037037037vw;
-  margin-inline: auto;
+  padding-inline: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,15 +55,13 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
 @media (max-width: 767px) {
   .header-inner {
-    max-width: 266.6666666667vw;
     width: 100%;
     height: inherit;
-    padding-inline: 10.6666666667vw;
+    padding-inline: 20px;
     margin-inline: auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -81,31 +76,29 @@ header {
   }
 }
 .header-logo-box {
-  width: 18.5185185185vw;
   padding-top: 0px;
 }
 
 @media (max-width: 767px) {
   .header-logo-box {
-    width: 20rem;
     padding-top: 0px;
   }
 }
 .header-name {
   color: #fff;
-  font-size: 1.8518518519vw;
+  font-size: 2rem;
   line-height: 1.65;
-  padding-top: 1.1rem;
+  padding-top: 11px;
 }
 
 @media (max-width: 767px) {
   .header-name {
     font-size: 2rem;
-    padding-top: 0.23em;
+    padding-top: 2.3px;
   }
 }
 .header-nav-wrap {
-  width: 56.4814814815vw;
+  width: 61%;
   height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,9 +120,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 2.7777777778vw;
-     -moz-column-gap: 2.7777777778vw;
-          column-gap: 2.7777777778vw;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
 }
 
 .header-nav-list-li {
@@ -143,33 +136,17 @@ header {
 }
 
 .header-nav-btn {
+  font-size: 1.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 0.5rem;
+  padding-top: 5px;
   color: #fff;
-  font-size: 1.6666666667vw;
   -webkit-transition: all 0.4s linear;
   transition: all 0.4s linear;
-}
-
-.hamburger-menu-mark {
-  width: 72px;
-  height: 50px;
-  background-color: yellow;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 15;
-  padding: 1.3rem 2rem;
-}
-
-.line-wrap {
-  background-color: #fff;
-  cursor: pointer;
 }
 
 .mv {
