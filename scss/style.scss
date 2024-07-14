@@ -422,16 +422,19 @@ text-orientation: upright;
   line-height: calc(33 / 30);   
   color: rgba(77, 150, 0, 1);
   letter-spacing: 0.3em;
+  text-indent: 0.3em; 
 }
+
 
 .title-kana-box h2{
   font-size: 2rem;
   line-height: calc(33 / 20);
   letter-spacing: 0.3em;
+  text-indent: 0.3em; 
 }
 
 .service-wrap {
-  margin-top: calc(68 / 1080 * 100vw);
+  margin-top: calc(67 / 1080 * 100vw);
   display: grid;
   row-gap: calc(80 / 1080 * 100vw);
 }
@@ -482,7 +485,7 @@ text-orientation: upright;
 @media (max-width: 767px) {  
   .service-img-area {
     display: grid;
-    row-gap: 0;
+    row-gap: calc(2 / 375 * 100vw);
     position: static;  
   }
 }
@@ -506,6 +509,22 @@ width: calc(600 / 1080 * 100vw);
   margin-bottom: calc(4 / 375 * 100vw);
 }
 }
+
+// @media (max-width: 767px) { 
+// .img-cap-01{
+//  padding-top: 5px;
+// } 
+// }
+
+// .img-cap-02{
+  
+// }
+
+// .img-cap-03 {
+
+// }
+
+
 
 .image-caption p {
   font-size: 1.6rem;
