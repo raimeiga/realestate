@@ -16,14 +16,15 @@
    <!-- スタイルシート　-->
    <link rel="stylesheet" type="text/css"  href="css/style.css">   
 
-   <!-- 新しく追加 -->
+   <!-- ダウンロードしたslickのファイル読み込み CDNで読み込んだので今回は使わず-->
    <!-- <link href="css/slick-theme.css" rel="stylesheet" type="text/css">
    <link href="css/slick.css" rel="stylesheet" type="text/css"> -->
 
-   <!-- slickのcss（CDN) の読み込み-->
-   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-
-   
+   <!-- CDNで読み込むslickのファイル（slick.css）の読み込み-->
+   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>  
+   <!-- CDNで読み込むslickのファイル（slick-theme.css）の読み込み。slickのサイトにないコードだが、
+    これがないと、画面上部に変な空白と「previous」という謎のテキストが出現してしまうので書いとく。-->
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
   </head>
    
  <body id="page-top">
@@ -96,7 +97,8 @@
     <!-- mv-imageの兄弟 -->
     <div class="mv-contents">   
       <div class="mv-catch">                
-         <h2>永遠も。<br class="if-pc-none">瞬間も。<br>あなたと共に。</h2>           
+         <h2>永遠も。<br class="if-pc-none"><span class="ib">瞬間も。</span><br>あなたと共に。</h2> 
+         <!-- <h2>永遠も。<br class="if-pc-none"><span class="ib">瞬間も。</span><br>あなたと共に。</h2>                      -->
       </div>
       <!-- <div class="mv-catch">             
          <h2 class="if-sp-none">永遠も。瞬間も。</h2> 
@@ -108,8 +110,9 @@
     </div> 
   </div>
 
+  <!-- about -->
   <section id="about">
-  <div class="about-v">
+  <div class="about-inner">
     <div class="about-v-image">
       <picture>  
         <source media="(max-width: 767px)" srcset="./images/sp_about.jpg">
@@ -117,26 +120,20 @@
       </picture>
     </div>
     <div class="about-v-contents">
-      <div class="about-v-catch">
-        <!-- <div class="about-v-catch-01 right-to-left">
-          <h2>伝統とイマを繋ぐ</h2>
-        </div>
-        <div class="about-v-catch-02 right-to-left">
-          <div><h2>古来から伝わる伝統文化</h2></div>
-          <div><h2>昔からそこにある材料</h2></div>
-          <div><h2>その土地に長い間かけて</h2></div>
-          <div><h2>最適化してきた</h2></div>
-          <div><h2>たくさんのヒントを</h2></div>
-          <div><h2>イマを生きる私たちの</h2></div>
-          <div><h2>心地よさに取り入れ</h2></div>
-          <div><h2>新たな技術革新を</h2></div>
-          <div><h2>起こし続ける会社です</h2></div>        
-        </div> -->
-
+      <div class="about-v-catch">     
         <div class="about-v-catch-01 right-to-left">
           <p>伝統とイマを繋ぐ</p>
         </div>
         <div class="about-v-catch-02 right-to-left">
+          <!-- <p>古来から伝わる伝統文化<br>
+          昔からそこにある材料<br>
+          その土地に長い間かけて<br>
+          最適化してきた<br>
+          たくさんのヒントを<br>
+          イマを生きる私たちの<br>
+          心地よさに取り入れ<br>
+          新たな技術革新を<br>
+          起こし続ける会社です</p> -->
           <div><p>古来から伝わる伝統文化</p></div>
           <div><p>昔からそこにある材料</p></div>
           <div><p>その土地に長い間かけて</p></div>
@@ -145,13 +142,14 @@
           <div><p>イマを生きる私たちの</p></div>
           <div><p>心地よさに取り入れ</p></div>
           <div><p>新たな技術革新を</p></div>
-          <div><p>起こし続ける会社です</p></div>        
+          <div><p>起こし続ける会社です</p></div>      
         </div>
-
       </div>
     </div>
   </div>
   </section>
+
+
 
 <section id="service">
   <div class="inner">
@@ -255,7 +253,6 @@
 
   </section>
   </main> 
-
     <!-- 上からjQuery・Javascript・slickのファイルの読み込み -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="js/main.js"></script>
@@ -263,7 +260,7 @@
     
     <!--jQueryの読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <!--slickのjs(CDN)の読み込み -->
+    <!--CDNで読み込むslickのファイル（slick.min.js）の読み込み -->
     <script type="text/Javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Javascript（main.jsファイル）の読み込み -->
     <script src="js/main.js"></script>
