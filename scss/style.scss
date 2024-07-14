@@ -40,6 +40,12 @@ picture img {
 }
 
 
+// 中級編課題では、
+// font-size: rem
+// 幅・高さ（width,height,padding,marginなど）は、%とpxで書く
+// calcを使用するのは、mvくらいってかんじ。
+
+
 // -------header-------
 
 header {
@@ -318,48 +324,65 @@ header {
 
 
 // -----about-----
-.about-v {
+.about-inner {
   position: relative;
 }
 
-.about-v-contents {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding-top: calc(111 / 1080 * 100vw);
-}
-@media (max-width: 767px) {
-  .about-v-contents {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding-top: calc(51 / 375 * 100vw);
- }
-}
+// .about-v-contents {
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+//   top: 20%;
+//   left: 14.2%;
+//   transform: translate(5%);
+//   // padding-top: 111px;
+//   // padding-right: 40.7%;
+// }
+// @media (max-width: 767px) {
+//   .about-v-contents {
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     padding-top: 51px;
+//  }
+// }
 
-.about-v-catch {
-  width: calc(642 / 1080 * 100vw);    
-  padding-left: calc(150 / 1080 * 100vw);
+.about-v-catch {  
   display: flex;
-  // align-items: center;
-  // justify-content: left;
+  width: 45.5%;  
+  // ↓いったん50%にした上で、transformで調整すれば、同じ比率を保つ
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-48.5%);
+  margin-left: 14%;
   flex-direction: row-reverse;
 }
+@media (max-width: 930px) {
+ .about-v-catch {  
+  display: flex;
+  width: 45.5%; 
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-48.5%);
+  margin-left: 14%;
+  flex-direction: row-reverse;
+ }
+}
 @media (max-width: 767px) {
-  .about-v-catch {
-    width: calc(225 / 375 * 100vw);    
-    padding-left: 0;
-    // padding-inline: calc(75 / 375 * 100vw);
-    margin-inline: calc(75 / 375 * 100vw);
-    display: grid;
-    row-gap: 24px;
-    // align-items: center;
-    // justify-content: center;
-    // flex-direction: column;
+  .about-v-catch {    
+    width: 100%; 
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-49%);
+    margin-left: 0%;    
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;    
   }
 }
 
@@ -369,54 +392,77 @@ text-orientation: upright;
 }
 @media (max-width: 767px) {
 .about-v-catch-01 {
-  display: flex;
-  align-items: center;  
+  margin: 0 auto;
  }
 }
 
 .about-v-catch-01 p {
-  font-size: calc(30 / 1080 * 100vw);
-  line-height: calc(36 / 30);
-  letter-spacing: 0.18em;
+  font-size: 3rem;
+  line-height: 1.18;
+  letter-spacing: 0.17em;
+}
+@media (max-width: 930px) {
+  .about-v-catch-01 p {
+    font-size: 2.8rem;
+    line-height: 1.18;
+    letter-spacing: 0.17em;
+  }
 }
 @media (max-width: 767px) {
   .about-v-catch-01 p {
-    font-size: calc(25 / 375 * 100vw);
-    line-height: calc(29.75 / 25);
+    font-size: 2.5rem;
+    line-height: 1.19;
     letter-spacing: 0.2em;
   }
 }
 
 .about-v-catch-02 {
- padding-right: calc(52 / 1080 * 100vw); 
+ margin-right: 11%; 
  writing-mode: vertical-rl;
-text-orientation: upright;
+ text-orientation: upright; 
+}
+@media (max-width: 930px) {
+.about-v-catch-02 {
+  margin-right: 8%; 
+ }
 }
 @media (max-width: 767px) {
   .about-v-catch-02 {
-    padding-right: 0; 
+    margin: 0 auto; 
    }
 }
 
 .about-v-catch-02 div {
-  padding-left: calc(24 / 1080 * 100vw); 
+  padding-left: 8.3%;
+ }
+ @media (max-width: 930px) {
+  .about-v-catch-02 div {
+    padding-left: 7.5%;
+   }
  }
  @media (max-width: 767px) { 
   .about-v-catch-02 div {
-  padding-left: calc(10 / 375 * 100%);    
+  padding-left: 2.6%;    
  }
 }
 
  .about-v-catch-02 p {
-  font-size: calc(18 / 1080 * 100vw);
-  line-height: calc(24.66 / 18);
+  font-size: 1.8rem;
+  line-height: 1.37;
   letter-spacing: 0.41em;  
+}
+@media (max-width: 930px) {
+  .about-v-catch-02 p {
+    font-size: 1.7rem;
+    line-height: 1.3;
+    letter-spacing: 0.41em;  
+  }
 }
 @media (max-width: 767px) {
   .about-v-catch-02 p {
-    font-size: calc(16 / 375 * 100vw);
-    line-height: calc(20 / 16);
-    letter-spacing: 0.25em;  
+    font-size: 1.6rem;
+    line-height: 1.25;
+    letter-spacing: 0.23em;  
   }
 }
 
