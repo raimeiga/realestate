@@ -36,6 +36,9 @@
 // });
 
 
+
+// $(function() {　=この中身は、ページ読み込み後に発火するって意味。
+
 $(function() {
   $(".mv-slider").slick({
     autoplay: true,  //自動再生

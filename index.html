@@ -17,9 +17,11 @@
    <link rel="stylesheet" type="text/css"  href="css/style.css">   
 
    <!-- 新しく追加 -->
-   <link href="css/slick-theme.css" rel="stylesheet" type="text/css">
-   <link href="css/slick.css" rel="stylesheet" type="text/css">
+   <!-- <link href="css/slick-theme.css" rel="stylesheet" type="text/css">
+   <link href="css/slick.css" rel="stylesheet" type="text/css"> -->
 
+   <!-- slickの読み込み（CDN) -->
+   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
   
 
@@ -255,11 +257,16 @@
   </section>
   </main> 
 
-    <!-- jQueryの読み込み -->
+    <!-- 上からjQuery・Javascript・slickのファイルの読み込み -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script> -->
+    
+    <!--jQueryの読み込み -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <!--slickのjs(CDN)の読み込み -->
+    <script type="text/Javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Javascriptの読み込み -->
     <script src="js/main.js"></script>
-    <!-- 新しく追加 -->
-    <script type="text/javascript" src="js/slick.min.js"></script>
  </body>
  </html>
