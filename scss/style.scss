@@ -329,7 +329,6 @@ header {
   text-indent: 0.3em; 
 }
 }
-
 @media (min-width: 768px) {
  .if-pc-none {
   display: none;
@@ -602,14 +601,15 @@ text-orientation: upright;
     }
   }
 
-
 .service-img-area {
   display: grid;
   row-gap: 19px;
   position: absolute;
-  // top:0;
-  // left: 0;
+  top:0;
+  left: 0;
+  transform: translateY(0%);
   z-index: 11;  
+  
   }
 @media (max-width: 767px) {  
   .service-img-area {
@@ -619,10 +619,12 @@ text-orientation: upright;
   }
 }
 
+
+
 .service-img-wrap {
 //  width: 600rem;
 //  height: 300rem;
-width: 600px; 
+  width: 65%; 
 // height: calc(300 / 1080 * 100vw);
 }
 @media (max-width: 767px) {  
@@ -632,28 +634,19 @@ width: 600px;
  }
 }
 
+// 2番めの画像を右寄せにするスタイル
+.service-img-wrap-even {
+  width: 65%; 
+  margin-left: 34.7%;
+}
+
+// ↓ 767以下のみで発動
 @media (max-width: 767px) { 
 .image-caption {
   margin-top: calc(4 / 375 * 100vw);
   margin-bottom: calc(4 / 375 * 100vw);
 }
 }
-
-// @media (max-width: 767px) { 
-// .img-cap-01{
-//  padding-top: 5px;
-// } 
-// }
-
-// .img-cap-02{
-  
-// }
-
-// .img-cap-03 {
-
-// }
-
-
 
 .image-caption p {
   font-size: 1.6rem;
@@ -663,13 +656,14 @@ width: 600px;
 .green-box {
 //  width: 50rem;
 //  height: 25rem;
- width: 500px; 
- 
+ width: 54.3%;  
  background-color: rgba(77, 150, 0, 1);
  color: #fff; 
  display: grid;
  row-gap: 17px;
- margin-top: calc(145 / 1080 * 100vw);
+ margin-top: 15.7%;
+//  ↑この15.7%は何の15.7%？
+//  親はservice-list（高さ395px)なのに。意味不明。
 }
 @media (max-width: 767px) {
   .green-box {    
@@ -686,9 +680,14 @@ width: 600px;
   padding-top: 50px;
   padding-right: 0;
   padding-bottom: 42px;
-  padding-left: 220px;
+  padding-left: 23.9%;
   // margin-left:420px;  
-  margin-left: calc(420 / 1080 * 100vw);
+  margin-left: 45.6%;
+ }
+ @media (max-width: 974px) {
+  .green-box-right {
+    padding-left: 21.8%;
+  }  
  }
  @media (max-width: 767px) {
   .green-box-right {      
@@ -703,11 +702,11 @@ width: 600px;
 .green-box-left {  
   // padding: 50px 220px 42px 40px ; 
   padding-top: 50px;
-  padding-right: 220px;
+  padding-right: 0;
   padding-bottom: 42px;
   padding-left: 40px;
   // margin-right:420px; 
-  margin-right: 420px;
+  margin-right: 45.6%;
  }
  @media (max-width: 767px) {
   .green-box-left {      
@@ -732,17 +731,18 @@ width: 600px;
   }
 }
 
-
-
 .green-box p {
-  // font-size: 1.6rem;
-  font-size: calc(16 / 1080 * 100vw);
+  font-size: 1.6rem;  
   line-height: calc(25 / 16);
+}
+@media (max-width: 966px) {
+.ib-max966 {
+  display: inline-block;
+ }
 }
 @media (max-width: 767px) {
   .green-box p {
-    // font-size: 1.6rem;
-    font-size: calc(16 / 375 * 100vw);
+    font-size: 1.6rem;    
     line-height: calc(25 / 16);
   }
 }
@@ -755,8 +755,6 @@ width: 600px;
     text-align: left;
   }
 }
-
-
 
 // -----works-----
 
