@@ -178,17 +178,7 @@ header {
 }
 }
 
-// ↓ スライダーのデフォルト矢印を削除
-.slick-next::before{
-  content:"";
-  display: none;
-}
 
-
-.slick-arrow::before{
-  content:"";
-  display: none;
-}
 
 // ハンバーガーメニュー    
 // .hamburger-menu-mark {
@@ -537,8 +527,8 @@ text-orientation: upright;
   .inner {
     // max-width: 1000px;
     // max-width: calc(345 / 375 * 100vw);
-    width: 100%;
-    padding-inline: 30px;
+    width: 92%;
+    padding-inline:15px;
     margin-inline: auto;
     position: relative;
   }

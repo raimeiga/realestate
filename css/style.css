@@ -198,16 +198,6 @@ header {
     transition: all 0.4s linear;
   }
 }
-.slick-next::before {
-  content: "";
-  display: none;
-}
-
-.slick-arrow::before {
-  content: "";
-  display: none;
-}
-
 .mv {
   position: relative;
 }
@@ -454,8 +444,8 @@ header {
 
 @media (max-width: 767px) {
   .inner {
-    width: 100%;
-    padding-inline: 30px;
+    width: 92%;
+    padding-inline: 15px;
     margin-inline: auto;
     position: relative;
   }
