@@ -453,7 +453,7 @@ header {
 }
 .title-wrap {
   display: grid;
-  row-gap: 0.7407407407vw;
+  row-gap: 8px;
   text-align: center;
 }
 
@@ -480,9 +480,9 @@ header {
 }
 
 .service-wrap {
-  margin-top: 6.2037037037vw;
+  margin-top: 67px;
   display: grid;
-  row-gap: 7.4074074074vw;
+  row-gap: 80px;
 }
 
 @media (max-width: 767px) {
@@ -541,7 +541,7 @@ header {
 }
 .service-img-area {
   display: grid;
-  row-gap: 1.7592592593vw;
+  row-gap: 19px;
   position: absolute;
   z-index: 11;
 }
@@ -554,7 +554,7 @@ header {
   }
 }
 .service-img-wrap {
-  width: 55.5555555556vw;
+  width: 600px;
 }
 
 @media (max-width: 767px) {
@@ -574,11 +574,11 @@ header {
 }
 
 .green-box {
-  width: 46.2962962963vw;
+  width: 500px;
   background-color: rgb(77, 150, 0);
   color: #fff;
   display: grid;
-  row-gap: 1.5740740741vw;
+  row-gap: 17px;
   margin-top: 13.4259259259vw;
 }
 
@@ -591,10 +591,10 @@ header {
   }
 }
 .green-box-right {
-  padding-top: 4.6296296296vw;
-  padding-right: 0vw;
-  padding-bottom: 3.8888888889vw;
-  padding-left: 20.3703703704vw;
+  padding-top: 50px;
+  padding-right: 0;
+  padding-bottom: 42px;
+  padding-left: 220px;
   margin-left: 38.8888888889vw;
 }
 
@@ -608,11 +608,11 @@ header {
   }
 }
 .green-box-left {
-  padding-top: 4.6296296296vw;
-  padding-right: 20.3703703704vw;
-  padding-bottom: 3.8888888889vw;
-  padding-left: 3.7037037037vw;
-  margin-right: 38.8888888889vw;
+  padding-top: 50px;
+  padding-right: 220px;
+  padding-bottom: 42px;
+  padding-left: 40px;
+  margin-right: 420px;
 }
 
 @media (max-width: 767px) {
