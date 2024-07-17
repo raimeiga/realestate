@@ -950,39 +950,58 @@ text-orientation: upright;
 
 
 .w-space {
-  background-color: aqua;
+  // background-color: aqua;
+  position: relative;
+  //height: calc(74/ 390);
+  height: 18.9%;
+}
+@media (max-width: 767px) {
+.w-space {  
+  position: relative;
+  //height: calc(74 / 275);
+  height: 26.9%;
+}
+}
+
+.link-more {
+  background-color: yellow;
+  width: 20.5%;  
+}
+
+.arrow-wrap  {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;    
+  }
+@media (max-width: 767px) {
+  .arrow-wrap  {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;    
+  }
 }
 
 .more-wrap {
-  background-color: yellow;
-  width:20.5%;
-  // padding-left: 79.5%;
-  // padding-top: 17px;
-  margin-top: 17px;
-  margin-left: 215px;
+  // background-color: yellow;   
+  //padding-top: 17px;
+  padding-top: 4.3%;
+  //padding-right: 33px;
+  padding-right: 8.4%;
+  //margin-left: 310px;
+  margin-left: 79.4%;
+}
+@media (max-width: 767px) {
+  .more-wrap {        
+    //padding-top: 17px;
+    padding-top: 6.18%;
+    //padding-right: 33px;
+    padding-right: 12%;
+    //margin-left: 310px;
+    margin-left: 70.9%;
+  }
 }
 
-
-
-
-
-// .more-wrap {
-//   // background-color: pink;
-//   padding-top: 6.1%;
-//   margin-left: 79.4%; 
-//   // position: relative;
-// }
-// @media (max-width: 767px) {
-//   .more-wrap {
-//     // background-color: pink;
-//     padding-top: 6.1%;
-//     margin-left: 70.9%; 
-//     // position: relative;
-//   }
-// }
-
-.more-wrap p {  
-  // background-color: aqua;
+.more-wrap p {    
   color: #55A500;
   font-size: 2.2rem; 
   // カンプだと「20px」（2rem）だが、ピクパで合わないので拡大
@@ -990,10 +1009,6 @@ text-orientation: upright;
   // ↑「Demibold」と書くと効いてない理由がわからない
   line-height: calc(33 / 20);
   letter-spacing: -0.05em;
-}
-
-.arrow-wrap  {
-  position: absolute;
 }
 
 
