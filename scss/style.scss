@@ -11,12 +11,12 @@ body {
  font-family: "YuMincho","Yu Mincho","游明朝体","游明朝",sans-serif;
  // 游明朝はmacosとWindowsにデバイスインストールされているが、太さが異なる↓
  // ・macos"YuMincho","游明朝体" weightはMedium=500,Demibold=600
- // ・Windows"Yu Mincho","Yu Mincho",weightはRegular=500,Demibold=600
+ // ・Windows"Yu Mincho","游明朝",weightはRegular=500,Demibold=600
  // なので、自分のPC（Windows）からfigmaでrealestate（複製）を開くと、
  // テキストのプロパティに 「Yu Mincho」、太さの欄に「Regular」なら、macos「Medium（500）」と同じってこと。
  // 太さの欄に「Demibold」なら、macosでも同じく「Demibold=600」ってこと。
  font-size: 1.8rem;     // 1.8rem（18px)が最多なので
- font-weight: Regular;  // 500が最多のfont-weightなので、Regular 
+ font-weight: 500;  // 500が最多のfont-weightなので、「Regular」って書くと効かない理由が不明。
  color: #000; 
  letter-spacing: 0;
 }
@@ -65,8 +65,7 @@ header {
 .header-inner {  
   width: 100%; 
   height: inherit;
-  padding-inline: 80px;
-  
+  padding-inline: 80px;  
   margin-inline: auto; 
   display: flex;    
   justify-content: space-between;
@@ -319,6 +318,7 @@ header {
 .mv-catch h2  {
   color:#fff;
   font-size: 4rem;
+  font-weight: 600;
   line-height: calc(70 / 40);
   letter-spacing: 0.3em;
   text-indent: 0.3em;  
@@ -507,11 +507,12 @@ text-orientation: upright;
 // -----service-----
 
 #service {
-  background: rgba(77, 150, 0, 0.102);
+  background: rgba(77, 150, 0, 0.102);  
   padding-block: 80px;
 }
 @media (max-width: 767px) {
-  #service {    
+  #service {
+    background: rgba(77, 150, 0, 0.102);  
     padding-block: 50px;
   }
 }
@@ -529,19 +530,21 @@ text-orientation: upright;
     // max-width: 1000px;
     // max-width: calc(345 / 375 * 100vw);
     width: 92%;
-    padding-inline:15px;
+    padding-inline: 15px;
     margin-inline: auto;
     position: relative;
   }
 }
 
 .title-wrap {
+  padding-bottom: 68px;
   display: grid;
   row-gap: 8px;
   text-align: center;  
 }
 @media (max-width: 767px) {
  .title-wrap {
+  padding-bottom: 38px;
   display: grid;
   row-gap: 6px;
   text-align: center;  
@@ -551,11 +554,10 @@ text-orientation: upright;
 .title-english-box h2 {
   font-size: 3rem;
   line-height: calc(33 / 30);   
-  color: rgba(77, 150, 0, 1);
+  color: #4D9600;
   letter-spacing: 0.3em;
   text-indent: 0.3em; 
 }
-
 
 .title-kana-box h2{
   font-size: 2rem;
@@ -564,14 +566,12 @@ text-orientation: upright;
   text-indent: 0.3em; 
 }
 
-.service-wrap {
-  margin-top: 67px;
+.service-wrap {    
   display: grid;
   row-gap: 80px;
 }
 @media (max-width: 767px) {
-  .service-wrap {
-    margin-top: 38px;
+  .service-wrap {       
     display: grid;
     row-gap: 50px;
   }
@@ -663,7 +663,7 @@ text-orientation: upright;
 //  width: 50rem;
 //  height: 25rem;
  width: 54.3%;  
- background-color: rgba(77, 150, 0, 1);
+ background-color: #4D9600;
  color: #fff; 
  display: grid;
  row-gap: 17px;
@@ -721,6 +721,7 @@ text-orientation: upright;
 
 .green-box h3 {
   font-size: 2.5rem;
+  font-weight: 600;
   // font-size: calc(25 / 1080 * 100vw);
   line-height: calc(33 / 25);  
 }
@@ -734,6 +735,7 @@ text-orientation: upright;
 
 .green-box p {
   font-size: 1.6rem;  
+  font-weight: 600;
   line-height: calc(25 / 16);
 }
 @media (max-width: 966px) {
@@ -754,11 +756,11 @@ text-orientation: upright;
    }
   }
   
-  @media (max-width: 767px) {
-    .if-sp-none {
-      display: none;
-     }
-  }
+  // @media (max-width: 767px) {
+  //   .if-sp-none {
+  //     display: none;
+  //    }
+  // }
   
 .align-right {
   text-align: end;
@@ -772,5 +774,146 @@ text-orientation: upright;
 // -----works-----
 
 #works {
+ width: 100%; 
+ padding-block: 80px 97px;
+}
+@media (max-width: 767px) {
+  #works {
+    width: 100%; 
+    padding-block: 50px 42px;
+   }
+}
 
+.works-wrap { 
+  display: flex;
+  column-gap: 4.3%;
+}
+@media (max-width: 767px) {
+  .works-wrap {     
+    display: grid;
+    row-gap: 22px;
+  }
+}
+
+.works-list {
+  width: 21.7%;
+  display: grid;
+  row-gap: 19px;  
+}
+@media (max-width: 767px) {
+  .works-list {
+    width: 100%;
+    display: grid;
+    row-gap: 9px;  
+  }
+}
+
+.works-li-text-wrap p {
+ font-size: 1.6rem;
+ line-height: 1.56;
+}
+@media (max-width: 964px) {
+  .works-li-text-wrap p {
+    font-size: 1.4rem;
+    line-height: 1.56;
+   }
+}
+@media (max-width: 855px) {
+  .works-li-text-wrap p {
+    font-size: 1.2rem;
+    line-height: 1.56;
+   }
+}
+@media (max-width: 767px) {
+  .works-li-text-wrap p {
+    font-size: 1.6rem;
+    line-height: 1.56;
+   }
+}
+
+// -----news-----
+
+#news {
+  background: rgba(77, 150, 0, 0.102); 
+  padding-block: 80px;
+}
+
+.news-wrap {  
+  display: flex;
+  column-gap: 6.5%;
+}
+
+.news-news,.news-blog {
+  // background-color: yellow;
+  width: 46.7%;
+}
+
+.green-area {
+  padding-inline: 4.65%;  
+  background-color: #4D9600;
+  padding-block: 12px 5px;
+}
+.green-area p {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: calc(33 / 20);
+}
+
+.article-wrap {
+  background-color: #fff;
+  padding-block: 10px 20px;  
+  padding-inline: 4.65%;  
+}
+
+.a-link{
+  // background-color: aqua;  
+  display: flex;
+  align-items: center;
+  column-gap: 16.6%;
+  border-bottom: solid 1px #55A500;
+}
+
+.date {
+  width: 57px;  
+  padding-block: 13px 36px;
+}
+.date time {
+  font-size: 1.6rem;
+  line-height: calc(33 / 16);
+  letter-spacing: -0.03em;
+}
+.text {
+  padding-block: 20px 12px;
+  flex: 1;
+}
+.text p {
+  font-size: 1.8rem;
+  line-height: calc(25 / 18);
+}
+
+.more-wrap {
+  // background-color: pink;
+  padding-top: 17px;
+  margin-left: 79.4%; 
+  position: relative;
+}
+
+.more-wrap p {  
+  // background-color: aqua;
+  color: #55A500;
+  font-size: 2.2rem; 
+  // カンプだと「20px」（2rem）だが、ピクパで合わないので拡大
+  font-weight: 600;  
+  // ↑「Demibold」と書くと効いてない理由がわからない
+  line-height: calc(33 / 20);
+  letter-spacing: -0.05em;
+}
+
+.arrow-wrap {
+  position: absolute;
+  bottom:0;
+  right:0;
+  width: 80px;
+  height: 20px;  
 }
