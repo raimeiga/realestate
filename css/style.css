@@ -1060,7 +1060,7 @@ iframe {
   display: grid;
   row-gap: 6px;
   text-align: center;
-  padding-bottom: 34px;
+  padding-bottom: 36px;
 }
 
 .con-inner {
@@ -1081,32 +1081,39 @@ iframe {
 }
 .attention p {
   font-size: 2rem;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 
+@media (min-width: 407px) and (max-width: 803px) {
+  .ib-407-803 {
+    display: inline-block;
+  }
+}
 .con-sec-form-block {
-  margin-top: 74px;
+  margin-top: 67px;
 }
 
+@media (max-width: 767px) {
+  .con-sec-form-block {
+    margin-top: 36px;
+  }
+}
 .form-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.form-gender {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-block: 43px 39px;
+@media (max-width: 767px) {
+  .form-flex {
+    display: grid;
+    -webkit-column-gap: 0;
+       -moz-column-gap: 0;
+            column-gap: 0;
+  }
 }
-
-.form-category {
-  margin-block: 49px 43px;
-}
-
 .item {
-  width: 170px;
+  width: 21.25%;
   height: 50px;
   padding-top: 1px;
   display: -webkit-box;
@@ -1119,57 +1126,106 @@ iframe {
   line-height: 1.65;
 }
 
+@media (max-width: 767px) {
+  .item {
+    width: 53.9%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 2rem;
+    line-height: 1.65;
+  }
+}
 .space-or-btn {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.form-control {
-  background: #fff;
-  width: 100%;
-  height: 50px;
-  padding-inline: 20px;
-  display: block;
-}
-
 ::-webkit-input-placeholder {
   color: #A0A0A0;
   font-size: 1.6rem;
+  font-weight: 300;
   line-height: 1.5625;
 }
 
 ::-moz-placeholder {
   color: #A0A0A0;
   font-size: 1.6rem;
+  font-weight: 300;
   line-height: 1.5625;
 }
 
 :-ms-input-placeholder {
   color: #A0A0A0;
   font-size: 1.6rem;
+  font-weight: 300;
   line-height: 1.5625;
 }
 
 ::-ms-input-placeholder {
   color: #A0A0A0;
   font-size: 1.6rem;
+  font-weight: 300;
   line-height: 1.5625;
 }
 
 ::placeholder {
   color: #A0A0A0;
   font-size: 1.6rem;
+  font-weight: 300;
   line-height: 1.5625;
 }
 
-.radio-wrap {
+.form-control {
+  background: red;
+  width: 100%;
+  height: 50px;
+  padding-inline: 20px;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .short-767 {
+    width: 27%;
+  }
+}
+.form-gender {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 74px;
-     -moz-column-gap: 74px;
-          column-gap: 74px;
+  margin-block: 43px 41px;
+}
+
+@media (max-width: 767px) {
+  .form-gender {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-block: 30px 28px;
+  }
+}
+.form-category {
+  margin-block: 51px 41px;
+}
+
+@media (max-width: 767px) {
+  .form-category {
+    margin-block: 29px 29px;
+  }
+}
+.radio-wrap {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10.9%;
+     -moz-column-gap: 10.9%;
+          column-gap: 10.9%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1182,7 +1238,7 @@ iframe {
 }
 
 .radio__text {
-  padding-left: 35px;
+  padding-left: 37px;
   position: relative;
   cursor: pointer;
   font-size: 1.8rem;
@@ -1212,73 +1268,149 @@ iframe {
   background-color: #000;
   position: absolute;
   top: 50%;
-  left: 6px;
+  left: 7px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
 
-.form-textarea {
-  height: 200px;
-  padding: 10px;
+.cate-pull-down {
+  position: relative;
+  width: 100%;
 }
 
+.cate-pull-down::before {
+  content: "";
+  width: 10px;
+  height: 0;
+  border-style: solid;
+  border-width: 12.5px 9.5px 0px 9.5px;
+  border-color: #4D9600 transparent transparent transparent;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.cate-option {
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  padding-top: 5px;
+  padding-inline: 20px 0px;
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
+.cate-option::-ms-expand {
+  display: none; /* デフォルトの矢印を非表示(IE用) */
+}
+
+.cate-option {
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
+}
+
+@media (max-width: 767px) {
+  .cate-option {
+    font-size: 1.6rem;
+    line-height: 1.5625;
+  }
+}
 .form-text-content {
   display: block;
 }
 
-.find-out-method {
-  margin-block: 53px 14px;
+.form-textarea {
+  background: red;
+  width: 100%;
+  height: 200px;
+  padding-inline: 20px;
 }
 
+.find-out-method {
+  margin-block: 53px 8px;
+}
+
+@media (max-width: 767px) {
+  .find-out-method {
+    margin-block: 31px 0px;
+  }
+}
 .find-out-method p {
   font-size: 2rem;
-  line-height: 1.5;
+  line-height: 1.65;
 }
 
+@media (max-width: 767px) {
+  .find-out-method p {
+    font-size: 2rem;
+    line-height: 1.35;
+  }
+}
+@media (max-width: 534px) {
+  .ib-534 {
+    display: inline-block;
+  }
+}
 .form-checkbox {
+  background-color: yellow;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-column-gap: 36px;
-     -moz-column-gap: 36px;
-          column-gap: 36px;
 }
 
 .media-check {
-  width: 166px;
-  background-color: yellow;
-  display: block;
+  width: 25%;
   position: relative;
   margin: 0 0;
-  padding-left: 40px;
-  padding-bottom: 20px;
+  padding-top: 1px;
+  padding-left: 5%;
+  padding-bottom: 16px;
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; /* テキストの選択を防ぐ */
+  font-size: 1.8rem;
+  line-height: 1.3888888889;
 }
 
+@media (max-width: 767px) {
+  .media-check {
+    width: 50%;
+    position: relative;
+    margin: 0 0;
+    padding-top: 1px;
+    padding-left: 9.5%;
+    padding-bottom: 4px;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; /* テキストの選択を防ぐ */
+    font-size: 1.6rem;
+    line-height: 1.5625;
+  }
+}
 /* inputは非表示にする */
 .media-check input {
   display: none;
 }
 
-.media-check p {
-  font-size: 1.8rem;
-  line-height: 1.3888888889;
-}
-
 /* □ */
 .checkmark {
+  background-color: red;
   position: absolute;
-  top: 0; /* 上からの位置 */
-  left: 0;
+  top: 6.3%; /* 上からの位置 */
+  left: 0px;
   height: 20px; /* 大きさ */
   width: 20px; /* 大きさ */
-  border: solid 1px #000; /* 線 */
   border-radius: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1311,23 +1443,94 @@ iframe {
   margin-block: 32px 10px;
 }
 
+@media (max-width: 767px) {
+  .privacy-policy-title {
+    font-size: 2rem;
+    line-height: 1.65;
+    margin-block: 25px 0px;
+  }
+}
 .privacy-policy {
   height: 300px;
   background-color: #fff;
-  padding: 40px 60px 40px 40px;
+  padding: 40px 7.5% 40px 5%;
   overflow-y: scroll;
 }
 
+@media (max-width: 767px) {
+  .privacy-policy {
+    height: 323px;
+    background-color: #fff;
+    padding: 30px 15.8% 30px 9.5%;
+    overflow-y: scroll;
+  }
+}
 .pp-head {
   font-size: 1.8rem;
   line-height: 1.7222222222;
 }
 
+@media (max-width: 767px) {
+  .pp-head {
+    font-size: 1.8rem;
+    line-height: 1.8333333333;
+  }
+}
 .pp-detail {
   font-size: 1.6rem;
   line-height: 1.9375;
 }
 
-.bottom {
+@media (max-width: 767px) {
+  .pp-detail {
+    font-size: 1.6rem;
+    line-height: 2.0625;
+  }
+}
+.pp-space {
   margin-bottom: 31px;
+}
+
+@media (max-width: 767px) {
+  .pp-space {
+    margin-bottom: 33px;
+  }
+}
+@media (max-width: 767px) {
+  .ib-376 {
+    display: inline-block;
+  }
+}
+.form-submit-area {
+  background-color: #4D9600;
+  width: 300px;
+  margin: 80px auto 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8px 0;
+}
+
+@media (max-width: 767px) {
+  .form-submit-area {
+    background-color: #4D9600;
+    width: 315px;
+    margin: 50px auto 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 8px 0;
+  }
+}
+.form-submit {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.65;
 }/*# sourceMappingURL=style.css.map */
