@@ -21,6 +21,10 @@ picture img {
   width: 100%;
 }
 
+a {
+  cursor: pointer;
+}
+
 @media (max-width: 767px) {
   .pc {
     display: none !important;
@@ -80,8 +84,9 @@ header {
   }
 }
 .header-logo-box {
+  background-color: red;
+  width: 200px;
   height: inherit;
-  padding-top: 0px;
 }
 
 @media (max-width: 767px) {
@@ -95,7 +100,7 @@ header {
   color: #fff;
   font-size: 2rem;
   line-height: 1.65;
-  padding-top: 15%;
+  padding-top: 28px;
 }
 
 @media (max-width: 930px) {
@@ -103,17 +108,19 @@ header {
     height: inherit;
     color: #fff;
     font-size: 1.7rem;
-    padding-top: 18%;
+    line-height: 1.65;
+    padding-top: 28px;
   }
 }
 @media (max-width: 767px) {
   .header-name {
     height: inherit;
     font-size: 2rem;
-    padding-top: 2.3px;
+    padding-top: 8px;
   }
 }
 .header-nav-wrap {
+  max-width: 610px;
   width: 66%;
   height: inherit;
   display: -webkit-box;
@@ -122,9 +129,9 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .header-nav {
@@ -134,16 +141,16 @@ header {
 
 .header-nav-list {
   height: inherit;
-  padding-top: 2%;
+  padding-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 5%;
-     -moz-column-gap: 5%;
-          column-gap: 5%;
+  -webkit-column-gap: 4.9%;
+     -moz-column-gap: 4.9%;
+          column-gap: 4.9%;
 }
 
 @media (max-width: 930px) {
@@ -162,7 +169,6 @@ header {
   }
 }
 .header-nav-list-li {
-  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,16 +179,10 @@ header {
 
 .header-nav-btn {
   font-size: 1.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 0%;
+  line-height: 1.8333333333;
   color: #fff;
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
 }
 
 @media (max-width: 930px) {
@@ -200,6 +200,24 @@ header {
     transition: all 0.4s linear;
   }
 }
+/* ヘッダーナビのホバー時に下線が左から右へ走るしくみ */
+.header-nav-btn {
+  text-decoration: none; /* デフォルトの下線を非表示にする */
+  color: #fff; /* 文字色 */
+  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
+  background-image: linear-gradient(90deg, #fff, #fff); /* 線の色 */
+  background-repeat: no-repeat;
+  background-position: left bottom; /* 線の起点を左・下に設定 */
+  background-size: 0 2px; /* 線の横幅を0、縦幅を1pxに */
+  -webkit-transition: background-size 0.8s;
+  transition: background-size 0.8s; /* 線を伸ばすアニメーション実行時間を指定 */
+}
+
+.header-nav-btn:hover {
+  background-size: 100% 1px; /* 線の横幅を100%にする */
+  opacity: 0.5;
+}
+
 .mv {
   position: relative;
 }
@@ -897,8 +915,12 @@ header {
 }
 
 .link-more {
-  background-color: grey;
   padding-block: 17px 20px;
+}
+
+.link-more:hover {
+  -webkit-transform: translate(5px, 0px);
+          transform: translate(5px, 0px);
 }
 
 .more-wrap {

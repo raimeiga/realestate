@@ -27,6 +27,12 @@ picture img {
  width: 100%;
 }
 
+a {
+  cursor: pointer;
+}
+
+
+
 //------------common--------------
 // PC、SPの非表示 とりあえず記述し、あとでhtmlで使う感じか？*/
         
@@ -64,7 +70,7 @@ header {
  }
 }
 
-.header-inner {  
+.header-inner {   
   width: 100%; 
   height: inherit;
   padding-inline: 80px;  
@@ -87,9 +93,11 @@ header {
 }
 
 .header-logo-box {
+  background-color: red;
   // width: calc(200 / 1080 * 100vw);
-  height: inherit;
-  padding-top: 0px;
+  width: 200px;
+  height: inherit;  
+  
 }
 @media (max-width: 767px) {
   .header-logo-box {
@@ -104,34 +112,34 @@ header {
   height: inherit;
   color:#fff;
   font-size: 2rem;
-  line-height: 1.65;
-  // padding-top: 11px;
-  padding-top: 15%;
+  line-height: calc(33 / 20);
+  padding-top: 28px;
 }
 @media (max-width: 930px) {
   .header-name {      
     height: inherit;
     color:#fff;
-    font-size: 1.7rem;
-    // padding-top: 11px;
-    padding-top: 18%;
+    font-size: 1.7rem;    
+    line-height: calc(33 / 20);
+    padding-top: 28px;
   }
 }
 @media (max-width: 767px) {
   .header-name {      
     height: inherit;
     font-size: 2rem;    
-    padding-top: 2.3px;
+    padding-top: 8px;
   }
 }
 
 .header-nav-wrap {
   // width: calc(610 / 1080 * 100vw);
-  width: 66%;  
+  max-width: 610px;
+  width: 66%;
   height: inherit;
   display: flex; 
   align-items: center;     
-  justify-content: space-between;   
+  justify-content: center;   
 }
 
 .header-nav {
@@ -139,11 +147,12 @@ header {
   height: inherit;  
 }
 .header-nav-list {  
+  // background-color: aqua;
   height: inherit; 
-  padding-top: 2%; 
+  padding-top: 10px; 
   display: flex;
   align-items: center;  
-  column-gap: 5%;  
+  column-gap: 4.9%;  
 }
 @media (max-width: 930px) {
   .header-nav-list {       
@@ -155,19 +164,20 @@ header {
   }
 }
 .header-nav-list-li {  
-  height: inherit;
   display: flex;
   align-items: center;  
 }
 
 .header-nav-btn {  
-  font-size: 1.8rem;                        
-  display: flex;
-  align-items: center;              
+  // background-color: yellow;  
+  font-size: 1.8rem;
+  line-height: calc(33 / 18);  
+  // display: flex;
+  // align-items: center;              
   // padding-top: 10px;   
-  padding-top: 0%;           
+  // padding-top: 0%;           
   color:#fff; 
-  transition: all 0.4s linear; 
+  transition: all 0.4s ease-out; 
 }
 @media (max-width: 930px) {
 .header-nav-btn {  
@@ -178,6 +188,28 @@ header {
   color:#fff; 
   transition: all 0.4s linear; 
 }
+}
+
+// .header-nav-btn:hover {
+//   border-bottom: solid 1px #fff;
+//   opacity: 0.5;
+// }
+
+
+/* ヘッダーナビのホバー時に下線が左から右へ走るしくみ */
+.header-nav-btn {
+  text-decoration: none; /* デフォルトの下線を非表示にする */  
+  color: #fff; /* 文字色 */
+  background-image: linear-gradient(90deg, #fff, #fff); /* 線の色 */
+  background-repeat: no-repeat;
+  background-position: left bottom; /* 線の起点を左・下に設定 */
+  background-size: 0 2px; /* 線の横幅を0、縦幅を1pxに */
+  transition: background-size 0.8s; /* 線を伸ばすアニメーション実行時間を指定 */
+}
+
+.header-nav-btn:hover {
+  background-size: 100% 1px; /* 線の横幅を100%にする */
+  opacity: 0.5;
 }
 
 
@@ -977,9 +1009,14 @@ text-orientation: upright;
 }
 
 .link-more {
-  background-color: grey;  
+  // background-color: grey;  
   padding-block: 17px 20px;  
 }
+
+.link-more:hover {
+  transform: translate(5px, 0px); 
+}
+
 
 .more-wrap {  
   width: 100%;  
@@ -1308,13 +1345,11 @@ iframe {
   column-gap: 10.9%;
   align-items: center;  
 }
-@media (max-width: 767px) {
- 
+@media (max-width: 767px) { 
 }
 
 .radio__btn {
-  appearance: none;
-  
+  appearance: none;  
 }
 
 .radio__text {
