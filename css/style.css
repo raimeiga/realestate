@@ -1534,6 +1534,12 @@ iframe {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 8px 0;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.65;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 @media (max-width: 767px) {
@@ -1550,11 +1556,11 @@ iframe {
     padding: 8px 0;
   }
 }
-.form-submit {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.65;
+.form-submit-area:hover {
+  background-color: #fff;
+  color: #4D9600;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 footer {
