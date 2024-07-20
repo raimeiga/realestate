@@ -832,7 +832,8 @@ text-orientation: upright;
 .works-list {
   width: 21.7%;
   display: grid;
-  row-gap: 19px;  
+  row-gap: 19px; 
+  cursor: pointer;  /* カーソルを指マークに変更 */
 }
 @media (max-width: 767px) {
   .works-list {
@@ -1014,7 +1015,7 @@ text-orientation: upright;
 }
 
 .link-more:hover {
-  transform: translate(5px, 0px); 
+  transform: translate(10px, 0px); 
 }
 
 
@@ -1182,6 +1183,7 @@ iframe {
 
 
 // -----contact-----
+
 #contact {
   background: rgba(77, 150, 0, 0.149);
   padding-block: 80px;
@@ -1641,42 +1643,66 @@ iframe {
  }
 }
 
+// .form-submit-area {
+//   background-color: #4D9600;
+//   width: 300px;
+//   margin: 80px auto 0;
+//   display: flex;
+//   justify-content: center;
+//   padding: 8px 0;
+//   color: #fff;
+//  font-size: 2rem;
+//  font-weight: 600;
+//  line-height: calc(33 / 20);
+//  transition: 2s;
+// }
+// @media (max-width: 767px) {
+//   .form-submit-area {
+//     background-color: #4D9600;
+//     width: 315px;
+//     margin: 50px auto 0;
+//     display: flex;
+//     justify-content: center;
+//     padding: 8px 0;
+//   }
+// }
+
+
+// .form-submit-area:hover {
+//   background-color: #fff;
+//   color: #4D9600;
+//   transition: 2s;
+// }
+
 .form-submit-area {
   background-color: #4D9600;
   width: 300px;
   margin: 80px auto 0;
   display: flex;
   justify-content: center;
-  padding: 8px 0;
-  color: #fff;
- font-size: 2rem;
- font-weight: 600;
- line-height: calc(33 / 20);
- transition: .1s;
-}
-@media (max-width: 767px) {
-  .form-submit-area {
-    background-color: #4D9600;
-    width: 315px;
-    margin: 50px auto 0;
-    display: flex;
-    justify-content: center;
-    padding: 8px 0;
-  }
+  padding: 8px 0;  
+  transition: 2s;
 }
 
 .form-submit-area:hover {
-  background-color: #fff;
-  color: #4D9600;
-  transition: .1s;
+  background-color: #fff;  
+  transition: 2s;
 }
 
-// .form-submit {  
-//  color: #fff;
-//  font-size: 2rem;
-//  font-weight: 600;
-//  line-height: calc(33 / 20);
-// }
+.form-submit {  
+ color: #fff;
+ font-size: 2rem;
+ font-weight: 600;
+ line-height: calc(33 / 20);
+ transition: 2s;
+}
+
+.form-submit:hover {  
+  color: #4D9600;
+  transition: 2s;
+}
+
+
 
 // -----footer-----
 

@@ -735,6 +735,7 @@ header {
   width: 21.7%;
   display: grid;
   row-gap: 19px;
+  cursor: pointer; /* カーソルを指マークに変更 */
 }
 
 @media (max-width: 767px) {
@@ -919,8 +920,8 @@ header {
 }
 
 .link-more:hover {
-  -webkit-transform: translate(5px, 0px);
-          transform: translate(5px, 0px);
+  -webkit-transform: translate(10px, 0px);
+          transform: translate(10px, 0px);
 }
 
 .more-wrap {
@@ -1534,33 +1535,29 @@ iframe {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 8px 0;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.form-submit-area:hover {
+  background-color: #fff;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.form-submit {
   color: #fff;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.65;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
-@media (max-width: 767px) {
-  .form-submit-area {
-    background-color: #4D9600;
-    width: 315px;
-    margin: 50px auto 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 8px 0;
-  }
-}
-.form-submit-area:hover {
-  background-color: #fff;
+.form-submit:hover {
   color: #4D9600;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 footer {
