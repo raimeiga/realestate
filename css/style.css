@@ -268,6 +268,7 @@ header {
   }
 }
 .mv-catch {
+  background-color: grey;
   width: 56.7rem;
   margin-inline: auto;
   text-align: center;
@@ -287,6 +288,7 @@ header {
   line-height: 1.75;
   letter-spacing: 0.3em;
   text-indent: 0.3em;
+  text-shadow: 5px 5px 5px rgb(0, 0, 0);
 }
 
 @media (max-width: 767px) {

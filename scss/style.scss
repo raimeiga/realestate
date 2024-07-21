@@ -264,7 +264,8 @@ header {
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.03);
-  // background-color: rgba(0, 0, 0, 0.15);  
+  // background-color: rgba(0, 0, 0, 0.15);
+  // ↑ 黒の透過カラー 設定 
   }
 
 .mv-contents {
@@ -287,6 +288,7 @@ header {
 }
 
 .mv-catch {
+  background-color: grey;
   width: 56.7rem; 
   // height: calc(140 / 1080 * 100vw);
   margin-inline: auto;
@@ -356,6 +358,8 @@ header {
   line-height: calc(70 / 40);
   letter-spacing: 0.3em;
   text-indent: 0.3em;  
+  // ↓ シャドウの数値をfigmaからコピー
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
 }
 @media (max-width: 767px) {
   .mv-catch h2 {
@@ -372,53 +376,11 @@ header {
  }
 }
 
-// @media (max-width: 767px) {
-//   .ib {
-//    display: inline-block;   
-//   }
-//  }
- 
-
-// .if-pc-none {
-//   display: none;
-// }
-// @media (max-width: 767px) {
-//   .if-pc-none {
-//   display: block;
-//   color:#fff;
-//   font-size: calc(30 / 375 * 100vw);
-//   line-height: calc(60 / 30);
-//   letter-spacing: 0.3em;
-//   text-indent: 0.3em;  
-//   }
-// }
-
 
 // -----about-----
 .about-inner {
   position: relative;
 }
-
-// .about-v-contents {
-//   width: 100%;
-//   height: 100%;
-//   position: absolute;
-//   top: 20%;
-//   left: 14.2%;
-//   transform: translate(5%);
-//   // padding-top: 111px;
-//   // padding-right: 40.7%;
-// }
-// @media (max-width: 767px) {
-//   .about-v-contents {
-//     width: 100%;
-//     height: 100%;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     padding-top: 51px;
-//  }
-// }
 
 .about-v-catch {  
   display: flex;
