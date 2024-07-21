@@ -5,7 +5,6 @@ $(function() {
     autoplaySpeed: 5000,
     arrows: false,
   });  
-
 });
 
   $(window).scroll(function() {
@@ -68,65 +67,35 @@ $(function() {
     });
   });
 
-
-
-
-
-
-  // $(window).on('scroll',function(){
-  //   const scrollValue = document.scrollingElement.scrollTop;
-  //   // 画面スクロール量が600px以上なら,戻るボタンを表示
-  //   if (scrollValue >= 600) {
-  //     $(".sp-back-btn").css('display', 'inline');
-  //   }
-  //   // 画面のスクロール量が600px未満なら,戻るボタンを非表示
-  //   else {
-  //     $(".sp-back-btn").css('display', 'none');
-  //   }
   
-  // });
+  // ------モーダル-------
 
-  
-// $(window).on('scroll',function(){
-//   const scrollValue = document.scrollingElement.scrollTop;
-//   // 画面スクロール量が800px以上なら,戻るボタンを表示
-//   if (scrollValue >= 800) {
-//     $(".back-btn").css('display', 'inline');
-//   }
-//   // 画面のスクロール量が800px未満なら,戻るボタンを非表示
-//   else {
-//     $(".back-btn").css('display', 'none');
-//   }
-
-//   // 画面スクロール量が800px以上なら,文字色を黒
-//   if (scrollValue >= 800) {
-//     $(".header-name,.header-nav-btn").css('color', '#000');
-//   }
-//   // 画面のスクロール量が800px未満なら,文字色を白
-//   else {
-//     $(".header-name,.header-nav-btn").css('color', '#fff');
-//   } 
-// });
-
-// ↑ を書いたときの基盤（ ↓ ）
-// $(document).ready(function() {
-//   var backBtn = $('#back-btn');
-
-//   $(window).scroll(function() {
-//     var scrollValue = $(document).scrollTop();
-
-//     if (scrollValue >= 500) {
-//       backBtn.css('display', 'inline');
-//     } else {
-//       backBtn.css('display', 'none');
-//     }
-//   });
-// });
+  $(function () {
+  $(".modal-open").click(
+    function() {
+      $(".modal-area").show()
+    }
+  );
+  $(".modal-close").click(
+    function() {
+      $(".modal-area").hide()
+    }
+  );
+});
 
 
 
+// ------ハンバーガーメニュー-------
+// toggle=表示と非表示を切り替えるメソッド
+// 300=0.3秒で表示・非表示を切り替える
 
-
+$(function () {
+  $("#hamburger-block").click( 
+    function() {
+      $(".ham-menu").toggle(300)
+    }
+  );
+});
 
 
 
