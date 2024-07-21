@@ -93,7 +93,7 @@ header {
 }
 
 .header-logo-box {
-  background-color: red;
+  // background-color: red;
   // width: calc(200 / 1080 * 100vw);
   width: 200px;
   height: inherit;  
@@ -107,7 +107,8 @@ header {
   }
 }
 
-.header-name {  
+.header-name,
+.header-name-sp-scroll {  
   //  font-size: 2rem;
   height: inherit;
   color:#fff;
@@ -1816,3 +1817,37 @@ footer {
   }
 }
 
+// -----戻るボタン-----
+  .back-btn{
+    width: 68px;
+    height: 68px;
+    display: none;
+    padding: 22px 20px;
+    // padding: 40px 10px;
+    background-color: #4D9600;
+    color: #000;
+    text-decoration: none;
+    border-radius: 50%;  
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+  }
+
+  // ↓ sp画面では、mvの高さ600pxに合わせて表示
+  // ↓ main.jsとコードとコンビ
+  @media (max-width: 767px) {
+  .sp-back-btn {
+   width: 68px;
+   height: 68px;
+   display: none;
+   padding: 22px 20px;
+   // padding: 40px 10px;
+   background-color: #4D9600;
+   color: #000;
+   text-decoration: none;
+   border-radius: 50%;  
+   position: fixed;
+   bottom: 60px;
+   right: 60px;
+ }
+}

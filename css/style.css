@@ -94,7 +94,8 @@ header {
     padding-top: 0px;
   }
 }
-.header-name {
+.header-name,
+.header-name-sp-scroll {
   height: inherit;
   color: #fff;
   font-size: 2rem;
