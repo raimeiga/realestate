@@ -1874,18 +1874,6 @@ footer {
 
 //---------------------------------------------
 
-  
-// body {
-//   margin: 0;
-//   box-sizing: border-box;
-// }
-
-/* モーダルを開くボタン */
-// .modal-open {  
-//   width: 120px;
-//   height: 40px;
-// }
-
 /* モーダル全体 */
 .modal-area {
   display: none;
@@ -1916,9 +1904,24 @@ footer {
   background-color: #fff;
   padding: 15px 15px 0px;
 }
+@media (max-width: 767px) {
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // width:315px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    //background: rgba(255, 255, 255, 1);
+    background-color: #fff;
+    padding: 20px 20px 0px;
+  }
+}
 
 .m-image-wrap {
-  // width: 420px;
+  // width: 315px;
   width: 100%;
   height: auto;
   margin-inline: auto;
@@ -1928,6 +1931,13 @@ footer {
   padding-block: 9px 6px;
   text-align: left;
 }
+@media (max-width: 767px) {
+  .m-caption {
+    padding-block: 7px 14px;
+    text-align: left;
+  }
+}
+
 
 /* ウィンドウを閉じるボタン */
 .modal-cancel {
