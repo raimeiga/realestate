@@ -84,7 +84,6 @@ header {
   }
 }
 .header-logo-box {
-  background-color: red;
   width: 200px;
   height: inherit;
 }
@@ -1733,5 +1732,34 @@ footer {
   .copy-right p {
     font-size: 2rem;
     line-height: 1.25;
+  }
+}
+.back-btn {
+  width: 68px;
+  height: 68px;
+  display: none;
+  padding: 22px 20px;
+  background-color: #4D9600;
+  color: #000;
+  text-decoration: none;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+}
+
+@media (max-width: 767px) {
+  .sp-back-btn {
+    width: 68px;
+    height: 68px;
+    display: none;
+    padding: 22px 20px;
+    background-color: #4D9600;
+    color: #000;
+    text-decoration: none;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
   }
 }/*# sourceMappingURL=style.css.map */
