@@ -70,20 +70,71 @@ $(function() {
   
   // ------モーダル-------
 
-  $(function () {
-  $(".modal-open").click(
+//   $(function () {
+//   $(".modal-open").click(
+//     function() {
+//       $(".modal-area").show()
+//     }
+//   );
+//   $(".modal-close").click(
+//     function() {
+//       $(".modal-area").hide()
+//     }
+//   );
+//  });
+
+
+ $(function () {
+  $(".modal-open-01").click(
     function() {
-      $(".modal-area").show()
+      $(".modal-area-01").show()
     }
   );
   $(".modal-close").click(
     function() {
-      $(".modal-area").hide()
+      $(".modal-area-01").hide()
     }
   );
-});
+ });
 
+ $(function () {
+  $(".modal-open-02").click(
+    function() {
+      $(".modal-area-02").show()
+    }
+  );
+  $(".modal-close").click(
+    function() {
+      $(".modal-area-02").hide()
+    }
+  );
+ });
 
+ $(function () {
+  $(".modal-open-03").click(
+    function() {
+      $(".modal-area-03").show()
+    }
+  );
+  $(".modal-close").click(
+    function() {
+      $(".modal-area-03").hide()
+    }
+  );
+ });
+
+ $(function () {
+  $(".modal-open-04").click(
+    function() {
+      $(".modal-area-04").show()
+    }
+  );
+  $(".modal-close").click(
+    function() {
+      $(".modal-area-04").hide()
+    }
+  );
+ });
 
 // ------ハンバーガーメニュー-------
 // toggle=表示と非表示を切り替えるメソッド
@@ -93,8 +144,19 @@ $(function () {
   $("#hamburger-block").click( 
     function() {
       $(".ham-menu").toggle(300)
+     
     }
   );
+});
+
+
+// ハンバーガーメニュー内のメニュークリックすると、
+// 3秒後にメニューはfadeout。removeだと消えたまま、復活しない。
+$(function () {
+  $(".ham-menu-btn").click( 
+    function() {
+      $(".ham-menu").fadeOut(300);
+    });
 });
 
 
