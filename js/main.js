@@ -1,75 +1,12 @@
 
-// // ヘッダーの動き
-// $(function(){
-// $('.header-nav-btn').hover(
-//   function() {
-//       $(this).animate({
-//             opacity: 0.5,}),
-//       $(this).css(
-//        'border-bottom', 'solid 1px #fff'
-//       )
-//     },
-//     function() {
-//       $(this).animate({
-//             opacity: 1}),
-//       $(this).css(
-//         'border-bottom', 'none'
-//       )
-//     }
-//   );
-// });
-
-
-// メインビジュアルのスライド
-
-// $(function(){
-//   // スライダー
-//   $('.mv-image').slick({
-//     autoplay: true,  //自動再生
-//     dots: true,      //ドットインジケーター
-//     infinite: true,
-//     autoplaySpeed: 3000,  //自動再生の切り替え速度
-//     slidesToShow: 3,
-//     arrows: true,  //左右矢印
-//   });
-
-// });
-
-
 $(function() {
-
   $(".mv-slider").slick({
     autoplay: true,  //自動再生
     autoplaySpeed: 5000,
     arrows: false,
   });  
+
 });
-
-
-// $(document).ready(function() {
-//   $(window).scroll(function() {
-//     var scrollDistance = $(window).scrollTop();
-//     var aboutOffset = $('#about').offset().top;
-
-//     // #aboutまでスクロールしたら特定のCSSを適用する
-//     if (scrollDistance >= aboutOffset) {
-//       $('#about').css({
-//         'background-color': 'lightblue',
-//         'color': 'black',
-//         'font-size': '20px'
-//       });
-//     } else {
-//       // スクロール位置が#aboutより上の場合はCSSをリセットする（例えば、元のスタイルに戻す）
-//       $('#about').css({
-//         'background-color': '',
-//         'color': '',
-//         'font-size': ''
-//       });
-//     }
-//   });
-// });
-
-// $(document).ready(function() {
 
   $(window).scroll(function() {
     var scrollValue = $(window).scrollTop();
@@ -77,24 +14,17 @@ $(function() {
 
     // #aboutまでスクロールしたら特定のCSSを適用する
     if (scrollValue >= aboutOffset) {
-      $('.header-name, .header-nav-btn').css({
+      $('.header-name,.header-nav-btn').css({
         'color': '#000',        
-      });
-      // $('.back-btn').css({
-      //   'display': 'inline',        
-      // });
+      });   
 
     } else {
       // スクロール位置が#aboutより上の場合はCSSをリセットする
-      $('.header-name, .header-nav-btn').css({
+      $('.header-name,.header-nav-btn').css({
         'color': '#fff',       
-      });
-      // $('.back-btn').css({
-      //   'display': 'none',       
-      // });
+      });    
     }
   });
-
 
   $(window).scroll(function() {
     var scrollValue = $(window).scrollTop();
@@ -115,6 +45,28 @@ $(function() {
   });
 
 
+// 各sectionに↓のclassを持たせてフワっと出現させる
+// style.scssのjs-activeとコンビ
+  $(function () {
+    // ウィンドウがスクロールされるたびに実行される関数
+    $(window).scroll(function () {
+      // ".js-scroll"というクラスを持つすべての要素に対して処理を行う
+      $(".js-scroll").each(function () {
+        // 対象となる要素のページの上からの位置を取得
+        var targetOffset = $(this).offset().top;
+        // ウィンドウの高さを取得
+        var windowHeight = $(window).height();
+        // 現在のスクロール位置 + ウィンドウの高さを計算
+        var scrollPosition = $(window).scrollTop() + windowHeight;
+  
+        // 現在のスクロール位置が対象となる要素の位置を超えた場合
+        if (scrollPosition > targetOffset) {
+          // 要素に"js-active"というクラスを追加
+          $(this).addClass("js-active");
+        }
+      });
+    });
+  });
 
 
 

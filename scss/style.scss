@@ -31,7 +31,28 @@ a {
   cursor: pointer;
 }
 
+// 各sectionに↓のclassを持たせてフワっと出現させる
+// main.jsとコンビ
+.js-scroll.anima-fade-in {
+  opacity: 0;
+  transform: translateY(5rem);
+}
+.js-scroll.anima-fade-in.js-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 4s ease, transform 2s ease;
+}
 
+
+// .js-scroll.-fadein {
+//   opacity: 0;
+//   transform: translateY(5rem);
+// }
+// .js-scroll.-fadein.js-active {
+//   opacity: 1;
+//   transform: translateY(0);
+//   transition: opacity 0.4s ease, transform 0.4s ease;
+// }
 
 //------------common--------------
 // PC、SPの非表示 とりあえず記述し、あとでhtmlで使う感じか？*/
@@ -1833,21 +1854,4 @@ footer {
     right: 60px;
   }
 
-  // ↓ sp画面では、mvの高さ600pxに合わせて表示
-  // ↓ main.jsとコードとコンビ
-  @media (max-width: 767px) {
-  .sp-back-btn {
-   width: 68px;
-   height: 68px;
-   display: none;
-   padding: 22px 20px;
-   // padding: 40px 10px;
-   background-color: #4D9600;
-   color: #000;
-   text-decoration: none;
-   border-radius: 50%;  
-   position: fixed;
-   bottom: 60px;
-   right: 60px;
- }
-}
+ 

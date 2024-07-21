@@ -25,6 +25,22 @@ a {
   cursor: pointer;
 }
 
+.js-scroll.anima-fade-in {
+  opacity: 0;
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
+}
+
+.js-scroll.anima-fade-in.js-active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: opacity 4s ease, -webkit-transform 2s ease;
+  transition: opacity 4s ease, -webkit-transform 2s ease;
+  transition: opacity 4s ease, transform 2s ease;
+  transition: opacity 4s ease, transform 2s ease, -webkit-transform 2s ease;
+}
+
 @media (max-width: 767px) {
   .pc {
     display: none !important;
@@ -1747,20 +1763,4 @@ footer {
   position: fixed;
   bottom: 60px;
   right: 60px;
-}
-
-@media (max-width: 767px) {
-  .sp-back-btn {
-    width: 68px;
-    height: 68px;
-    display: none;
-    padding: 22px 20px;
-    background-color: #4D9600;
-    color: #000;
-    text-decoration: none;
-    border-radius: 50%;
-    position: fixed;
-    bottom: 60px;
-    right: 60px;
-  }
 }/*# sourceMappingURL=style.css.map */
