@@ -108,17 +108,6 @@ header {
   }
 }
 
-@mixin sp {
-  @media (max-width: 767px){
-    @content;
-  }
-}
-
-@include sp {
-  
-}
-
-
 .header-logo-box {
   // background-color: red;
   // width: calc(200 / 1080 * 100vw);
