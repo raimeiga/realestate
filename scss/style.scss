@@ -101,17 +101,23 @@ header {
   align-items: center; 
 }
 @media (max-width: 767px) {
-  .header-inner {    
-    width: 100%; 
-    height: inherit;
-    padding-inline: 20px;
-    margin-inline: auto; 
-    display: flex;    
-    justify-content: space-between;
-    align-items: center;
+  .header-inner {            
+    padding-inline: 20px;    
+    display: flex;        
     position: relative;
   }
 }
+
+@mixin sp {
+  @media (max-width: 767px){
+    @content;
+  }
+}
+
+@include sp {
+  
+}
+
 
 .header-logo-box {
   // background-color: red;
@@ -122,8 +128,7 @@ header {
 }
 @media (max-width: 767px) {
   .header-logo-box {
-    // width: 20rem;
-    height: inherit;
+    // width: 20rem;    
     padding-top: 0px;
   }
 }
@@ -138,17 +143,13 @@ header {
   padding-top: 28px;
 }
 @media (max-width: 930px) {
-  .header-name {      
-    height: inherit;
-    color:#fff;
+  .header-name {          
     font-size: 1.7rem;    
-    line-height: calc(33 / 20);
-    padding-top: 28px;
+    line-height: calc(33 / 20);    
   }
 }
 @media (max-width: 767px) {
-  .header-name {      
-    height: inherit;
+  .header-name {          
     font-size: 2rem;    
     padding-top: 8px;
   }
@@ -168,6 +169,7 @@ header {
   width: 100%;
   height: inherit;  
 }
+
 .header-nav-list {  
   // background-color: aqua;
   height: inherit; 
@@ -177,11 +179,8 @@ header {
   column-gap: 4.9%;  
 }
 @media (max-width: 930px) {
-  .header-nav-list {       
-    height: inherit;  
-    padding-top: 2%; 
-    display: flex;
-    align-items: center;  
+  .header-nav-list {          
+    padding-top: 2%;     
     column-gap: 5%;
   }
 }
@@ -193,25 +192,15 @@ header {
 .header-nav-btn {  
   // background-color: yellow;  
   font-size: 1.8rem;
-  line-height: calc(33 / 18);  
-  // display: flex;
-  // align-items: center;              
-  // padding-top: 10px;   
-  // padding-top: 0%;           
+  line-height: calc(33 / 18);       
   color:#fff; 
   transition: all 0.4s ease-out; 
 }
 @media (max-width: 930px) {
 .header-nav-btn {  
-  font-size: 1.5rem;                        
-  display: flex;
-  align-items: center;              
-  padding-top: 0%;              
-  color:#fff; 
-  transition: all 0.4s linear; 
+  font-size: 1.5rem;  
+ }
 }
-}
-
 
 /* ヘッダーナビのホバー時に下線が左から右へ走るしくみ */
 .header-nav-btn {
@@ -300,16 +289,13 @@ header {
   transition: 0.6s;
 }
 
-
-
 // -----mv-----
-
 .mv {
   position: relative;
 }
 
 .mv-image {   
-  background-color: rgba(0, 0, 0, 0.15)
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .mv-slider{ 
@@ -740,7 +726,7 @@ text-orientation: upright;
      row-gap: 14px;
      margin-top: 0;     
      padding-block: 20px 12px; 
-    padding-inline: 20px;
+     padding-inline: 20px;
     }
 }
 
