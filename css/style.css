@@ -104,9 +104,9 @@ header {
 .header-name-sp-scroll {
   height: inherit;
   color: #fff;
+  padding-top: 28px;
   font-size: 2rem;
   line-height: 1.65;
-  padding-top: 28px;
 }
 
 @media (max-width: 930px) {
@@ -186,7 +186,7 @@ header {
   }
 }
 /* ヘッダーナビのホバー時に下線が左から右へ走るしくみ */
-.header-nav-btn {
+.under-line {
   text-decoration: none; /* デフォルトの下線を非表示にする */
   color: #fff; /* 文字色 */
   background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
@@ -221,7 +221,7 @@ header {
   left: 20px;
   width: 32px;
   height: 4px;
-  background: #4D9600;
+  background: rgb(77, 150, 0);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   border-radius: 25px;
@@ -251,7 +251,7 @@ header {
   top: 51px;
   right: 0;
   bottom: 0;
-  background-color: #4D9600;
+  background-color: rgb(77, 150, 0);
 }
 
 .ham-menu ul {
@@ -261,7 +261,7 @@ header {
 
 .ham-menu ul li {
   height: 58px;
-  background-color: #4D9600;
+  background-color: rgb(77, 150, 0);
   padding-left: 20px;
   padding-block: 12px 13px;
   color: #fff;
@@ -552,7 +552,7 @@ header {
 .title-english-box h2 {
   font-size: 3rem;
   line-height: 1.1;
-  color: #4D9600;
+  color: rgb(77, 150, 0);
   letter-spacing: 0.3em;
   text-indent: 0.3em;
 }
@@ -672,7 +672,7 @@ header {
 
 .green-box {
   width: 54.3%;
-  background-color: #4D9600;
+  background-color: rgb(77, 150, 0);
   color: #fff;
   display: grid;
   row-gap: 17px;
@@ -867,7 +867,7 @@ header {
 }
 .green-area {
   padding-inline: 4.65%;
-  background-color: #4D9600;
+  background-color: rgb(77, 150, 0);
   padding-block: 12px 5px;
 }
 
@@ -1030,7 +1030,7 @@ header {
   }
 }
 .com-green-box {
-  background-color: #4D9600;
+  background-color: rgb(77, 150, 0);
   color: #fff;
   padding: 10% 1% 7.8% 44%;
 }
@@ -1369,7 +1369,7 @@ iframe {
   height: 0;
   border-style: solid;
   border-width: 12.5px 9.5px 0px 9.5px;
-  border-color: #4D9600 transparent transparent transparent;
+  border-color: rgb(77, 150, 0) transparent transparent transparent;
   position: absolute;
   top: 50%;
   right: 20px;
@@ -1587,7 +1587,7 @@ iframe {
   }
 }
 .form-submit-area {
-  background-color: #4D9600;
+  background-color: rgb(77, 150, 0);
   width: 300px;
   margin: 80px auto 0;
   display: -webkit-box;
@@ -1607,7 +1607,7 @@ iframe {
 
 @media (max-width: 767px) {
   .form-submit-area {
-    background-color: #4D9600;
+    background-color: rgb(77, 150, 0);
     width: 315px;
     margin: 50px auto 0;
     display: -webkit-box;
@@ -1621,8 +1621,8 @@ iframe {
 }
 .form-submit-area:hover {
   background-color: #fff;
-  color: #4D9600;
-  border: solid 1px #4D9600;
+  color: rgb(77, 150, 0);
+  border: solid 1px rgb(77, 150, 0);
   -webkit-transition: 2s;
   transition: 2s;
 }
@@ -1774,7 +1774,7 @@ footer {
 
 .copy-right {
   width: 100%;
-  background-color: #4D9600;
+  background-color: rgb(77, 150, 0);
   padding-block: 30px;
   text-align: center;
 }
@@ -1782,7 +1782,7 @@ footer {
 @media (max-width: 767px) {
   .copy-right {
     width: 100%;
-    background-color: #4D9600;
+    background-color: rgb(77, 150, 0);
     padding-block: 21px;
     text-align: center;
   }
@@ -1805,7 +1805,7 @@ footer {
   height: 68px;
   display: none;
   padding: 22px 20px;
-  background-color: #4D9600;
+  background-color: rgb(77, 150, 0);
   color: #000;
   text-decoration: none;
   border-radius: 50%;

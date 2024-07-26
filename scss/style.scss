@@ -44,16 +44,6 @@ a {
 }
 
 
-// .js-scroll.-fadein {
-//   opacity: 0;
-//   transform: translateY(5rem);
-// }
-// .js-scroll.-fadein.js-active {
-//   opacity: 1;
-//   transform: translateY(0);
-//   transition: opacity 0.4s ease, transform 0.4s ease;
-// }
-
 //------------common--------------
 // PC、SPの非表示 とりあえず記述し、あとでhtmlで使う感じか？*/
         
@@ -77,6 +67,22 @@ a {
 
 // -------header-------
 
+// sassで変数やmixinを定義
+$main-color: rgba(77, 150, 0, 1);
+$base-color: rgba(77, 150, 0, 0.102);
+
+@mixin text-style {
+  @include text-style;  
+}
+
+@mixin c-width($value) {
+  @media (max-width: $value) {
+    @content;
+  }
+}
+
+
+
 header {  
  width: 100%;
  height: 8rem;  
@@ -85,11 +91,12 @@ header {
  top: 0;
  left: 0;
 }
-@media (max-width: 767px) {
-  header { 
-    height: 5rem;  
- }
+@include c-width(767px) {
+   header { 
+      height: 5rem;  
+   }
 }
+
 
 .header-inner {   
   width: 100%; 
@@ -100,26 +107,25 @@ header {
   justify-content: space-between;
   align-items: center; 
 }
-@media (max-width: 767px) {
-  .header-inner {            
-    padding-inline: 20px;    
-    display: flex;        
-    position: relative;
-  }
+@include c-width(767px){
+ .header-inner {            
+  padding-inline: 20px;    
+  display: flex;        
+  position: relative;
+ }
 }
 
 .header-logo-box {
   // background-color: red;
   // width: calc(200 / 1080 * 100vw);
   width: 200px;
-  height: inherit;  
-  
+  height: inherit;    
 }
-@media (max-width: 767px) {
-  .header-logo-box {
-    // width: 20rem;    
-    padding-top: 0px;
-  }
+@include c-width(767px){
+ .header-logo-box {
+ // width: 20rem;    
+  padding-top: 0px;
+ }
 }
 
 .header-name,
@@ -127,21 +133,21 @@ header {
   //  font-size: 2rem;
   height: inherit;
   color:#fff;
-  font-size: 2rem;
-  line-height: calc(33 / 20);
   padding-top: 28px;
+   @include text-style; 
 }
-@media (max-width: 930px) {
-  .header-name {          
-    font-size: 1.7rem;    
-    line-height: calc(33 / 20);    
+
+@include c-width(930px){
+ .header-name {          
+  font-size: 1.7rem;    
+  line-height: calc(33 / 20);    
   }
 }
-@media (max-width: 767px) {
-  .header-name {          
-    font-size: 2rem;    
-    padding-top: 8px;
-  }
+@include c-width(767px){
+ .header-name {          
+  font-size: 2rem;    
+  padding-top: 8px;
+ }
 }
 
 .header-nav-wrap {
@@ -154,6 +160,7 @@ header {
   justify-content: center;   
 }
 
+
 .header-nav {
   width: 100%;
   height: inherit;  
@@ -165,14 +172,15 @@ header {
   padding-top: 10px; 
   display: flex;
   align-items: center;  
-  column-gap: 4.9%;  
+  column-gap: 4.9%;
 }
-@media (max-width: 930px) {
-  .header-nav-list {          
-    padding-top: 2%;     
-    column-gap: 5%;
+@include c-width(930px){
+ .header-nav-list {          
+  padding-top: 2%;     
+  column-gap: 5%;
   }
 }
+
 .header-nav-list-li {  
   display: flex;
   align-items: center;  
@@ -183,16 +191,17 @@ header {
   font-size: 1.8rem;
   line-height: calc(33 / 18);       
   color:#fff; 
-  transition: all 0.4s ease-out; 
+  transition: all 0.4s ease-out;
 }
-@media (max-width: 930px) {
-.header-nav-btn {  
+ @include c-width(930px){
+ .header-nav-btn {  
   font-size: 1.5rem;  
- }
+  }
 }
 
+
 /* ヘッダーナビのホバー時に下線が左から右へ走るしくみ */
-.header-nav-btn {
+.under-line {
   text-decoration: none; /* デフォルトの下線を非表示にする */  
   color: #fff; /* 文字色 */
   background-image: linear-gradient(90deg, #fff, #fff); /* 線の色 */
@@ -225,7 +234,7 @@ header {
   left: 20px;
   width: 32px;
   height: 4px;
-  background: #4D9600;
+  background: $main-color;
   -webkit-transition: .3s;
   transition: .3s;
   border-radius: 25px;
@@ -253,7 +262,7 @@ header {
   right: 0;
   bottom: 0;
   // border: 2px solid #000;
-  background-color: #4D9600;  
+  background-color: $main-color;  
 }
 
 .ham-menu ul {
@@ -263,7 +272,7 @@ header {
 
 .ham-menu ul li {
   height: 58px;
-  background-color: #4D9600;
+  background-color: $main-color;
   padding-left: 20px;
   padding-block: 12px 13px;  
   color: #fff;
@@ -544,14 +553,13 @@ text-orientation: upright;
 
 
 // -----service-----
-
 #service {
-  background: rgba(77, 150, 0, 0.102);  
+  background: $base-color;  
   padding-block: 80px;
 }
 @media (max-width: 767px) {
   #service {
-    background: rgba(77, 150, 0, 0.102);  
+    background: $base-color;  
     padding-block: 50px;
   }
 }
@@ -593,14 +601,15 @@ text-orientation: upright;
 .title-english-box h2 {
   font-size: 3rem;
   line-height: calc(33 / 30);   
-  color: #4D9600;
+  color: $main-color;
   letter-spacing: 0.3em;
   text-indent: 0.3em; 
 }
 
 .title-kana-box h2{
-  font-size: 2rem;
-  line-height: calc(33 / 20);
+  @include text-style;
+  // font-size: 2rem;
+  // line-height: calc(33 / 20);
   letter-spacing: 0.3em;
   text-indent: 0.3em; 
 }
@@ -702,7 +711,7 @@ text-orientation: upright;
 //  width: 50rem;
 //  height: 25rem;
  width: 54.3%;  
- background-color: #4D9600;
+ background-color: $main-color;
  color: #fff; 
  display: grid;
  row-gap: 17px;
@@ -874,12 +883,12 @@ text-orientation: upright;
 // -----news-----
 
 #news {
-  background: rgba(77, 150, 0, 0.102); 
+  background: $base-color; 
   padding-block: 80px 80px;
 }
 @media (max-width: 767px) {
   #news {
-    background: rgba(77, 150, 0, 0.102);  
+    background: $base-color;  
     padding-block: 50px;
   }
 }
@@ -908,14 +917,13 @@ text-orientation: upright;
 
 .green-area {
   padding-inline: 4.65%;  
-  background-color: #4D9600;
+  background-color: $main-color;
   padding-block: 12px 5px;
 }
 .green-area p {
-  color: #fff;
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: calc(33 / 20);
+  color: #fff;  
+  font-weight: 600; 
+  @include text-style;  
 }
 
 .article-wrap {
@@ -1080,7 +1088,7 @@ text-orientation: upright;
 }
 
 .com-green-box {
-  background-color: #4D9600;
+  background-color: $main-color;
   color: #fff;  
   //padding: 41px 5px 50px 220px;
   //padding: 8.2% 1% 10% 44%;
@@ -1195,7 +1203,7 @@ iframe {
 }
 @media (max-width: 767px) {
   #contact {
-    background: rgba(77, 150, 0, 0.102);  
+    background: $base-color;  
     padding-block: 50px;
   }
 }
@@ -1227,8 +1235,7 @@ iframe {
 }
 
 .attention p {
-  font-size: 2rem;
-  line-height: calc(33 / 20);
+  @include text-style;  
 }
 
 
@@ -1279,18 +1286,13 @@ iframe {
   padding-top: 1px;
   display: flex;
   align-items: center;
-  font-size: 2rem;
-  line-height: calc(33 / 20);  
+  @include text-style;  
 }
 @media (max-width: 767px) {
   .item {
     width: 53.9%;  
     height: auto;
-    // padding-top: 1px;
-    display: flex;
-    align-items: center;
-    font-size: 2rem;
-    line-height: calc(33 / 20);  
+    // padding-top: 1px;    
   }
 }
 
@@ -1410,7 +1412,7 @@ iframe {
     border-style: solid;
     // border-width: 5px 5px 0 5px;    
     border-width: 12.5px 9.5px 0px 9.5px;
-    border-color: #4D9600 transparent transparent transparent;
+    border-color: $main-color transparent transparent transparent;
     position: absolute;
     top: 50%;
     right: 20px;
@@ -1479,8 +1481,7 @@ iframe {
 }
 
 .find-out-method p {  
-  font-size: 2rem;
-  line-height: calc(33 / 20);
+  @include text-style;  
 }
 @media (max-width: 767px) {
   .find-out-method p {  
@@ -1582,14 +1583,12 @@ iframe {
 
 
 .privacy-policy-title {
-  font-size: 2rem;
-  line-height: calc(33 / 20);
+  @include text-style;  
   margin-block: 32px 10px;
 }
 @media (max-width: 767px) {
   .privacy-policy-title {
-    font-size: 2rem;
-    line-height: calc(33 / 20);
+    @include text-style;  
     margin-block: 25px 0px;
   }
 }
@@ -1649,21 +1648,20 @@ iframe {
 }
 
 .form-submit-area {
-  background-color: #4D9600;
+  background-color: $main-color;
   width: 300px;
   margin: 80px auto 0;
   display: flex;
   justify-content: center;
   padding: 8px 0;
   color: #fff;
- font-size: 2rem;
+  @include text-style;  
  font-weight: 600;
- line-height: calc(33 / 20); 
  transition: 2s;
 }
 @media (max-width: 767px) {
   .form-submit-area {
-    background-color: #4D9600;
+    background-color: $main-color;
     width: 315px;
     margin: 50px auto 0;
     display: flex;
@@ -1674,8 +1672,8 @@ iframe {
 
 .form-submit-area:hover {
   background-color: #fff;
-  color: #4D9600;
-  border: solid 1px #4D9600;
+  color: $main-color;
+  border: solid 1px $main-color;
   transition: 2s;
 }
 
@@ -1707,8 +1705,7 @@ footer {
 }
 
 .footer-company-name p {
-  font-size: 2rem;
-  line-height: calc(33 / 20);
+  @include text-style;  
 }
 
 .footer-nav-wrap {
@@ -1805,14 +1802,14 @@ footer {
 
 .copy-right {
   width: 100%;
-  background-color: #4D9600;
+  background-color: $main-color;
   padding-block: 30px;  
   text-align: center;
 }
 @media (max-width: 767px) {
   .copy-right {
     width: 100%;
-    background-color: #4D9600;
+    background-color: $main-color;
     padding-block: 21px;
     text-align: center;
   }
@@ -1820,9 +1817,8 @@ footer {
 
 .copy-right p {
   color: #fff;
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: calc(33 / 20);
+  @include text-style;  
+  font-weight: 300; 
 }
 @media (max-width: 767px) {
   .copy-right p {
@@ -1838,7 +1834,7 @@ footer {
     display: none;
     padding: 22px 20px;
     // padding: 40px 10px;
-    background-color: #4D9600;
+    background-color: $main-color;
     color: #000;
     text-decoration: none;
     border-radius: 50%;  
