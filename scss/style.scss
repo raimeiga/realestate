@@ -31,6 +31,20 @@ a {
   cursor: pointer;
 }
 
+// sassで変数やmixinを定義
+$main-color: rgba(77, 150, 0, 1);
+$base-color: rgba(77, 150, 0, 0.102);
+
+@mixin text-style {
+  @include text-style;  
+}
+
+@mixin c-width($value) {
+  @media (max-width: $value) {
+    @content;
+  }
+}
+
 // 各sectionに↓のclassを持たせてフワっと出現させる
 // main.jsとコンビ
 .js-scroll.anima-fade-in {
@@ -67,19 +81,7 @@ a {
 
 // -------header-------
 
-// sassで変数やmixinを定義
-$main-color: rgba(77, 150, 0, 1);
-$base-color: rgba(77, 150, 0, 0.102);
 
-@mixin text-style {
-  @include text-style;  
-}
-
-@mixin c-width($value) {
-  @media (max-width: $value) {
-    @content;
-  }
-}
 
 
 
