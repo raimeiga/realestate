@@ -351,6 +351,38 @@ header {
 }
 
 
+.mv-catch h2  {
+  color:#fff;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: calc(70 / 40);
+  letter-spacing: 0.3em;
+  text-indent: 0.3em;  
+  // ↓ シャドウの数値をfigmaからコピー
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+}
+@include c-width(767px) {
+  .mv-catch h2 {
+  color:#fff;
+  font-size: 3rem;
+  line-height: calc(60 / 30);
+  letter-spacing: 0.3em;
+  text-indent: 0.3em; 
+}
+}
+
+.pc-pad {
+  padding-left: 12px;
+}
+
+.sp-pad {
+  padding-left: 0px;
+}
+@include c-width(767px) {
+  .sp-pad {
+    padding-left: 12px;
+  }
+}
 
 
 // .mv-catch {
@@ -400,39 +432,6 @@ header {
 //   text-indent: 0.3em; 
 // }
 // }
-
-.mv-catch h2  {
-  color:#fff;
-  font-size: 4rem;
-  font-weight: 600;
-  line-height: calc(70 / 40);
-  letter-spacing: 0.3em;
-  text-indent: 0.3em;  
-  // ↓ シャドウの数値をfigmaからコピー
-  text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
-}
-@include c-width(767px) {
-  .mv-catch h2 {
-  color:#fff;
-  font-size: 3rem;
-  line-height: calc(60 / 30);
-  letter-spacing: 0.3em;
-  text-indent: 0.3em; 
-}
-}
-
-.pc-pad {
-  padding-left: 12px;
-}
-
-.sp-pad {
-  padding-left: 0px;
-}
-@include c-width(767px) {
-  .sp-pad {
-    padding-left: 12px;
-  }
-}
 
 
 // -----about-----
