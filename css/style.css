@@ -328,7 +328,6 @@ header {
   }
 }
 .mv-catch {
-  background-color: grey;
   width: 56.7rem;
   margin-inline: auto;
   text-align: center;
@@ -360,9 +359,17 @@ header {
     text-indent: 0.3em;
   }
 }
-@media (min-width: 768px) {
-  .if-pc-none {
-    display: none;
+.pc-pad {
+  padding-left: 12px;
+}
+
+.sp-pad {
+  padding-left: 0px;
+}
+
+@media (max-width: 767px) {
+  .sp-pad {
+    padding-left: 12px;
   }
 }
 .about-inner {
@@ -370,9 +377,6 @@ header {
 }
 
 .about-v-catch {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 45.5%;
   position: absolute;
   top: 50%;
@@ -380,38 +384,23 @@ header {
   -webkit-transform: translateY(-48.5%);
           transform: translateY(-48.5%);
   margin-left: 14%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-@media (max-width: 930px) {
-  .about-v-catch {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 45.5%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-48.5%);
-            transform: translateY(-48.5%);
-    margin-left: 14%;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-}
 @media (max-width: 767px) {
   .about-v-catch {
     width: 100%;
     position: absolute;
     top: 50%;
     left: 0;
-    -webkit-transform: translateY(-49%);
-            transform: translateY(-49%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     margin-left: 0%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -515,7 +504,7 @@ header {
 @media (max-width: 767px) {
   #service {
     background: rgba(77, 150, 0, 0.102);
-    padding-block: 50px;
+    padding-block: 52px;
   }
 }
 .inner {
@@ -546,7 +535,7 @@ header {
     display: grid;
     row-gap: 6px;
     text-align: center;
-    padding-bottom: 38px;
+    padding-bottom: 37px;
   }
 }
 .title-english-box h2 {
@@ -623,7 +612,7 @@ header {
 }
 .service-img-area {
   display: grid;
-  row-gap: 19px;
+  row-gap: 21px;
   position: absolute;
   top: 0;
   left: 0;
@@ -866,9 +855,9 @@ header {
   }
 }
 .green-area {
-  padding-inline: 4.65%;
+  padding-inline: 20px;
   background-color: rgb(77, 150, 0);
-  padding-block: 12px 5px;
+  padding-block: 9px 8px;
 }
 
 .green-area p {
@@ -1088,13 +1077,14 @@ iframe {
   }
 }
 .com-gb-name p {
+  padding-top: 2px;
   font-size: 2rem;
   font-weight: 600;
   line-height: 1.65;
 }
 
 .com-gb-address {
-  margin-block: 2.5% 4.7%;
+  margin-block: 2.8% 4.7%;
 }
 
 @media (min-width: 387px) and (max-width: 767px) {
@@ -1121,7 +1111,7 @@ iframe {
 }
 
 .com-gb-mail {
-  margin-top: 6.9%;
+  margin-top: 5.3%;
 }
 
 .com-gb-mail p {
@@ -1132,7 +1122,7 @@ iframe {
 
 #contact {
   background: rgba(77, 150, 0, 0.149);
-  padding-block: 80px;
+  padding-block: 82px;
 }
 
 @media (max-width: 767px) {
@@ -1175,12 +1165,12 @@ iframe {
   }
 }
 .con-sec-form-block {
-  margin-top: 67px;
+  margin-top: 69px;
 }
 
 @media (max-width: 767px) {
   .con-sec-form-block {
-    margin-top: 36px;
+    margin-top: 39px;
   }
 }
 .form-flex {
@@ -1200,7 +1190,6 @@ iframe {
 .item {
   width: 21.25%;
   height: 50px;
-  padding-top: 1px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1259,7 +1248,7 @@ iframe {
 }
 
 .form-control {
-  background: red;
+  background: #fff;
   width: 100%;
   height: 50px;
   padding-inline: 20px;
@@ -1283,7 +1272,7 @@ iframe {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-block: 30px 28px;
+    margin-block: 30px 31px;
   }
 }
 .form-category {
@@ -1374,19 +1363,11 @@ iframe {
   background-color: #fff;
   width: 100%;
   height: 50px;
-  padding-top: 5px;
   padding-inline: 20px 0px;
   display: block;
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
-}
-
-.cate-option::-ms-expand {
-  display: none; /* デフォルトの矢印を非表示(IE用) */
-}
-
-.cate-option {
   font-size: 1.8rem;
   line-height: 1.3888888889;
 }
@@ -1397,12 +1378,16 @@ iframe {
     line-height: 1.5625;
   }
 }
+.cate-option::-ms-expand {
+  display: none; /* デフォルトの矢印を非表示(IE用) */
+}
+
 .form-text-content {
   display: block;
 }
 
 .form-textarea {
-  background: red;
+  background: #fff;
   width: 100%;
   height: 200px;
   padding-inline: 20px;
@@ -1434,7 +1419,6 @@ iframe {
   }
 }
 .form-checkbox {
-  background-color: yellow;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1475,6 +1459,15 @@ iframe {
     line-height: 1.5625;
   }
 }
+.pad-left-little {
+  padding-left: 5.5%;
+}
+
+@media (max-width: 767px) {
+  .pad-left-little {
+    padding-left: 9.5%;
+  }
+}
 /* inputは非表示にする */
 .media-check input {
   display: none;
@@ -1482,10 +1475,10 @@ iframe {
 
 /* □ */
 .checkmark {
-  background-color: red;
+  background-color: #fff;
   position: absolute;
   top: 6.3%; /* 上からの位置 */
-  left: 0px;
+  left: 2px;
   height: 20px; /* 大きさ */
   width: 20px; /* 大きさ */
   border-radius: 0;
@@ -1497,8 +1490,8 @@ iframe {
 .checkmark:after {
   content: "";
   position: absolute;
-  left: 6px; /* チェックの位置 */
-  top: 3px; /* チェックの位置 */
+  left: 7px; /* チェックの位置 */
+  top: 4px; /* チェックの位置 */
   width: 6px; /* チェックの大きさ */
   height: 10px; /* チェックの大きさ */
   border: solid #000;
@@ -1625,6 +1618,7 @@ footer {
 
 .footer-company-name {
   padding-block: 80px 28px;
+  padding-block: 78px 26px;
   text-align: center;
   margin-inline: auto;
   width: 79%;
@@ -1700,7 +1694,7 @@ footer {
   }
 }
 .footer-nav-wrap nav ul li {
-  padding-block: 30px 26px;
+  padding-block: 28px 30px;
 }
 
 @media (max-width: 767px) {
@@ -1729,7 +1723,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 80px;
+  margin-bottom: 78px;
 }
 
 @media (max-width: 767px) {
@@ -1784,12 +1778,19 @@ footer {
   font-size: 2rem;
   line-height: 1.65;
   font-weight: 300;
+  letter-spacing: 0.01em;
 }
 
 @media (max-width: 767px) {
   .copy-right p {
     font-size: 2rem;
     line-height: 1.25;
+    letter-spacing: 0.01em;
+  }
+}
+@media (max-width: 767px) {
+  .l-s-shrink {
+    padding-right: 19px;
   }
 }
 .back-btn {

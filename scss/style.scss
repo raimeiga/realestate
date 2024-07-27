@@ -323,7 +323,7 @@ header {
   left: 0;
   padding-top: calc(340 / 1080 * 100vw);
 }
-@media (max-width: 767px) {
+@include c-width(767px) {
   .mv-contents {
     width: 100%;
     height: 100%;
@@ -335,13 +335,13 @@ header {
 }
 
 .mv-catch {
-  background-color: grey;
+  // background-color: grey;
   width: 56.7rem; 
   // height: calc(140 / 1080 * 100vw);
   margin-inline: auto;
   text-align: center;
 }
-@media (max-width: 767px) {
+@include c-width(767px) {
   .mv-catch {
     width: 28.5rem;
     // height: calc(180 / 375 * 100vw);
@@ -349,6 +349,9 @@ header {
     text-align: center;
   }
 }
+
+
+
 
 // .mv-catch {
 //   width: calc(567 / 1080 * 100vw); 
@@ -408,7 +411,7 @@ header {
   // ↓ シャドウの数値をfigmaからコピー
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
 }
-@media (max-width: 767px) {
+@include c-width(767px) {
   .mv-catch h2 {
   color:#fff;
   font-size: 3rem;
@@ -417,20 +420,28 @@ header {
   text-indent: 0.3em; 
 }
 }
-@media (min-width: 768px) {
- .if-pc-none {
-  display: none;
- }
+
+.pc-pad {
+  padding-left: 12px;
+}
+
+.sp-pad {
+  padding-left: 0px;
+}
+@include c-width(767px) {
+  .sp-pad {
+    padding-left: 12px;
+  }
 }
 
 
 // -----about-----
+
 .about-inner {
   position: relative;
 }
 
-.about-v-catch {  
-  display: flex;
+.about-v-catch {   
   width: 45.5%;  
   // ↓いったん50%にした上で、transformで調整すれば、同じ比率を保つ
   position: absolute;
@@ -438,27 +449,16 @@ header {
   left: 0;
   transform: translateY(-48.5%);
   margin-left: 14%;
-  flex-direction: row-reverse;
-}
-@media (max-width: 930px) {
- .about-v-catch {  
   display: flex;
-  width: 45.5%; 
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-48.5%);
-  margin-left: 14%;
   flex-direction: row-reverse;
- }
 }
-@media (max-width: 767px) {
+@include c-width(767px) {
   .about-v-catch {    
     width: 100%; 
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translateY(-49%);
+    transform: translateY(-50%);
     margin-left: 0%;    
     display: flex;
     flex-direction: column;
@@ -470,7 +470,7 @@ header {
 writing-mode: vertical-rl;
 text-orientation: upright;
 }
-@media (max-width: 767px) {
+@include c-width(767px) {
 .about-v-catch-01 {
   margin: 0 auto;
  }
@@ -481,14 +481,14 @@ text-orientation: upright;
   line-height: 1.18;
   letter-spacing: 0.17em;
 }
-@media (max-width: 930px) {
+@include c-width(930px) {
   .about-v-catch-01 p {
     font-size: 2.8rem;
     line-height: 1.18;
     letter-spacing: 0.17em;
   }
 }
-@media (max-width: 767px) {
+@include c-width(767px) {
   .about-v-catch-01 p {
     font-size: 2.5rem;
     line-height: 1.19;
@@ -501,12 +501,12 @@ text-orientation: upright;
  writing-mode: vertical-rl;
  text-orientation: upright; 
 }
-@media (max-width: 930px) {
+@include c-width(930px) {
 .about-v-catch-02 {
   margin-right: 8%; 
  }
 }
-@media (max-width: 767px) {
+@include c-width(767px) {
   .about-v-catch-02 {
     margin: 0 auto; 
    }
@@ -515,12 +515,12 @@ text-orientation: upright;
 .about-v-catch-02 div {
   padding-left: 8.3%;
  }
- @media (max-width: 930px) {
+ @include c-width(930px) {
   .about-v-catch-02 div {
     padding-left: 7.5%;
    }
  }
- @media (max-width: 767px) { 
+ @include c-width(767px) {
   .about-v-catch-02 div {
   padding-left: 2.6%;    
  }
@@ -531,14 +531,14 @@ text-orientation: upright;
   line-height: 1.37;
   letter-spacing: 0.41em;  
 }
-@media (max-width: 930px) {
+@include c-width(930px) {
   .about-v-catch-02 p {
     font-size: 1.7rem;
     line-height: 1.3;
     letter-spacing: 0.41em;  
   }
 }
-@media (max-width: 767px) {
+@include c-width(767px) {
   .about-v-catch-02 p {
     font-size: 1.6rem;
     line-height: 1.25;
@@ -555,7 +555,7 @@ text-orientation: upright;
 @media (max-width: 767px) {
   #service {
     background: $base-color;  
-    padding-block: 50px;
+    padding-block: 52px;
   }
 }
 
@@ -589,7 +589,7 @@ text-orientation: upright;
   display: grid;
   row-gap: 6px;
   text-align: center;  
-  padding-bottom: 38px;
+  padding-bottom: 37px;
  }
 }
 
@@ -650,7 +650,7 @@ text-orientation: upright;
 
 .service-img-area {
   display: grid;
-  row-gap: 19px;
+  row-gap: 21px;
   position: absolute;
   top:0;
   left: 0;
@@ -911,9 +911,9 @@ text-orientation: upright;
 }
 
 .green-area {
-  padding-inline: 4.65%;  
+  padding-inline: 20px;  
   background-color: $main-color;
-  padding-block: 12px 5px;
+  padding-block: 9px 8px;
 }
 .green-area p {
   color: #fff;  
@@ -1145,6 +1145,7 @@ iframe {
 }
 
 .com-gb-name p {
+  padding-top: 2px;
  font-size: 2rem;
  font-weight: 600;
  line-height: 1.65;
@@ -1152,7 +1153,7 @@ iframe {
 
 .com-gb-address {
   //margin-block: 7px 12px;
-  margin-block: 2.5% 4.7%;
+  margin-block: 2.8% 4.7%;
 }
 
 @media (min-width: 387px) and (max-width: 767px) {
@@ -1181,7 +1182,7 @@ iframe {
 
  .com-gb-mail {
   //margin-top: 19px;
-  margin-top: 6.9%;
+  margin-top: 5.3%;
  }
  .com-gb-mail p {
   font-size: 1.6rem;
@@ -1194,7 +1195,7 @@ iframe {
 
 #contact {
   background: rgba(77, 150, 0, 0.149);
-  padding-block: 80px;
+  padding-block: 82px;
 }
 @media (max-width: 767px) {
   #contact {
@@ -1257,11 +1258,11 @@ iframe {
 
 
 .con-sec-form-block {
-  margin-top: 67px;
+  margin-top: 69px;
 }
 @media (max-width: 767px) {
   .con-sec-form-block {
-    margin-top: 36px;
+    margin-top: 39px;
   }
 }
 
@@ -1278,7 +1279,7 @@ iframe {
 .item {
   width: 21.25%;  
   height: 50px;
-  padding-top: 1px;
+  // padding-top: 4px;
   display: flex;
   align-items: center;
   @include text-style;  
@@ -1304,7 +1305,7 @@ iframe {
   line-height: calc(25 / 16);
 }
 .form-control {
-  background: red;
+  background: #fff;
   width: 100%;
   height: 50px;  
   padding-inline: 20px;
@@ -1326,7 +1327,7 @@ iframe {
 @media (max-width: 767px) {
   .form-gender {
     display: flex;
-    margin-block: 30px 28px;
+    margin-block: 30px 31px;
   }
 }
 
@@ -1419,20 +1420,13 @@ iframe {
   background-color: #fff;
   width: 100%;
   height: 50px;  
-  padding-top: 5px;
+  // padding-top: 5px;
   padding-inline: 20px 0px;
   display: block;
   
   // デフォルトの矢印を削除
   -webkit-appearance: none;
   appearance: none; 
-}
-
-.cate-option::-ms-expand {
-  display: none; /* デフォルトの矢印を非表示(IE用) */
-}
-
-.cate-option {
   font-size: 1.8rem;
   line-height: calc(25 / 18);
 }
@@ -1442,6 +1436,11 @@ iframe {
     line-height: calc(25 / 16);
   }
 }
+
+.cate-option::-ms-expand {
+  display: none; /* デフォルトの矢印を非表示(IE用) */
+}
+
 
 
 // /* セレクトボックスの矢印デザイン変更 */
@@ -1460,7 +1459,7 @@ iframe {
 }
 
 .form-textarea {
-  background: red;
+  background: #fff;
   width: 100%;
   height: 200px;
   padding-inline: 20px;
@@ -1492,14 +1491,14 @@ iframe {
 }
 
 // -----チェックボタンの実装（ここから）-----
-.form-checkbox {  
-  background-color: yellow; 
+.form-checkbox {   
   display: flex;
   flex-wrap: wrap;
   // column-gap: 4.5%;  
 }
 
 .media-check { 
+  // background-color: yellow; 
   width: 25%;
   // background-color: yellow;
   // display: block;
@@ -1531,6 +1530,15 @@ iframe {
   }
 }
 
+.pad-left-little {
+  padding-left: 5.5%;
+}
+@include c-width(767px){
+  .pad-left-little {
+  padding-left: 9.5%;
+}
+}
+
 /* inputは非表示にする */
 .media-check input {
   display: none;
@@ -1538,12 +1546,11 @@ iframe {
 
 /* □ */
 .checkmark {
-  background-color: red;
+  background-color:#fff;
   position: absolute;
   // top: 3px;
   top: 6.3%; /* 上からの位置 */
-
-  left: 0px;
+  left: 2px;
   height: 20px; /* 大きさ */
   width: 20px; /* 大きさ */
   // border: solid 1px #000; /* 線 */
@@ -1554,8 +1561,8 @@ iframe {
 .checkmark:after {
   content: "";
   position: absolute;
-  left: 6px; /* チェックの位置 */
-  top: 3px; /* チェックの位置 */  
+  left: 7px; /* チェックの位置 */
+  top: 4px; /* チェックの位置 */  
   width: 6px; /* チェックの大きさ */
   height: 10px; /* チェックの大きさ */
   border: solid #000;
@@ -1683,6 +1690,7 @@ footer {
 .footer-company-name {
   // background-color: yellow;
   padding-block: 80px 28px;
+  padding-block: 78px 26px;
   text-align: center;
   margin-inline: auto;
   width: 79%;
@@ -1742,7 +1750,7 @@ footer {
 }
 
 .footer-nav-wrap nav ul li { 
- padding-block: 30px 26px;
+ padding-block: 28px 30px;
 }
 @media (max-width: 767px) {
   .footer-nav-wrap nav ul li { 
@@ -1767,7 +1775,7 @@ footer {
   display: flex;
   column-gap: 30px;  
   justify-content: center; 
-  margin-bottom: 80px;
+  margin-bottom: 78px;
 }
 @media (max-width: 767px) {
   .sns-icon-wrap {
@@ -1814,11 +1822,19 @@ footer {
   color: #fff;
   @include text-style;  
   font-weight: 300; 
+  letter-spacing: 0.01em;
 }
 @media (max-width: 767px) {
   .copy-right p {
     font-size: 2rem;
     line-height: calc(25 / 20);
+    letter-spacing: 0.01em;
+  }
+}
+
+@media (max-width: 767px) {
+  .l-s-shrink {
+    padding-right: 19px;
   }
 }
 
