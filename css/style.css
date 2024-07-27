@@ -873,8 +873,8 @@ header {
 
 .green-area p {
   color: #fff;
-  font-size: 2rem;
   font-weight: 600;
+  font-size: 2rem;
   line-height: 1.65;
 }
 
@@ -1215,14 +1215,6 @@ iframe {
   .item {
     width: 53.9%;
     height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 2rem;
-    line-height: 1.65;
   }
 }
 .space-or-btn {
@@ -1599,8 +1591,8 @@ iframe {
   padding: 8px 0;
   color: #fff;
   font-size: 2rem;
-  font-weight: 600;
   line-height: 1.65;
+  font-weight: 600;
   -webkit-transition: 2s;
   transition: 2s;
 }
@@ -1790,8 +1782,8 @@ footer {
 .copy-right p {
   color: #fff;
   font-size: 2rem;
-  font-weight: 300;
   line-height: 1.65;
+  font-weight: 300;
 }
 
 @media (max-width: 767px) {
