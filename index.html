@@ -61,27 +61,18 @@
           </nav>
         </div>
         <!-- タブレット用ナビ（ハンバーガーメニュー） -->
-        <button id="hamburger-block" class="hamburger sp">
+        <div id="hamburger-block" class="hamburger sp">
           <span class="hamburger-line"></span>
-        </button>
+        </div>
         <div class="ham-menu sp">
-          <nav>
-            <ul>  
-              <a href="index.html#about" class="ham-menu-btn"><li>ABOUT</li></a>
-              <a href="index.html#service" class="ham-menu-btn"><li>SERVICE</li></a>
-              <a href="index.html#works" class="ham-menu-btn"><li>WORKS</li></a>
-              <a href="index.html#news" class="ham-menu-btn"><li>NEWS</li></a>
-              <a href="index.html#company" class="ham-menu-btn"><li>COMPANY</li></a>
-              <a href="index.html#contact" class="ham-menu-btn"><li>CONTACT</li></a>
-           
-              <!-- ham-menu-btnとaリンクを同じ範囲にする場合、↑のように、liをaで囲むしかない？
-              ulとliに赤線が入っているのはエラーだと思う、、、 -->
-              <!-- <li><a href="index.html#about" class="ham-menu-btn">ABOUT</a></li>
+          <nav>                                  
+              <ul> 
+              <li><a href="index.html#about" class="ham-menu-btn">ABOUT</a></li>
               <li><a href="index.html#service" class="ham-menu-btn">SERVICE</a></li>
               <li><a href="index.html#works" class="ham-menu-btn">WORKS</a></li>
               <li><a href="index.html#news" class="ham-menu-btn">NEWS</a></li>
               <li><a href="index.html#company" class="ham-menu-btn">COMPANY</a></li>
-              <li><a href="index.html#contact" class="ham-menu-btn">CONTACT</a></li> -->
+              <li><a href="index.html#contact" class="ham-menu-btn">CONTACT</a></li>
             </ul>
           </nav>
         </div>
@@ -96,19 +87,19 @@
         <div>
           <picture>    
             <source media="(max-width: 767px)" srcset="./images/sp-fv-01.jpg">                                                              
-            <img src="./images/fv-01.jpg" alt="" >
+            <img src="./images/fv-01.jpg" alt="メインビジュアル画像01" >
           </picture>
         </div>
         <div>
           <picture>
             <source media="(max-width: 767px)" srcset="./images/sp-fv-02.jpg">                                                              
-            <img src="./images/fv-02.jpg" alt="" >
+            <img src="./images/fv-02.jpg" alt="メインビジュアル画像02" >
           </picture>
         </div>
         <div>
           <picture>
             <source media="(max-width: 767px)" srcset="./images/sp-fv-03.jpg">                                                              
-            <img src="./images/fv-03.jpg" alt="" >
+            <img src="./images/fv-03.jpg" alt="ファーストビュー画像03" >
           </picture>
         </div>
       </div>
@@ -125,16 +116,15 @@
           </h2>
       
         <!-- <h2>永遠も。<br class="if-pc-none"><span class="ib">瞬間も。</span><br>あなたと共に。</h2>  -->
-     </div>
-     </div>
+      </div>
+    </div>
       <!-- <div class="mv-catch">             
          <h2 class="if-sp-none">永遠も。瞬間も。</h2> 
          <h2 class="if-sp-none">あなたと共に。</h2>         
          <h2 class="if-pc-none">永遠も。</h2>  
          <h2 class="if-pc-none">瞬間も。</h2>
          <h2 class="if-pc-none">あなたと共に。</h2>
-      </div>     -->  
-    </div> 
+      </div>     -->      
   </div>
 
   <!-- about -->
@@ -143,7 +133,7 @@
     <div class="about-v-image">
       <picture>  
         <source media="(max-width: 767px)" srcset="./images/sp_about.jpg">
-        <img src="./images/about.jpg" alt="">         
+        <img src="./images/about.jpg" alt="ABOUTの画像">         
       </picture>
     </div>
     <div class="about-v-contents">
@@ -192,7 +182,7 @@
         <div class="service-img-area">  
           <picture class="service-img-wrap">
             <source media="(max-width: 767px)" srcset="/images/sp_service_01.jpg">
-            <img src="/images/service_01.jpg" alt="top image">
+            <img src="/images/service_01.jpg" alt="サービス画像01">
           </picture>
           <div class="image-caption img-cap-01">
              <p>静岡県U.I様自宅</p>
@@ -217,7 +207,7 @@
         <div class="service-img-area">  
           <picture class="service-img-wrap-even">
             <source media="(max-width: 767px)" srcset="/images/sp_service_02.jpg">
-            <img src="/images/service_02.jpg" alt="top image">
+            <img src="/images/service_02.jpg" alt="サービス画像02">
           </picture>
           <div class="image-caption img-cap-02">
              <p class="align-right">北海道富良野市ブックカフェ</p>
@@ -242,7 +232,7 @@
         <div class="service-img-area">  
           <picture class="service-img-wrap">
             <source media="(max-width: 767px)" srcset="/images/sp_service_03.jpg">
-            <img src="/images/service_03.jpg" alt="top image">
+            <img src="/images/service_03.jpg" alt="サービス画像03">
           </picture>
           <div class="image-caption img-cap-03">
              <p>広島県竹原市</p>
@@ -266,42 +256,13 @@
   </div>
   </section>
 
-<!-- モーダル実験 -->
-<!-- <button class="modal-open">OPEN</button> 
-<section class="modal-area"> 
-  <div class="modal-bg modal-close"></div>
-  <div class="modal-content">
-    <p>モーダルウィンドウの表示</p>
-    <div class="modal-cancel modal-close">×</div>
-  </div>
-</section> -->
-<!-- --------------------------------------------- -->
-
-<!-- <div class="modal-area modal-area">   
-  <div class="modal-bg modal-close">      
-    <div class="modal-content">    
-      <div class="m-image-wrap">  
-        <picture>    
-          <source media="(max-width: 767px)" srcset="./images/sp_works_01.jpg">                                                              
-          <img class="kimoto" src="./images/w_modal_01.jpg" alt="" >
-        </picture>
-      </div>
-      <div class="m-caption">
-        <p>【新築】長崎県T.O様自宅
-        </p> 
-      </div>
-      <div class="modal-cancel modal-close"></div>
-    </div>
-  </div>
-</div> -->
-
 <div class="modal-area modal-area-01">   
   <div class="modal-bg modal-close">      
     <div class="modal-content">    
       <div class="m-image-wrap">  
         <picture>    
           <source media="(max-width: 767px)" srcset="./images/sp_works_01.jpg">                                                              
-          <img class="kimoto" src="./images/w_modal_01.jpg" alt="" >
+          <img class="kimoto" src="./images/w_modal_01.jpg" alt="モーダル画像01" >
         </picture>
       </div>
       <div class="m-caption">
@@ -319,7 +280,7 @@
       <div class="m-image-wrap">  
         <picture>    
           <source media="(max-width: 767px)" srcset="./images/sp_works_02.jpg">                                                              
-          <img class="kimoto" src="./images/w_modal_02.jpg" alt="" >
+          <img class="kimoto" src="./images/w_modal_02.jpg" alt="モーダル画像02" >
         </picture>
       </div>
       <div class="m-caption">
@@ -337,7 +298,7 @@
       <div class="m-image-wrap">  
         <picture>    
           <source media="(max-width: 767px)" srcset="./images/sp_works_03.jpg">                                                              
-          <img class="kimoto" src="./images/w_modal_03.jpg" alt="" >
+          <img class="kimoto" src="./images/w_modal_03.jpg" alt="モーダル画像03" >
         </picture>
       </div>
       <div class="m-caption">
@@ -355,7 +316,7 @@
       <div class="m-image-wrap">  
         <picture>    
           <source media="(max-width: 767px)" srcset="./images/sp_works_04.jpg">                                                              
-          <img class="kimoto" src="./images/w_modal_04.jpg" alt="" >
+          <img class="kimoto" src="./images/w_modal_04.jpg" alt="モーダル画像04" >
         </picture>
       </div>
       <div class="m-caption">
@@ -384,7 +345,7 @@
           <div class="works-li-img-wrap">
             <picture class="modal-open-01">    
               <source media="(max-width: 767px)" srcset="./images/sp_works_01.jpg">                                                              
-              <img src="./images/works_01.jpg" alt="" >
+              <img src="./images/works_01.jpg" alt="施工事例の画像01" >
             </picture>
           </div>
           <div class="works-li-text-wrap modal-open-01">
@@ -397,7 +358,7 @@
           <div class="works-li-img-wrap">
             <picture class="modal-open-02">   
               <source media="(max-width: 767px)" srcset="./images/sp_works_02.jpg">                                                              
-              <img src="./images/works_02.jpg" alt="" >
+              <img src="./images/works_02.jpg" alt="施工事例の画像02" >
             </picture>
           </div>
           <div class="works-li-text-wrap modal-open-02">
@@ -410,12 +371,12 @@
           <div class="works-li-img-wrap">
             <picture class="modal-open-03">    
               <source media="(max-width: 767px)" srcset="./images/sp_works_03.jpg">                                                              
-              <img src="./images/works_03.jpg" alt="" >
+              <img src="./images/works_03.jpg" alt="施工事例の画像03" >
             </picture>
           </div>
           <div class="works-li-text-wrap modal-open-03">
             <p>【新築】<br>
-              東京都A.F様自宅件事務所
+              東京都A.F様自兼事務所
             </p>
           </div>
         </div>
@@ -423,7 +384,7 @@
           <div class="works-li-img-wrap">
             <picture class="modal-open-04">    
               <source media="(max-width: 767px)" srcset="./images/sp_works_04.jpg">                                                              
-              <img src="./images/works_04.jpg" alt="" >
+              <img src="./images/works_04.jpg" alt="施工事例の画像04" >
             </picture>
           </div>
           <div class="works-li-text-wrap modal-open-04">
@@ -456,7 +417,8 @@
             <article>
               <a href="" class="a-link">
                 <div class="date">
-                  <time>0000.00</time>
+                  <time datetime="2024-07">2024.07</time>
+                  
                 </div>
                 <div class="text">
                   <p>公式Instagram、YouTubeはじめました。</p>
@@ -466,7 +428,7 @@
             <article>
               <a href="" class="a-link">
                 <div class="date">
-                  <time>0000.00</time>
+                  <time datetime="2024-07">2024.07</time>
                 </div>
                 <div class="text">
                   <p>非住宅 木造建築フェアに出展します。</p>
@@ -476,7 +438,7 @@
             <article>
               <a href="" class="a-link">
                 <div class="date">
-                  <time>0000.00</time>
+                  <time datetime="2024-07">2024.07</time>
                 </div>
                 <div class="text">
                   <p>公式ホームページがリニューアルしました。</p>
@@ -489,7 +451,7 @@
                     <p>more</p>
                   </div>               
                   <div class="arrow-wrap">
-                    <img src="./images/arrow.svg" alt="" >
+                    <img src="./images/arrow.svg" alt="moreの矢印" >
                   </div>
                 </a>              
             </div>              
@@ -503,7 +465,7 @@
             <article>
               <a href="" class="a-link">
                 <div class="date">
-                  <time>0000.00</time>
+                  <time datetime="2024-07">2024.07</time>
                 </div>
                 <div class="text">
                   <p>あけましておめでとうございます。〜会長から…</p>
@@ -513,7 +475,7 @@
             <article>
               <a href="" class="a-link">
                 <div class="date">
-                  <time>0000.00</time>
+                  <time datetime="2024-07">2024.07</time>
                 </div>
                 <div class="text">
                   <p>【検証】土地と人に相性はあるのか？</p>
@@ -523,7 +485,7 @@
             <article>
               <a href="" class="a-link">
                 <div class="date">
-                  <time>0000.00</time>
+                  <time datetime="2024-07">2024.07</time>
                 </div>
                 <div class="text">
                   <p>弊社創業初の入社式が行われました。</p>
@@ -536,7 +498,7 @@
                   <p>more</p>
                 </div>               
                 <div class="arrow-wrap">
-                  <img src="./images/arrow.svg" alt="" >
+                  <img src="./images/arrow.svg" alt="moreの矢印" >
                 </div>
               </a>              
             </div>  
@@ -610,7 +572,7 @@
         <p>３営業日以内にメールにてご連絡いたします。<span class="ib-407-803">*は入力必須項目となります。</span></p>
       </div>
 
-      <form action="">
+      <form action="送信先のURL">
         <div class="con-sec-form-block">
 
           <dl class="form-name form-flex">
@@ -624,15 +586,15 @@
 
           <dl class="form-gender">
             <dt class="item short-767">
-              <label for="gender" class="name-label">性別</label> 
+              <label class="name-label">性別</label> 
             </dt>            
             <dd class="radio-wrap space-or-btn">
               <label>
-                  <input class="radio__btn" type="radio" name="fruit" value="男性" checked="checked">
+                  <input class="radio__btn" type="radio" name="gender" value="男性" id="gender-male"  checked="checked">
                   <span class="radio__text">男性</span>
               </label>            
               <label>
-                  <input class="radio__btn" type="radio" name="fruit" value="女性">
+                  <input class="radio__btn" type="radio"  name="gender" value="女性" id="gender-female">
                   <span class="radio__text">女性</span>
               </label>
             </dd>          
@@ -670,11 +632,11 @@
             </dd>
           </dl>
           
-          <dl class="find-out-method">
+          <div class="find-out-method">
             <p>何を見て当社HPを知りましたか？<span class="ib-534"> (複数回答可)　*</span></p>
-          </dl>
+          </div>
           
-          <dl class="form-checkbox">        
+          <div class="form-checkbox">        
             <label class="media-check" for="internet">
               <input type="checkbox"  name="media" id="internet">
               <span class="checkmark"></span>インターネット
@@ -714,11 +676,11 @@
               <input type="checkbox"  name="media" id="else">
               <span class="checkmark"></span>その他
             </label>
-          </dl>
-        
-          <dl class="privacy-policy-title">
+          </div>
+        </div>
+          <div class="privacy-policy-title">
             <p>個人情報保護方針</p>
-          </dl>
+          </div>
         
             <div class="privacy-policy">
               <div class="pp-wrap pp-space">
@@ -788,7 +750,7 @@
                 <p class="pp-detail">FAX	000-000-0000</p>
                 <p class="pp-detail">メールアドレス	info@kitamurakensetu.com</p>
             </div>
-        </div>
+        
         <!-- 送信ボタン -->
         <!-- <div class="form-submit-area">
           <input type="submit" class="form-submit" value="内容に同意して送信">
@@ -796,7 +758,8 @@
         <div class="form-submit-area">
           <input type="submit" class="form-submit" value="内容に同意して送信">
         </div> 
-    </form>         
+    </form>       
+  </div>  
   </section>  
 
 
@@ -849,7 +812,7 @@
   <!-- 戻るボタン -->
   <a href="#">
    <div class="back-btn">
-    <img src="./images/icon-to-top.svg" alt="">    
+    <img src="./images/icon-to-top.svg" alt="戻るボタン">    
    </div>
   </a>
 
