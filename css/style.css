@@ -203,6 +203,11 @@ header {
   opacity: 0.5;
 }
 
+.header-nav-btn:active {
+  background-size: 0 2px;
+  opacity: 1;
+}
+
 /* ハンバーガーメニュー */
 .hamburger {
   position: fixed;
