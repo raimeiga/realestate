@@ -10,7 +10,7 @@ html {
 
 body {
  background-color: #fff;
- font-family: "YuMincho","Yu Mincho","游明朝体","游明朝",sans-serif;
+ font-family: "YuMincho","Yu Mincho","游明朝体","游明朝","Yu Gothic","游ゴシック","YuGothic","游ゴシック体",sans-serif,serif;
  // 游明朝はmacosとWindowsにデバイスインストールされているが、太さが異なる↓
  // ・macos"YuMincho","游明朝体" weightはMedium=500,Demibold=600
  // ・Windows"Yu Mincho","游明朝",weightはRegular=500,Demibold=600
@@ -40,9 +40,9 @@ $base-color: rgba(77, 150, 0, 0.102);
   line-height: calc(33 / 20);
 }
 
-@mixin e-title-style($value: rgba(77, 150, 0, 1)) {
+@mixin e-title-style($value:rgba(77, 150, 0, 1)) {
   font-size: 3rem;
-  line-height: calc(33 / 30);   
+  line-height: 1.1;   
   color: $value;
   letter-spacing: 0.3em;
   text-indent: 0.3em; 
@@ -81,12 +81,10 @@ $base-color: rgba(77, 150, 0, 0.102);
   }
 }
 
-
 // 中級編課題では、
 // font-size: rem
 // 幅・高さ（width,height,padding,marginなど）は、%とpxで書く
 // calcを使用するのは、mvくらいってかんじ。
-
 
 // -------header-------
 header {  
@@ -211,7 +209,7 @@ header {
   background-repeat: no-repeat;
   background-position: left bottom; /* 線の起点を左・下に設定 */
   background-size: 0 2px; /* 線の横幅を0、縦幅を1pxに */
-  transition: background-size 0.8s; /* 線を伸ばすアニメーション実行時間を指定 */
+  transition: all 0.5s; /* 線を伸ばすアニメーション実行時間を指定 */
 }
 
 .header-nav-btn:hover {
@@ -227,6 +225,7 @@ header {
   height: 50px;
   background-color: #fff;
   // border: 2px solid #000;
+  cursor: pointer;
 }
 /* 三本線 */
 .hamburger-line,
@@ -280,7 +279,6 @@ header {
   padding-block: 12px 13px;  
   color: #fff;
   font-size: 1.8rem;
-  font-weight: 500;
   line-height: calc(33 / 18);
   transition: 0.6s;  
 }
@@ -600,15 +598,9 @@ text-orientation: upright;
  }
 }
 
-
-
 .e-title-box h2 {
   @include e-title-style;
 }
-
-
-
-
 
 .title-kana-box h2{
   @include text-style;
@@ -735,7 +727,7 @@ text-orientation: upright;
 .green-box-right {  
   // padding: 50px 0 42px 220px ;  
   padding-top: 50px;
-  padding-right: 10px;
+  padding-right: 0px;
   padding-bottom: 42px;
   padding-left: 23.9%;
   // margin-left:420px;  
@@ -773,7 +765,7 @@ text-orientation: upright;
 
 .green-box h3 {
   font-size: 2.5rem;
-  font-weight: 600;
+  font-weight: 500;
   // font-size: calc(25 / 1080 * 100vw);
   line-height: calc(33 / 25);  
 }
@@ -1071,7 +1063,6 @@ text-orientation: upright;
 .e-title-box-other h2 {
   @include e-title-style(#55A500);
 }
-
 
 .com-wrap {
   // background-color: yellow;  
@@ -1666,11 +1657,11 @@ iframe {
   margin: 80px auto 0;
   display: flex;
   justify-content: center;
-  padding: 8px 0;
+  padding: 9px 0 8px;
   color: #fff;
   @include text-style;  
  font-weight: 600;
- transition: 2s;
+ transition: 1s;
 }
 @include c-width(767px) {
   .form-submit-area {
@@ -1687,7 +1678,7 @@ iframe {
   background-color: #fff;
   color: $main-color;
   border: solid 1px $main-color;
-  transition: 2s;
+  transition: 1s;
 }
 
 
@@ -1777,7 +1768,7 @@ footer {
  }
  
  .footer-nav-btn:hover {
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 .sns-icon-wrap {
@@ -1850,7 +1841,7 @@ footer {
 }
 
 // -----戻るボタン-----
-  .back-btn{
+  .back-btn {
     width: 68px;
     height: 68px;
     display: none;
@@ -1863,6 +1854,22 @@ footer {
     position: fixed;
     bottom: 60px;
     right: 60px;
+  }
+  @include c-width(767px){
+    .back-btn{
+      width: 50px;
+      height: 50px;
+      display: none;
+      padding: 13px 13px;
+      // padding: 40px 10px;
+      background-color: $main-color;
+      color: #000;
+      text-decoration: none;
+      border-radius: 50%;  
+      position: fixed;
+      bottom: 60px;
+      right: 20px;
+    }
   }
 
 //---------------------------------------------
@@ -1904,7 +1911,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     // width:315px;
-    width: 100%;
+    width: 84%;
     height: auto;
     text-align: center;
     //background: rgba(255, 255, 255, 1);
@@ -1930,6 +1937,13 @@ footer {
     text-align: left;
   }
 }
+
+@include c-width(497px) {
+  .ib-max497 {
+    display: inline-block;
+  }
+}
+
 
 
 /* ウィンドウを閉じるボタン */

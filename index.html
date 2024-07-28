@@ -64,9 +64,9 @@
         <div id="hamburger-block" class="hamburger sp">
           <span class="hamburger-line"></span>
         </div>
-        <div class="ham-menu sp">
+        <div class="ham-menu sp">  
           <nav>                                  
-              <ul> 
+            <ul> 
               <li><a href="index.html#about" class="ham-menu-btn">ABOUT</a></li>
               <li><a href="index.html#service" class="ham-menu-btn">SERVICE</a></li>
               <li><a href="index.html#works" class="ham-menu-btn">WORKS</a></li>
@@ -116,9 +116,10 @@
           </h2>
       
         <!-- <h2>永遠も。<br class="if-pc-none"><span class="ib">瞬間も。</span><br>あなたと共に。</h2>  -->
-      </div>
-    </div>     
+      </div>      
+    </div>    
   </div>
+
 
   <!-- about -->
   <section id="about" class="js-scroll anima-fade-in">
@@ -174,8 +175,8 @@
       <div class="service-list">      
         <div class="service-img-area">  
           <picture class="service-img-wrap">
-            <source media="(max-width: 767px)" srcset="/images/sp_service_01.jpg">
-            <img src="/images/service_01.jpg" alt="サービス画像01">
+            <source media="(max-width: 767px)" srcset="./images/sp_service_01.jpg">
+            <img src="./images/service_01.jpg" alt="サービス画像01">
           </picture>
           <div class="image-caption img-cap-01">
              <p>静岡県U.I様自宅</p>
@@ -199,8 +200,8 @@
       <div class="service-list">
         <div class="service-img-area">  
           <picture class="service-img-wrap-even">
-            <source media="(max-width: 767px)" srcset="/images/sp_service_02.jpg">
-            <img src="/images/service_02.jpg" alt="サービス画像02">
+            <source media="(max-width: 767px)" srcset="./images/sp_service_02.jpg">
+            <img src="./images/service_02.jpg" alt="サービス画像02">
           </picture>
           <div class="image-caption img-cap-02">
              <p class="align-right">北海道富良野市ブックカフェ</p>
@@ -224,8 +225,8 @@
       <div class="service-list">      
         <div class="service-img-area">  
           <picture class="service-img-wrap">
-            <source media="(max-width: 767px)" srcset="/images/sp_service_03.jpg">
-            <img src="/images/service_03.jpg" alt="サービス画像03">
+            <source media="(max-width: 767px)" srcset="./images/sp_service_03.jpg">
+            <img src="./images/service_03.jpg" alt="サービス画像03">
           </picture>
           <div class="image-caption img-cap-03">
              <p>広島県竹原市</p>
@@ -277,7 +278,7 @@
         </picture>
       </div>
       <div class="m-caption">
-        <p>【リノベーション】京都府カトリック丹波教会
+        <p>【リノベーション】<span class="ib-max497">京都府カトリック丹波教会</span>
         </p> 
       </div>
       <div class="modal-cancel modal-close"></div>
@@ -295,7 +296,7 @@
         </picture>
       </div>
       <div class="m-caption">
-        <p>【新築】東京都A.F様自宅兼事務所
+        <p>【新築】<span class="ib-max497">東京都A.F様自宅兼事務所</span>                  
         </p> 
       </div>
       <div class="modal-cancel modal-close"></div>
@@ -313,7 +314,7 @@
         </picture>
       </div>
       <div class="m-caption">
-        <p>【都市開発】山形県銀山温泉協同組合
+        <p>【都市開発】<span class="ib-max497">山形県銀山温泉協同組合</span>             
         </p> 
       </div>
       <div class="modal-cancel modal-close"></div>
@@ -565,7 +566,7 @@
         <p>３営業日以内にメールにてご連絡いたします。<span class="ib-407-803">*は入力必須項目となります。</span></p>
       </div>
 
-      <form action="送信先のURL">
+      <form action="">
         <div class="con-sec-form-block">
 
           <dl class="form-name form-flex">
@@ -583,7 +584,7 @@
             </dt>            
             <dd class="radio-wrap space-or-btn">
               <label>
-                  <input class="radio__btn" type="radio" name="gender" value="男性" id="gender-male"  checked="checked">
+                  <input class="radio__btn" type="radio" name="gender" value="男性" id="gender-male">
                   <span class="radio__text">男性</span>
               </label>            
               <label>
@@ -744,22 +745,15 @@
                 <p class="pp-detail">メールアドレス	info@kitamurakensetu.com</p>
             </div>
         
-        <!-- 送信ボタン -->
-        <!-- <div class="form-submit-area">
-          <input type="submit" class="form-submit" value="内容に同意して送信">
-        </div>  -->
+        <!-- 送信ボタン -->        
         <div class="form-submit-area">
           <input type="submit" class="form-submit" value="内容に同意して送信">
         </div> 
     </form>       
   </div>  
   </section>  
+  </main>
 
-
-
-
-
-  </main> 
   <footer>
     <div class="inner">      
         <div class="footer-company-name">
@@ -805,7 +799,10 @@
   <!-- 戻るボタン -->
   <a href="#">
    <div class="back-btn">
-    <img src="./images/icon-to-top.svg" alt="戻るボタン">    
+      <picture>    
+        <source media="(max-width: 767px)" srcset="./images/sp-icon-to-top.svg">                                                              
+        <img src="./images/icon-to-top.svg" alt="戻るボタン">  
+      </picture>
    </div>
   </a>
 

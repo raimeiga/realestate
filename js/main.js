@@ -25,6 +25,7 @@ $(function() {
     }
   });
 
+   
   $(window).scroll(function() {
     var scrollValue = $(window).scrollTop();
     var mvOffset = $('.mv').offset().top;
