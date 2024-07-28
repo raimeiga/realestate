@@ -217,6 +217,12 @@ header {
   opacity: 0.5;
 }
 
+
+.header-nav-btn:active {
+  background-size: 0 2px; //クリック中は線を元に戻す 
+  opacity: 1; // クリック中の不透明度を元に戻す 
+}
+
 /* ハンバーガーメニュー */
 .hamburger {
   position: fixed;

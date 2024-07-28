@@ -70,21 +70,6 @@ $(function() {
 
   
   // ------モーダル-------
-
-//   $(function () {
-//   $(".modal-open").click(
-//     function() {
-//       $(".modal-area").show()
-//     }
-//   );
-//   $(".modal-close").click(
-//     function() {
-//       $(".modal-area").hide()
-//     }
-//   );
-//  });
-
-
  $(function () {
   $(".modal-open-01").click(
     function() {
