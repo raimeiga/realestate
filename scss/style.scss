@@ -209,7 +209,7 @@ header {
   background-repeat: no-repeat;
   background-position: left bottom; /* 線の起点を左・下に設定 */
   background-size: 0 2px; /* 線の横幅を0、縦幅を1pxに */
-  transition: all 0.5s; /* 線を伸ばすアニメーション実行時間を指定 */
+  transition: all 0.4s; /* 線を伸ばすアニメーション実行時間を指定 */
 }
 
 .header-nav-btn:hover {
@@ -243,8 +243,8 @@ header {
   width: 32px;
   height: 4px;
   background: $main-color;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   border-radius: 25px;
 }
 .hamburger-line::before,
@@ -286,12 +286,11 @@ header {
   color: #fff;
   font-size: 1.8rem;
   line-height: calc(33 / 18);
-  transition: 0.6s;  
+  transition: 0.4s;  
 }
 
 .ham-menu ul li:hover {
   background-color: #000;
-  transition: 0.6s;
 }
 
 // -----mv-----
@@ -845,11 +844,13 @@ text-orientation: upright;
   }
 }
 
+//---画像と建物名のホバーアクション（はじめ）---
 .works-list {
   width: 21.7%;
   display: grid;
   row-gap: 19px; 
   cursor: pointer;  /* カーソルを指マークに変更 */
+  transition: transform 0.3s ease;
 }
 @include c-width(767px) {
   .works-list {
@@ -858,6 +859,17 @@ text-orientation: upright;
     row-gap: 9px;  
   }
 }
+.works-li-img-wrap {
+  overflow: hidden; // はみ出した部分を隠す
+}
+.works-list:hover .works-li-img-wrap img {
+  transform: scale(1.05); /* ホバー時に画像を1.05倍に拡大 */
+  filter: brightness(1.8); // 明るさを1.8倍（80%）増加
+}
+.works-list:hover:hover .works-li-text-wrap p {
+  color: rgba(0, 0, 0, 0.5); //ホバー時に文字色を薄く。
+}
+//---画像と建物名のホバーアクション（おわり）---
 
 .works-li-text-wrap p {
  font-size: 1.6rem;
@@ -881,6 +893,10 @@ text-orientation: upright;
     line-height: 1.56;
    }
 }
+
+
+
+
 
 // -----news-----
 
@@ -1027,6 +1043,7 @@ text-orientation: upright;
 .link-more {
   // background-color: grey;  
   padding-block: 17px 20px;  
+  transition: transform 0.3s ease;
 }
 
 .link-more:hover {
@@ -1667,7 +1684,7 @@ iframe {
   color: #fff;
   @include text-style;  
  font-weight: 600;
- transition: 1s;
+ transition: 0.4s;
 }
 @include c-width(767px) {
   .form-submit-area {
@@ -1684,7 +1701,6 @@ iframe {
   background-color: #fff;
   color: $main-color;
   border: solid 1px $main-color;
-  transition: 1s;
 }
 
 
@@ -1771,6 +1787,7 @@ footer {
   padding-block: inherit;
   font-size: 1.8rem;
   line-height: calc(33 / 18);
+  transition: 0.4s;
  }
  
  .footer-nav-btn:hover {
