@@ -931,7 +931,7 @@ header {
     border-bottom: solid 1px #55A500;
   }
 }
-.text p:hover, .date time:hover {
+.a-link:hover {
   color: red;
   font-weight: bold;
 }
