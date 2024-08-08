@@ -976,12 +976,6 @@ text-orientation: upright;
     border-bottom: solid 1px #55A500;
   }
 }
-
-.a-link:hover {
-  color: red;
-  font-weight: bold;
-}
-
     
 .date {
   width: 57px;  
@@ -1009,7 +1003,7 @@ text-orientation: upright;
 .date time {
   font-size: 1.6rem;
   line-height: calc(33 / 16);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.03em;  
 }
 
 .text {
@@ -1037,7 +1031,20 @@ text-orientation: upright;
 
 .text p {
   font-size: 1.8rem;
-  line-height: calc(25 / 18);
+  line-height: calc(25 / 18);  
+}
+
+
+.a-link:hover {
+  color: red;
+}
+
+.date time:hover {
+  font-weight: bold;
+}
+
+.text p:hover {
+  font-weight: bold;
 }
 
 .w-space {

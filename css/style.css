@@ -931,11 +931,6 @@ header {
     border-bottom: solid 1px #55A500;
   }
 }
-.a-link:hover {
-  color: red;
-  font-weight: bold;
-}
-
 .date {
   width: 57px;
   padding-block: 13px 36px;
@@ -983,6 +978,18 @@ header {
 .text p {
   font-size: 1.8rem;
   line-height: 1.3888888889;
+}
+
+.a-link:hover {
+  color: red;
+}
+
+.date time:hover {
+  font-weight: bold;
+}
+
+.text p:hover {
+  font-weight: bold;
 }
 
 .w-space {
