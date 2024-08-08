@@ -913,6 +913,8 @@ header {
      -moz-column-gap: 16.6%;
           column-gap: 16.6%;
   border-bottom: solid 1px #55A500;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 @media (max-width: 767px) {
@@ -929,6 +931,11 @@ header {
     border-bottom: solid 1px #55A500;
   }
 }
+.text p:hover, .date time:hover {
+  color: red;
+  font-weight: bold;
+}
+
 .date {
   width: 57px;
   padding-block: 13px 36px;

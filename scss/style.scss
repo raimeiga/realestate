@@ -965,6 +965,7 @@ text-orientation: upright;
   align-items: center;
   column-gap: 16.6%;
   border-bottom: solid 1px #55A500;
+  transition: 0.4s;
 }
 @include c-width(767px) {
   .a-link{
@@ -976,6 +977,12 @@ text-orientation: upright;
   }
 }
 
+.a-link:hover {
+  color: red;
+  font-weight: bold;
+}
+
+    
 .date {
   width: 57px;  
   padding-block: 13px 36px;
@@ -1047,7 +1054,7 @@ text-orientation: upright;
 }
 
 .link-more:hover {
-  transform: translate(10px, 0px); 
+  transform: translate(10px, 0px);   
 }
 
 
