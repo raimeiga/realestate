@@ -32,17 +32,13 @@ $(function() {
 
     // .mvまでスクロールしたら特定のCSSを適用する
     if (scrollValue > mvOffset) {
-      $('.back-btn').css({
-       'display': 'inline',        
-      });           
-      
-    } else {
-      // スクロール位置が.mvより上の場合はCSSをリセットする
-      $('.back-btn').css({
-        'display': 'none',       
-      });
-    }
-  });
+      // フワッと表示する	$('.back-btn').css({
+      $('.back-btn').fadeIn(500); // 400ミリ秒で表示           
+     } else {
+      // スクロール位置が.mvより上の場合はフワッと非表示にする	// スクロール位置が.mvより上の場合はCSSをリセットする
+     $('.back-btn').fadeOut(500); // 400ミリ秒で非表示
+     }
+    });
 
 
 // 各sectionに↓のclassを持たせてフワっと出現させる
