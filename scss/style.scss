@@ -1209,6 +1209,12 @@ iframe {
   font-weight: 600;
   line-height: 1.56;
  }
+ 
+ @include c-width(767px) {
+  .tel {
+    pointer-events: none;
+  } 
+}
 
  .com-gb-tel p {
   font-size: 1.6rem;
@@ -1277,12 +1283,12 @@ iframe {
 }
 
 
+
 // @media (min-width: 487px) and (max-width: 804px) {
 //  .display487-804 {
 //   display: block;
 //  }
 // }
-
 
 // // @media (min-width: 804px) {
 // @media (min-width: 486px) or (min-width: 804px) {
@@ -1296,8 +1302,6 @@ iframe {
     display: inline-block;
   }
 }
-
-
 
 .con-sec-form-block {
   margin-top: 69px;
@@ -1333,6 +1337,11 @@ iframe {
     // padding-top: 1px;    
   }
 }
+
+.name-label {
+  font-weight: 500;
+}
+
 
 .space-or-btn {
   flex: 1;
@@ -1391,12 +1400,9 @@ iframe {
   column-gap: 10.9%;
   align-items: center;  
 }
-
-
 .radio__btn {
   appearance: none;  
 }
-
 .radio__text {
   // background-color: yellow;
   padding-left: 37px;
@@ -1405,7 +1411,6 @@ iframe {
   font-size: 1.8rem;
   line-height: calc(25/ 18);
 }
-
 .radio__text::before {
   content: '';
   display: block; 
@@ -1418,7 +1423,6 @@ iframe {
   left: 0;
   transform: translateY(-50%);
 }
-
 .radio__btn:checked +.radio__text::after {
   content: '';
   display: block;
@@ -1716,8 +1720,6 @@ iframe {
   color: $main-color;
   border: solid 1px $main-color;
 }
-
-
 
 // -----footer-----
 
