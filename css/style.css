@@ -164,6 +164,7 @@ header {
   }
 }
 .header-nav-list-li {
+  height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,11 +174,20 @@ header {
 }
 
 .header-nav-btn {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.8rem;
   line-height: 1.8333333333;
   color: #fff;
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
+  padding-bottom: 4px;
+  position: relative;
 }
 
 @media (max-width: 930px) {
@@ -185,27 +195,24 @@ header {
     font-size: 1.5rem;
   }
 }
-/* ヘッダーナビのホバー時に下線が左から右へ走るしくみ */
-.under-line {
-  text-decoration: none; /* デフォルトの下線を非表示にする */
-  color: #fff; /* 文字色 */
-  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
-  background-image: linear-gradient(90deg, #fff, #fff); /* 線の色 */
-  background-repeat: no-repeat;
-  background-position: left bottom; /* 線の起点を左・下に設定 */
-  background-size: 0 2px; /* 線の横幅を0、縦幅を1pxに */
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s; /* 線を伸ばすアニメーション実行時間を指定 */
+.header-nav-btn::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  bottom: 24.5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transition: 0.5s opacity;
+  transition: 0.5s opacity;
 }
 
-.header-nav-btn:hover {
-  background-size: 100% 1px; /* 線の横幅を100%にする */
-  opacity: 0.5;
-}
-
-.header-nav-btn:active {
-  background-size: 0 2px;
-  opacity: 1;
+.header-nav-btn:hover::after {
+  width: 100%;
 }
 
 /* ハンバーガーメニュー */
