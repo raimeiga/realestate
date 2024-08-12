@@ -291,9 +291,14 @@ header {
 
 .ham-menu ul li {
   height: 58px;
-  background-color: $main-color;
-  padding-left: 20px;
-  padding-block: 12px 13px;  
+  background-color: $main-color;  
+}
+
+.ham-menu ul li a {
+  height: inherit;
+  display: flex;
+  align-items: center; 
+  padding-left: 20px;  
   color: #fff;
   font-size: 1.8rem;
   line-height: calc(33 / 18);
