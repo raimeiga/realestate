@@ -193,31 +193,28 @@ header {
     font-size: 1.5rem;
   }
 }
-.header-nav-btn:hover {
-  width: 100%;
+.menu-border {
+  position: relative;
 }
 
-/* ヘッダーナビのホバー時に下線が左から右へ走るしくみ */
-.under-line {
-  text-decoration: none; /* デフォルトの下線を非表示にする */
-  color: #fff; /* 文字色 */
-  background-image: -webkit-gradient(linear, left top, right top, from(#fff), to(#fff));
-  background-image: linear-gradient(90deg, #fff, #fff); /* 線の色 */
-  background-repeat: no-repeat;
-  background-position: left bottom; /* 線の起点を左・下に設定 */
-  background-size: 0 2px; /* 線の横幅を0、縦幅を1pxに */
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s; /* 線を伸ばすアニメーション実行時間を指定 */
+.menu-border::after {
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 1.5px #fff;
+  bottom: 3px;
+  width: 0;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+
+.header-nav-btn:hover .menu-border::after {
+  width: 100%; /* hover時に幅を100%に */
 }
 
 .header-nav-btn:hover {
   background-size: 100% 1px; /* 線の横幅を100%にする */
   opacity: 0.5;
-}
-
-.header-nav-btn:active {
-  background-size: 0 2px;
-  opacity: 1;
 }
 
 /* ハンバーガーメニュー */
