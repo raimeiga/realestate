@@ -42,10 +42,10 @@ $base-color: rgba(77, 150, 0, 0.102);
 
 @mixin e-title-style($value:rgba(77, 150, 0, 1)) {
   font-size: 3rem;
-  line-height: 1.1;   
+  line-height: 1.1;
   color: $value;
   letter-spacing: 0.3em;
-  text-indent: 0.3em; 
+  text-indent: 0.3em;
 }
 
 @mixin c-width($value) {
@@ -110,6 +110,13 @@ header {
   justify-content: space-between;
   align-items: center; 
 }
+@include c-width(1020px){
+  .header-inner {            
+   padding-inline: 40px;    
+   display: flex;        
+   position: relative;
+  }
+ }
 @include c-width(767px){
  .header-inner {            
   padding-inline: 20px;    
@@ -121,7 +128,7 @@ header {
 .header-logo-box {
   // background-color: red;
   // width: calc(200 / 1080 * 100vw);
-  width: 200px;
+  // width: 200px;   /////////////////////////
   height: inherit;    
 }
 @include c-width(767px){
@@ -139,8 +146,7 @@ header {
   padding-top: 28px;
    @include text-style; 
 }
-
-@include c-width(930px){
+@include c-width(1020px){
  .header-name {          
   font-size: 1.7rem;    
   line-height: calc(33 / 20);    
@@ -155,11 +161,11 @@ header {
 
 .header-nav-wrap {
   // width: calc(610 / 1080 * 100vw);
-  max-width: 610px;
-  width: 66%;
+  // max-width: 610px;
+  // width: 66%;
   height: inherit;
-  display: flex; 
-  align-items: center;     
+  display: flex;
+  align-items: center;
   justify-content: center;   
 }
 
@@ -170,27 +176,27 @@ header {
 
 .header-nav-list {  
   // background-color: aqua;
-  height: inherit; 
-  padding-top: 10px; 
+  height: inherit;   
   display: flex;
-  align-items: center;  
-  column-gap: 4.9%;
+  align-items: center;   
 }
-@include c-width(930px){
- .header-nav-list {          
-  padding-top: 2%;     
-  column-gap: 5%;
-  }
-}
+// @include c-width(930px){
+//  .header-nav-list {          
+//   padding-top: 2%;     
+//   column-gap: 5%;
+//   }
+// }
 
 //ヘッダーナビの下線をひく実験-----------
-.header-nav-list-li {  
+.header-nav-list-li {
   height: inherit;  
   display: flex;
-  align-items: center;  
+  align-items: center;
+  // margin-left: 11px;
 }
 
-.header-nav-btn {
+.header-nav-btn {  
+  // background-color: #000;
   height: inherit;
   display: flex;
   align-items: center;
@@ -199,10 +205,13 @@ header {
   line-height: calc(33 / 18);     
   color:#fff;
   transition: all 0.4s ease-out;
+  padding-top: 10px; 
+  padding-inline: 14.5px;
 }
- @include c-width(930px){
+ @include c-width(1020px){
  .header-nav-btn {  
-  font-size: 1.5rem;  
+  font-size: 1.4rem;  
+  padding-inline: 11px;
   }
 }
 
@@ -217,7 +226,7 @@ header {
   border-bottom: solid 1.5px #fff;
   bottom: 3px;
   width: 0;
-  transition: width 0.3s ease-out; // 幅が変わるアニメーションの時間を0.2秒に設定 
+  transition: width 0.3s ease-out; // 幅変更のアニメーションの時間（0.3秒）
 }
 
 //hover＋半角スペース＋子要素の書き方↓
@@ -226,13 +235,13 @@ header {
 }
 
 .header-nav-btn:hover {
-  background-size: 100% 1px; /* 線の横幅を100%にする */
   opacity: 0.5;
 }
 
-
-
-
+/* スクロール時の色変更に備えて下線の色を黒にするためのクラス */
+.scroll-change .menu-border::after {
+  border-bottom-color: #000; /* スクロール時の下線の色 */
+}
 
 /* ハンバーガーメニュー */
 .hamburger {
@@ -309,7 +318,7 @@ header {
   background-color: #000;
 }
 
-// -----mv-----
+// -----------mv--------------
 .mv {
   position: relative;
 }

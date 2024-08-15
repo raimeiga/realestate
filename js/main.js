@@ -14,16 +14,36 @@ $(function() {
     // #aboutまでスクロールしたら特定のCSSを適用する
     if (scrollValue >= aboutOffset) {
       $('.header-name,.header-nav-btn').css({
-        'color': '#000',        
-      });   
+        'color': '#000',
+      });
+      $('.header-nav-btn').addClass('scroll-change'); // scroll-changeクラスを追加
 
     } else {
       // スクロール位置が#aboutより上の場合はCSSをリセットする
       $('.header-name,.header-nav-btn').css({
         'color': '#fff',       
       });    
+      $('.header-nav-btn').removeClass('scroll-change'); // scroll-changeクラスを削除
     }
   });
+
+  // $(window).scroll(function() {
+  //   var scrollValue = $(window).scrollTop();
+  //   var aboutOffset = $('#about').offset().top;
+
+  //   // #aboutまでスクロールしたら特定のCSSを適用する
+  //   if (scrollValue >= aboutOffset) {
+  //     $('.header-name,.header-nav-btn').css({
+  //       'color': '#000',        
+  //     });
+
+  //   } else {
+  //     // スクロール位置が#aboutより上の場合はCSSをリセットする
+  //     $('.header-name,.header-nav-btn').css({
+  //       'color': '#fff',       
+  //     });    
+  //   }
+  // });
 
    
   $(window).scroll(function() {

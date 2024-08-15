@@ -81,6 +81,15 @@ header {
           align-items: center;
 }
 
+@media (max-width: 1020px) {
+  .header-inner {
+    padding-inline: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+  }
+}
 @media (max-width: 767px) {
   .header-inner {
     padding-inline: 20px;
@@ -91,7 +100,6 @@ header {
   }
 }
 .header-logo-box {
-  width: 200px;
   height: inherit;
 }
 
@@ -109,7 +117,7 @@ header {
   line-height: 1.65;
 }
 
-@media (max-width: 930px) {
+@media (max-width: 1020px) {
   .header-name {
     font-size: 1.7rem;
     line-height: 1.65;
@@ -122,8 +130,6 @@ header {
   }
 }
 .header-nav-wrap {
-  max-width: 610px;
-  width: 66%;
   height: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -143,26 +149,14 @@ header {
 
 .header-nav-list {
   height: inherit;
-  padding-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-column-gap: 4.9%;
-     -moz-column-gap: 4.9%;
-          column-gap: 4.9%;
 }
 
-@media (max-width: 930px) {
-  .header-nav-list {
-    padding-top: 2%;
-    -webkit-column-gap: 5%;
-       -moz-column-gap: 5%;
-            column-gap: 5%;
-  }
-}
 .header-nav-list-li {
   height: inherit;
   display: -webkit-box;
@@ -186,11 +180,14 @@ header {
   color: #fff;
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
+  padding-top: 10px;
+  padding-inline: 14.5px;
 }
 
-@media (max-width: 930px) {
+@media (max-width: 1020px) {
   .header-nav-btn {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    padding-inline: 11px;
   }
 }
 .menu-border {
@@ -213,8 +210,12 @@ header {
 }
 
 .header-nav-btn:hover {
-  background-size: 100% 1px; /* 線の横幅を100%にする */
   opacity: 0.5;
+}
+
+/* スクロール時の色変更に備えて下線の色を黒にするためのクラス */
+.scroll-change .menu-border::after {
+  border-bottom-color: #000; /* スクロール時の下線の色 */
 }
 
 /* ハンバーガーメニュー */
