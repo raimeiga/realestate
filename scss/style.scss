@@ -238,10 +238,15 @@ header {
   opacity: 0.5;
 }
 
-/* スクロール時の色変更に備えて下線の色を黒にするためのクラス */
 .scroll-change .menu-border::after {
-  border-bottom-color: #000; /* スクロール時の下線の色 */
+  border-bottom-color: #000;  //スクロール時の下線の色 
 }
+// ↑ スクロール時の色変更に備えて下線の色を黒にするためのクラス
+// main.jsにaddClassで.scroll-changeを追加したときに、.menu-border::afterに
+// スタイルをあてる書き方。既述の.menu-border::after{}内でなく、.scroll-change
+// 追加時にスタイルをあてる書き方にしている。
+// hover＋半角スペース＋子要素の書き方
+
 
 /* ハンバーガーメニュー */
 .hamburger {
