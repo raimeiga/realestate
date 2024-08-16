@@ -167,6 +167,10 @@ header {
           align-items: center;
 }
 
+.header-nav-list-li:last-child .header-nav-btn {
+  padding-inline: 14.5px 0;
+}
+
 .header-nav-btn {
   height: inherit;
   display: -webkit-box;
@@ -451,7 +455,7 @@ header {
     row-gap: 24px;
   }
 }
-.about-v-catch-01 {
+.about-title {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -462,42 +466,48 @@ header {
 }
 
 @media (max-width: 930px) {
-  .about-v-catch-01 p {
+  .about-title {
     font-size: 2.8rem;
     line-height: 1.18;
     letter-spacing: 0.17em;
   }
 }
 @media (max-width: 767px) {
-  .about-v-catch-01 {
+  .about-title {
     margin: 0 auto;
     font-size: 2.5rem;
     line-height: 1.19;
     letter-spacing: 0.2em;
   }
 }
-.about-v-catch-02 {
+.about-text-wrap {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   text-orientation: upright;
+  margin-right: 33px;
 }
 
-.about-v-catch-02 p {
+.about-text {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: upright;
   font-size: 1.8rem;
   line-height: 1.37;
   letter-spacing: 0.41em;
+  padding-right: 22.5px;
 }
 
 @media (max-width: 930px) {
-  .about-v-catch-02 p {
+  .about-text {
     font-size: 1.7rem;
     line-height: 1.3;
     letter-spacing: 0.41em;
   }
 }
 @media (max-width: 767px) {
-  .about-v-catch-02 p {
+  .about-text {
     font-size: 1.6rem;
     line-height: 1.25;
     letter-spacing: 0.23em;

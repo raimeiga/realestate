@@ -160,13 +160,10 @@ header {
 }
 
 .header-nav-wrap {
-  // width: calc(610 / 1080 * 100vw);
-  // max-width: 610px;
-  // width: 66%;
-  height: inherit;
+   height: inherit;
   display: flex;
   align-items: center;
-  justify-content: center;   
+  justify-content: center;
 }
 
 .header-nav {
@@ -178,7 +175,8 @@ header {
   // background-color: aqua;
   height: inherit;   
   display: flex;
-  align-items: center;   
+  align-items: center;
+  
 }
 // @include c-width(930px){
 //  .header-nav-list {          
@@ -192,7 +190,11 @@ header {
   height: inherit;  
   display: flex;
   align-items: center;
-  // margin-left: 11px;
+}
+
+//最後の.header-nav-list-liの子要素（header-nav-btn）をセレクタ
+.header-nav-list-li:last-child .header-nav-btn {
+  padding-inline: 14.5px 0;
 }
 
 .header-nav-btn {  
@@ -200,7 +202,6 @@ header {
   height: inherit;
   display: flex;
   align-items: center;
-  // background-color: yellow;
   font-size: 1.8rem;
   line-height: calc(33 / 18);     
   color:#fff;
@@ -410,7 +411,6 @@ header {
   }
 }
 
-
 .mv-catch h2  {
   color:#fff;
   font-size: 4rem;
@@ -434,7 +434,6 @@ header {
 .pc-pad {
   padding-left: 12px;
 }
-
 .sp-pad {
   padding-left: 0px;
 }
@@ -443,7 +442,6 @@ header {
     padding-left: 12px;
   }
 }
-
 
 // .mv-catch {
 //   width: calc(567 / 1080 * 100vw); 
@@ -495,7 +493,6 @@ header {
 
 
 // -----about-----
-
 .about-inner {
   position: relative;
 }
@@ -525,7 +522,7 @@ header {
   }
 }
 
-.about-v-catch-01 {
+.about-title {
  writing-mode: vertical-rl; //テキスト縦書き
  text-orientation: upright; //文字を通常の向きで表示 
  font-size: 3rem;
@@ -533,20 +530,52 @@ header {
  letter-spacing: 0.17em;
 }
 @include c-width(930px) {
- .about-v-catch-01 p {
+ .about-title {
  font-size: 2.8rem;
  line-height: 1.18;
  letter-spacing: 0.17em;
  }
 }
 @include c-width(767px) {
-.about-v-catch-01 {
+.about-title {
   margin: 0 auto;
   font-size: 2.5rem;
   line-height: 1.19;
   letter-spacing: 0.2em;
  }
 }
+
+.about-text-wrap {
+  writing-mode: vertical-rl; //テキスト縦書き
+  text-orientation: upright; //文字を通常の向きで表示
+  margin-right: 33px;
+  // display: flex;
+  // column-gap: 30px;
+}
+
+.about-text {  
+  writing-mode: vertical-rl; //テキスト縦書き
+  text-orientation: upright; //文字を通常の向きで表示
+  font-size: 1.8rem;
+  line-height: 1.37;
+  letter-spacing: 0.41em;  
+  padding-right: 22.5px
+}
+@include c-width(930px) {
+ .about-text {
+    font-size: 1.7rem;
+    line-height: 1.3;
+    letter-spacing: 0.41em;  
+  }
+}
+@include c-width(767px) {
+ .about-text {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    letter-spacing: 0.23em;  
+  }
+}
+
 
 // .about-v-catch-01 p {
 //   font-size: 3rem;
@@ -584,7 +613,7 @@ header {
 //    }
 // }
 
-// .about-v-catch-02 p {
+//.about-text {
 //   padding-left: 8.3%;
 //  }
 //  @include c-width(930px) {
@@ -597,33 +626,6 @@ header {
 //   padding-left: 2.6%;    
 //  }
 // }
-
-.about-v-catch-02 {
-  writing-mode: vertical-rl; //テキスト縦書き
-  text-orientation: upright; //文字を通常の向きで表示 
-
-}
-
- .about-v-catch-02 p {  
-  font-size: 1.8rem;
-  line-height: 1.37;
-  letter-spacing: 0.41em;  
-}
-@include c-width(930px) {
-  .about-v-catch-02 p {
-    font-size: 1.7rem;
-    line-height: 1.3;
-    letter-spacing: 0.41em;  
-  }
-}
-@include c-width(767px) {
-  .about-v-catch-02 p {
-    font-size: 1.6rem;
-    line-height: 1.25;
-    letter-spacing: 0.23em;  
-  }
-}
-
 
 // -----service-----
 #service {
