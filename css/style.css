@@ -213,9 +213,8 @@ header {
   opacity: 0.5;
 }
 
-/* スクロール時の色変更に備えて下線の色を黒にするためのクラス */
 .scroll-change .menu-border::after {
-  border-bottom-color: #000; /* スクロール時の下線の色 */
+  border-bottom-color: #000;
 }
 
 /* ハンバーガーメニュー */
@@ -226,6 +225,8 @@ header {
   height: 52px;
   background-color: #fff;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; /* スムーズなアニメーション */
 }
 
 /* 三本線 */
@@ -255,6 +256,23 @@ header {
 
 .hamburger-line::after {
   top: 12px;
+}
+
+/* アクティブ時のスタイル */
+.is-active .hamburger-line {
+  background: transparent; /* 中央の線を透明に */
+}
+
+.is-active .hamburger-line::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); /* 斜めの線 */
+  top: 0; /* 位置調整 */
+}
+
+.is-active .hamburger-line::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); /* 反対の斜め線 */
+  top: 0; /* 位置調整 */
 }
 
 /* ナビゲーション（中身） */
@@ -399,7 +417,6 @@ header {
 }
 
 .about-v-catch {
-  width: 45.5%;
   position: absolute;
   top: 50%;
   left: 0;
@@ -439,14 +456,6 @@ header {
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   text-orientation: upright;
-}
-
-@media (max-width: 767px) {
-  .about-v-catch-01 {
-    margin: 0 auto;
-  }
-}
-.about-v-catch-01 p {
   font-size: 3rem;
   line-height: 1.18;
   letter-spacing: 0.17em;
@@ -460,44 +469,20 @@ header {
   }
 }
 @media (max-width: 767px) {
-  .about-v-catch-01 p {
+  .about-v-catch-01 {
+    margin: 0 auto;
     font-size: 2.5rem;
     line-height: 1.19;
     letter-spacing: 0.2em;
   }
 }
 .about-v-catch-02 {
-  margin-right: 11%;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   text-orientation: upright;
 }
 
-@media (max-width: 930px) {
-  .about-v-catch-02 {
-    margin-right: 8%;
-  }
-}
-@media (max-width: 767px) {
-  .about-v-catch-02 {
-    margin: 0 auto;
-  }
-}
-.about-v-catch-02 div {
-  padding-left: 8.3%;
-}
-
-@media (max-width: 930px) {
-  .about-v-catch-02 div {
-    padding-left: 7.5%;
-  }
-}
-@media (max-width: 767px) {
-  .about-v-catch-02 div {
-    padding-left: 2.6%;
-  }
-}
 .about-v-catch-02 p {
   font-size: 1.8rem;
   line-height: 1.37;

@@ -257,6 +257,8 @@ header {
   background-color: #fff;
   // border: 2px solid #000;
   cursor: pointer;
+
+  transition: 0.3s; /* スムーズなアニメーション */
 }
 /* 三本線 */
 .hamburger-line,
@@ -283,6 +285,23 @@ header {
 .hamburger-line::after {
   top: 12px;
 }
+
+//---クリック時の三本戦を☓にする措置（はじめ）---
+/* アクティブ時のスタイル */
+.is-active .hamburger-line {
+  background: transparent; /* 中央の線を透明に */
+}
+
+.is-active .hamburger-line::before {
+  transform: rotate(45deg); /* 斜めの線 */
+  top: 0; /* 位置調整 */
+}
+
+.is-active .hamburger-line::after {
+  transform: rotate(-45deg); /* 反対の斜め線 */
+  top: 0; /* 位置調整 */
+}
+//---クリック時の三本戦を☓にする措置（終わり）---
 
 /* ナビゲーション（中身） */
 .ham-menu {
@@ -482,7 +501,7 @@ header {
 }
 
 .about-v-catch {   
-  width: 45.5%;  
+  // width: 45.5%;  
   // ↓いったん50%にした上で、transformで調整すれば、同じ比率を保つ
   position: absolute;
   top: 50%;
@@ -507,66 +526,85 @@ header {
 }
 
 .about-v-catch-01 {
-writing-mode: vertical-rl;
-text-orientation: upright;
+ writing-mode: vertical-rl; //テキスト縦書き
+ text-orientation: upright; //文字を通常の向きで表示 
+ font-size: 3rem;
+ line-height: 1.18;
+ letter-spacing: 0.17em;
+}
+@include c-width(930px) {
+ .about-v-catch-01 p {
+ font-size: 2.8rem;
+ line-height: 1.18;
+ letter-spacing: 0.17em;
+ }
 }
 @include c-width(767px) {
 .about-v-catch-01 {
   margin: 0 auto;
+  font-size: 2.5rem;
+  line-height: 1.19;
+  letter-spacing: 0.2em;
  }
 }
 
-.about-v-catch-01 p {
-  font-size: 3rem;
-  line-height: 1.18;
-  letter-spacing: 0.17em;
-}
-@include c-width(930px) {
-  .about-v-catch-01 p {
-    font-size: 2.8rem;
-    line-height: 1.18;
-    letter-spacing: 0.17em;
-  }
-}
-@include c-width(767px) {
-  .about-v-catch-01 p {
-    font-size: 2.5rem;
-    line-height: 1.19;
-    letter-spacing: 0.2em;
-  }
-}
+// .about-v-catch-01 p {
+//   font-size: 3rem;
+//   line-height: 1.18;
+//   letter-spacing: 0.17em;
+// }
+// @include c-width(930px) {
+//   .about-v-catch-01 p {
+//     font-size: 2.8rem;
+//     line-height: 1.18;
+//     letter-spacing: 0.17em;
+//   }
+// }
+// @include c-width(767px) {
+//   .about-v-catch-01 p {
+//     font-size: 2.5rem;
+//     line-height: 1.19;
+//     letter-spacing: 0.2em;
+//   }
+// }
+
+// .about-v-catch-02 {
+//  margin-right: 11%; 
+//  writing-mode: vertical-rl;
+//  text-orientation: upright; 
+// }
+// @include c-width(930px) {
+// .about-v-catch-02 {
+//   margin-right: 8%; 
+//  }
+// }
+// @include c-width(767px) {
+//   .about-v-catch-02 {
+//     margin: 0 auto; 
+//    }
+// }
+
+// .about-v-catch-02 p {
+//   padding-left: 8.3%;
+//  }
+//  @include c-width(930px) {
+//   .about-v-catch-02 {
+//     padding-left: 7.5%;
+//    }
+//  }
+//  @include c-width(767px) {
+//   .about-v-catch-02 {
+//   padding-left: 2.6%;    
+//  }
+// }
 
 .about-v-catch-02 {
- margin-right: 11%; 
- writing-mode: vertical-rl;
- text-orientation: upright; 
-}
-@include c-width(930px) {
-.about-v-catch-02 {
-  margin-right: 8%; 
- }
-}
-@include c-width(767px) {
-  .about-v-catch-02 {
-    margin: 0 auto; 
-   }
+  writing-mode: vertical-rl; //テキスト縦書き
+  text-orientation: upright; //文字を通常の向きで表示 
+
 }
 
-.about-v-catch-02 div {
-  padding-left: 8.3%;
- }
- @include c-width(930px) {
-  .about-v-catch-02 div {
-    padding-left: 7.5%;
-   }
- }
- @include c-width(767px) {
-  .about-v-catch-02 div {
-  padding-left: 2.6%;    
- }
-}
-
- .about-v-catch-02 p {
+ .about-v-catch-02 p {  
   font-size: 1.8rem;
   line-height: 1.37;
   letter-spacing: 0.41em;  

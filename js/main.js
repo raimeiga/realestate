@@ -45,7 +45,7 @@ $(function() {
   //   }
   // });
 
-   
+  //---------------mv----------------------
   $(window).scroll(function() {
     var scrollValue = $(window).scrollTop();
     var mvOffset = $('.mv').offset().top;
@@ -146,8 +146,11 @@ $(function() {
 $(function () {
   $("#hamburger-block").click( 
     function() {
-      $(".ham-menu").toggle(300)
-     
+    // ハンバーガーアイコンの切り替え
+    $(this).toggleClass('is-active');
+
+    // メニューの表示切り替え
+      $(".ham-menu").toggle(300)     
     }
   );
 });
@@ -159,6 +162,7 @@ $(function () {
   $(".ham-menu-btn").click( 
     function() {
       $(".ham-menu").fadeOut(300);
+      $("#hamburger-block").removeClass('is-active'); // メニューが閉じられるときに☓を元に戻す
     });
 });
 
