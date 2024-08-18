@@ -249,13 +249,14 @@
   </div>
   </section>
 
+<!-- モーダルエリア -->
 <div class="modal-area modal-area-01">   
   <div class="modal-bg modal-close">      
     <div class="modal-content">    
       <div class="m-image-wrap">  
         <picture>    
-          <source media="(max-width: 767px)" srcset="./images/sp_works_01.jpg">                                                              
-          <img src="./images/w_modal_01.jpg" alt="モーダル画像01" >
+          <source media="(max-width: 767px)" srcset="./images/sp_w_modal_01.jpg">                                                              
+          <img class="m-img" src="./images/w_modal_01.jpg" alt="モーダル画像01" >
         </picture>
       </div>
       <div class="m-caption">
@@ -272,8 +273,8 @@
     <div class="modal-content">    
       <div class="m-image-wrap">  
         <picture>    
-          <source media="(max-width: 767px)" srcset="./images/sp_works_02.jpg">                                                              
-          <img src="./images/w_modal_02.jpg" alt="モーダル画像02" >
+          <source media="(max-width: 767px)" srcset="./images/sp_w_modal_02.jpg">                                                              
+          <img class="m-img" src="./images/w_modal_02.jpg" alt="モーダル画像02" >
         </picture>
       </div>
       <div class="m-caption">
@@ -290,8 +291,8 @@
     <div class="modal-content">    
       <div class="m-image-wrap">  
         <picture>    
-          <source media="(max-width: 767px)" srcset="./images/sp_works_03.jpg">                                                              
-          <img src="./images/w_modal_03.jpg" alt="モーダル画像03" >
+          <source media="(max-width: 767px)" srcset="./images/sp_w_modal_03.jpg">                                                              
+          <img class="m-img" src="./images/w_modal_03.jpg" alt="モーダル画像03" >
         </picture>
       </div>
       <div class="m-caption">
@@ -308,8 +309,8 @@
     <div class="modal-content">    
       <div class="m-image-wrap">  
         <picture>    
-          <source media="(max-width: 767px)" srcset="./images/sp_works_04.jpg">                                                              
-          <img src="./images/w_modal_04.jpg" alt="モーダル画像04" >
+          <source media="(max-width: 767px)" srcset="./images/sp_w_modal_04.jpg">                                                              
+          <img class="m-img" src="./images/w_modal_04.jpg" alt="モーダル画像04" >
         </picture>
       </div>
       <div class="m-caption">
@@ -412,7 +413,7 @@
                   <time datetime="2024-07">2024.07</time>                  
                 </div>
                 <div class="text">
-                  <p>公式Instagram、YouTubeはじめました。</p>
+                  <p>YouTubeはじめました。</p>
                 </div>
               </a>
             </article>
@@ -565,7 +566,6 @@
 
       <form action="">
         <div class="con-sec-form-block">
-
           <dl class="form-name form-flex">
             <dt class="item">
              <label for="your-name" class="name-label">お名前</label> 
@@ -593,7 +593,7 @@
           
           <dl class="form-mail form-flex">
             <dt class="item">
-             <label for="your-email" class="name-label">メールアドレス *</label> 
+             <label for="your-email" class="name-label" id="your-email-label" >メールアドレス *</label> 
             </dt>
             <dd class="space-or-btn">
              <input type="text" name="your-email" placeholder="例：aaaaaaaa@gmail.com"  id="your-email" class="form-control">

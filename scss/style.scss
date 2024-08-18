@@ -1295,9 +1295,9 @@ iframe {
 
 .con-inner {
   // max-width: 1000px;
-  max-width: 920px;
+  max-width: 860px;
   width: 100%; //1000pxってこと。
-  padding-inline: 60px;
+  padding-inline: 30px;
   margin-inline: auto;
   position: relative;
 }
@@ -1378,7 +1378,7 @@ iframe {
 
 .space-or-btn {
   flex: 1;
-  } 
+} 
 
 ::placeholder {
   color: #A0A0A0;
@@ -1423,7 +1423,9 @@ iframe {
   }
 }
 
-
+#your-email-label {
+  letter-spacing: 0.01em;
+}
 
 // -----ラジオボタンの実装（ここから）-----
 .radio-wrap {
@@ -1499,8 +1501,7 @@ iframe {
   height: 50px;  
   // padding-top: 5px;
   padding-inline: 20px 0px;
-  display: block;
-  
+  display: block;  
   // デフォルトの矢印を削除
   -webkit-appearance: none;
   appearance: none; 
@@ -1518,7 +1519,12 @@ iframe {
   display: none; /* デフォルトの矢印を非表示(IE用) */
 }
 
-
+.form-textarea {
+  resize: vertical; //←縦方向だけ調整するプロパティ＋値
+  font-size: 1.6rem;
+  line-height: calc(25 / 16);
+  padding-block: 10px;
+}
 
 // /* セレクトボックスの矢印デザイン変更 */
 // .cate-option {

@@ -1218,9 +1218,9 @@ iframe {
 }
 
 .con-inner {
-  max-width: 920px;
+  max-width: 860px;
   width: 100%;
-  padding-inline: 60px;
+  padding-inline: 30px;
   margin-inline: auto;
   position: relative;
 }
@@ -1367,6 +1367,10 @@ iframe {
     margin-block: 29px 29px;
   }
 }
+#your-email-label {
+  letter-spacing: 0.01em;
+}
+
 .radio-wrap {
   width: 100%;
   display: -webkit-box;
@@ -1463,6 +1467,13 @@ iframe {
 }
 .cate-option::-ms-expand {
   display: none; /* デフォルトの矢印を非表示(IE用) */
+}
+
+.form-textarea {
+  resize: vertical;
+  font-size: 1.6rem;
+  line-height: 1.5625;
+  padding-block: 10px;
 }
 
 .form-text-content {
