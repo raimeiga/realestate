@@ -758,7 +758,7 @@ header {
 .green-box-right {  
   // padding: 50px 0 42px 220px ;  
   padding-top: 50px;
-  padding-right: 5%;
+  // padding-right: 5%;
   padding-bottom: 42px;
   padding-left: 23.9%;
   // margin-left:420px;  
@@ -1140,40 +1140,6 @@ header {
   }
 }
 
-.com-green-box-parent {
-  padding-top: 198px;
-  padding-left: 45.6%;
-}
-@include c-width(767px) {
-  .com-green-box-parent {
-    padding-top: 0;
-    //padding-top: 208px;
-    padding-left: 0;
-  }
-}
-
-.com-green-box {
-  background-color: $main-color;
-  color: #fff;  
-  //padding: 41px 5px 50px 220px;
-  //padding: 8.2% 1% 10% 44%;
-  padding: 10% 1% 7.8% 44%;
-}
-@include c-width(867px) {
-  .com-green-box {    
-  //padding: 41px 5px 50px 220px;
-  //padding: 8.2% 1% 10% 44%;
-  padding: 10% 3.6% 7.8% 41%;
-  }
-}
-@include c-width(767px) {
-  .com-green-box {    
-  //padding: 19px 20px 12px 20px;
-  //padding: 8.2% 1% 10% 44%;
-  padding: 6% 6.3% 3.8% 6.3%;
-  }
-}
-
 .com-iframe-box {
  position: relative; 
 }
@@ -1210,7 +1176,41 @@ iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    aspect-ratio: 600 / 400;  
+    aspect-ratio: 315 / 300;  
+  }
+}
+
+.com-green-box-parent {
+  padding-top: 198px;
+  padding-left: 45.6%;
+}
+@include c-width(767px) {
+  .com-green-box-parent {
+    padding-top: 0;
+    //padding-top: 208px;
+    padding-left: 0;
+  }
+}
+
+.com-green-box {
+  background-color: $main-color;
+  color: #fff;  
+  //padding: 41px 5px 50px 220px;
+  //padding: 8.2% 1% 10% 44%;
+  padding: 10% 1% 7.8% 44%;
+}
+@include c-width(867px) {
+  .com-green-box {    
+  //padding: 41px 5px 50px 220px;
+  //padding: 8.2% 1% 10% 44%;
+  padding: 10% 3.6% 7.8% 41%;
+  }
+}
+@include c-width(767px) {
+  .com-green-box {    
+  //padding: 19px 20px 12px 20px;
+  //padding: 8.2% 1% 10% 44%;
+  padding: 6% 6.3% 3.8% 6.3%;
   }
 }
 
@@ -1223,7 +1223,7 @@ iframe {
 
 .com-gb-address {
   //margin-block: 7px 12px;
-  margin-block: 2.8% 4.7%;
+  margin-block: 7px 12px;
 }
 
 @media (min-width: 387px) and (max-width: 767px) {
@@ -1236,8 +1236,7 @@ iframe {
   font-size: 1.6rem;
   font-weight: 600;
   line-height: 1.56;
- }
- 
+ } 
  @include c-width(767px) {
   .tel {
     pointer-events: none;
@@ -1252,8 +1251,7 @@ iframe {
  .com-gb-tel span {
   font-size: 2.5rem;
   font-weight: 600;
-  line-height: 1;
-  
+  line-height: 1;  
  }
 
  .com-gb-mail {
@@ -1265,14 +1263,18 @@ iframe {
   font-weight: 600;
   line-height: 1.56;
  }
- @media (min-width: 1021px) {
- .br-1020 {
+ 
+ @media (min-width: 1024px) {
+ .br-mail {
   display: none;  
   }
  }
-
-
-
+ @media (max-width: 767px) {
+  .br-mail {
+   display: none;  
+   }
+  }
+ 
 // -----contact-----
 
 #contact {
@@ -1490,6 +1492,8 @@ iframe {
   // padding-top: 5px;
   padding-inline: 20px 0px;
   display: block;
+  cursor: pointer;
+
   
   // デフォルトの矢印を削除
   -webkit-appearance: none;
@@ -1818,29 +1822,26 @@ footer {
 }
 
 .footer-nav-wrap nav ul {
- display: flex;
-//  column-gap: 50px;
- column-gap: 5.3%;
- justify-content: center;
-}
+  display: flex;
+  //  column-gap: 50px;
+  column-gap: 5.3%;
+  justify-content: center;
+  flex-wrap: wrap;
+ }
 @include c-width(767px) {
   .footer-nav-wrap nav ul {
     display: flex;
-   //  column-gap: 50px;
-    column-gap: 9.5%;
-    justify-content:flex-start;
-    flex-wrap: wrap;
+    //  column-gap: 50px;
+    column-gap: 9.5%;    
    }
 }
-@include c-width(449px) {
-  .footer-nav-wrap nav ul {
-    display: flex;
-   //  column-gap: 50px;
-    column-gap: 9.5%;
-    justify-content:center;
-    flex-wrap: wrap;
-   }
-}
+// @include c-width(449px) {
+//   .footer-nav-wrap nav ul {
+//     display: flex;
+//    //  column-gap: 50px;
+//     column-gap: 9.5%;    
+//    }
+// }
 
 .footer-nav-wrap nav ul li { 
  padding-block: 28px 30px;
@@ -1937,7 +1938,7 @@ footer {
     width: 68px;
     height: 68px;
     display: none;
-    padding: 22px 20px;
+    padding: 22px 20px 22px 22px;
     // padding: 40px 10px;
     background-color: $main-color;
     color: #000;
