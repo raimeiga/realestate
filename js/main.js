@@ -71,15 +71,15 @@ $(function() {
  $(function () {
   $(".modal-open-01").click(
     function() {
-      $(".modal-area-01").show()
-      $('body').addClass('modal-open')
+      $(".modal-area-01").show();
+      $('body').addClass('modal-open');
       // ↑（01～04）モーダル開いた時、scssのmodal-open追加
       // scssに書いたmodal-openとコンビ
     } );
   $(".modal-close").click(
     function() {
-      $(".modal-area-01").hide()
-      $('body').removeClass('modal-open')
+      $(".modal-area-01").hide();
+      $('body').removeClass('modal-open');
       // ↑（01～04）モーダル開いた時、背景のスクロールをさせない措置
     }
   );
@@ -88,14 +88,14 @@ $(function() {
  $(function () {
   $(".modal-open-02").click(
     function() {
-      $(".modal-area-02").show()
-      $('body').addClass('modal-open')
+      $(".modal-area-02").show();
+      $('body').addClass('modal-open');
     }
   );
   $(".modal-close").click(
     function() {
-      $(".modal-area-02").hide()
-      $('body').removeClass('modal-open')
+      $(".modal-area-02").hide();
+      $('body').removeClass('modal-open');
     }
   );
  });
@@ -103,14 +103,14 @@ $(function() {
  $(function () {
   $(".modal-open-03").click(
     function() {
-      $(".modal-area-03").show()
-      $('body').addClass('modal-open')
+      $(".modal-area-03").show();
+      $('body').addClass('modal-open');
     }
   );
   $(".modal-close").click(
     function() {
-      $(".modal-area-03").hide()
-      $('body').removeClass('modal-open')
+      $(".modal-area-03").hide();
+      $('body').removeClass('modal-open');
     }
   );
  });
@@ -118,14 +118,14 @@ $(function() {
  $(function () {
   $(".modal-open-04").click(
     function() {
-      $(".modal-area-04").show()
-      $('body').addClass('modal-open')
+      $(".modal-area-04").show();
+      $('body').addClass('modal-open');
     }
   );
   $(".modal-close").click(
     function() {
-      $(".modal-area-04").hide()
-      $('body').removeClass('modal-open')
+      $(".modal-area-04").hide();
+      $('body').removeClass('modal-open');
     }
   );
  });

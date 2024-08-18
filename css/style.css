@@ -1218,9 +1218,9 @@ iframe {
 }
 
 .con-inner {
-  max-width: 860px;
+  max-width: 920px;
   width: 100%;
-  padding-inline: 30px;
+  padding-inline: 60px;
   margin-inline: auto;
   position: relative;
 }
@@ -1279,6 +1279,11 @@ iframe {
   line-height: 1.65;
 }
 
+@media (max-width: 1024px) {
+  .item {
+    width: 26%;
+  }
+}
 @media (max-width: 767px) {
   .item {
     width: 53.9%;
@@ -1367,10 +1372,6 @@ iframe {
     margin-block: 29px 29px;
   }
 }
-#your-email-label {
-  letter-spacing: 0.01em;
-}
-
 .radio-wrap {
   width: 100%;
   display: -webkit-box;
@@ -1469,22 +1470,18 @@ iframe {
   display: none; /* デフォルトの矢印を非表示(IE用) */
 }
 
-.form-textarea {
-  resize: vertical;
-  font-size: 1.6rem;
-  line-height: 1.5625;
-  padding-block: 10px;
-}
-
 .form-text-content {
   display: block;
 }
 
 .form-textarea {
-  background: #fff;
   width: 100%;
   height: 200px;
-  padding-inline: 20px;
+  background: #fff;
+  padding: 10px 20px;
+  resize: vertical;
+  font-size: 1.6rem;
+  line-height: 1.5625;
 }
 
 .find-out-method {
@@ -1619,6 +1616,20 @@ iframe {
   background-color: #fff;
   padding: 40px 7.5% 40px 5%;
   overflow-y: scroll;
+}
+
+.privacy-policy::-webkit-scrollbar {
+  width: 10px;
+}
+
+.privacy-policy::-webkit-scrollbar-thumb {
+  background-color: #9B9B9B;
+  width: 10px;
+  height: 30px;
+}
+
+.privacy-policy::-webkit-scrollbar-track {
+  background-color: #E3E3E3;
 }
 
 @media (max-width: 767px) {
@@ -1972,7 +1983,6 @@ footer {
 .m-img {
   aspect-ratio: 274/144;
   width: 100%; /* コンテナの幅に合わせる */
-  height: auto; /* 高さは自動調整 */
   -o-object-fit: cover;
      object-fit: cover; /* 画像の切り抜きを防ぐために cover を使用 */
 }

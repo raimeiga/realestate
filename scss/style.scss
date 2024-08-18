@@ -31,7 +31,7 @@ a {
   cursor: pointer;
 }
 
-// sassで変数やmixinを定義
+//-----sassで変数やmixinを定義--------
 $main-color: rgba(77, 150, 0, 1);
 $base-color: rgba(77, 150, 0, 0.102);
 
@@ -1295,9 +1295,9 @@ iframe {
 
 .con-inner {
   // max-width: 1000px;
-  max-width: 860px;
+  max-width: 920px;
   width: 100%; //1000pxってこと。
-  padding-inline: 30px;
+  padding-inline: 60px;
   margin-inline: auto;
   position: relative;
 }
@@ -1315,21 +1315,6 @@ iframe {
 .attention p {
   @include text-style;  
 }
-
-
-
-// @media (min-width: 487px) and (max-width: 804px) {
-//  .display487-804 {
-//   display: block;
-//  }
-// }
-
-// // @media (min-width: 804px) {
-// @media (min-width: 486px) or (min-width: 804px) {
-//   .none-min804{
-//    display: none;
-//   }
-// }
 
 @media (min-width: 407px) and (max-width: 803px) {
   .ib-407-803 {
@@ -1364,6 +1349,11 @@ iframe {
   align-items: center;
   @include text-style;  
 }
+@include c-width(1024px) {
+  .item {
+    width: 26%;  
+  }
+}
 @include c-width(767px) {
   .item {
     width: 53.9%;  
@@ -1378,7 +1368,7 @@ iframe {
 
 .space-or-btn {
   flex: 1;
-} 
+  } 
 
 ::placeholder {
   color: #A0A0A0;
@@ -1423,9 +1413,7 @@ iframe {
   }
 }
 
-#your-email-label {
-  letter-spacing: 0.01em;
-}
+
 
 // -----ラジオボタンの実装（ここから）-----
 .radio-wrap {
@@ -1501,7 +1489,8 @@ iframe {
   height: 50px;  
   // padding-top: 5px;
   padding-inline: 20px 0px;
-  display: block;  
+  display: block;
+  
   // デフォルトの矢印を削除
   -webkit-appearance: none;
   appearance: none; 
@@ -1519,32 +1508,21 @@ iframe {
   display: none; /* デフォルトの矢印を非表示(IE用) */
 }
 
-.form-textarea {
-  resize: vertical; //←縦方向だけ調整するプロパティ＋値
-  font-size: 1.6rem;
-  line-height: calc(25 / 16);
-  padding-block: 10px;
-}
-
-// /* セレクトボックスの矢印デザイン変更 */
-// .cate-option {
-//   background-image: url(../images/spin-btn.jpg);
-//   background-position: right 17px center;
-//   background-repeat: no-repeat;
-//   background-size: 20px 16px;
-// }
-
 //---select（問い合わせ種別）ボタンの実装(end)-----
 
 .form-text-content {
   display: block;
 }
 
-.form-textarea {
-  background: #fff;
+.form-textarea {  
   width: 100%;
   height: 200px;
-  padding-inline: 20px;
+  background: #fff;
+  padding: 10px 20px;
+  resize: vertical; //←縦方向だけ調整するプロパティ＋値	
+  font-size: 1.6rem;	
+  line-height: calc(25 / 16);
+  
 }
 
 .find-out-method {
@@ -1684,6 +1662,25 @@ iframe {
   padding: 40px 7.5% 40px 5%;   
   overflow-y: scroll;  // height:300pxを指定した上で、y軸（縦）のスクロール設定
 }
+
+/// スクロールバーの場所（幅・高さ）
+.privacy-policy::-webkit-scrollbar {
+  width: 10px; // 縦スクロールバーの幅
+  // height: 30px; // 横スクロールバーの幅  
+}
+
+ // スクロールバーのつまみ（動く部分・クリックしてつまむ部分）
+ .privacy-policy::-webkit-scrollbar-thumb {  
+  background-color: #9B9B9B;  
+  width: 10px;
+  height: 30px;
+}
+
+// スクロールバーの背景
+.privacy-policy::-webkit-scrollbar-track {
+  background-color: #E3E3E3;
+}
+  
 @include c-width(767px) {
   .privacy-policy {
     height: 323px;   
@@ -1693,6 +1690,23 @@ iframe {
     overflow-y: scroll;  // height:300pxを指定した上で、y軸（縦）のスクロール設定
   }
 }
+
+// .sample {
+//   border: 3px solid #7BA4A8;
+//   margin-inline: auto;
+//   width: 90%;
+//   //height: 300px;
+//   overflow: scroll;
+  
+//   // スクロールバー（幅・高さ）
+//   &::-webkit-scrollbar {
+//     width: 20px; // 縦スクロールバーの幅
+//     // height: 30px; // 横スクロールバーの幅
+//     background-color: #97AFC5; // 「track」に指定でもOK
+//     border-radius: 10px; // 「track」に指定でもOK
+//   }
+// }
+
 
 .pp-head {
   font-size: 1.8rem;
@@ -2010,7 +2024,7 @@ footer {
 .m-img {
   aspect-ratio: 274 / 144;
   width: 100%; /* コンテナの幅に合わせる */
-  height: auto; /* 高さは自動調整 */
+  // height: auto; /* 高さは自動調整 */
   object-fit: cover; /* 画像の切り抜きを防ぐために cover を使用 */
 }
 
