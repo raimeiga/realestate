@@ -27,24 +27,6 @@ $(function() {
     }
   });
 
-  // $(window).scroll(function() {
-  //   var scrollValue = $(window).scrollTop();
-  //   var aboutOffset = $('#about').offset().top;
-
-  //   // #aboutまでスクロールしたら特定のCSSを適用する
-  //   if (scrollValue >= aboutOffset) {
-  //     $('.header-name,.header-nav-btn').css({
-  //       'color': '#000',        
-  //     });
-
-  //   } else {
-  //     // スクロール位置が#aboutより上の場合はCSSをリセットする
-  //     $('.header-name,.header-nav-btn').css({
-  //       'color': '#fff',       
-  //     });    
-  //   }
-  // });
-
   //---------------mv----------------------
   $(window).scroll(function() {
     var scrollValue = $(window).scrollTop();
@@ -85,17 +67,20 @@ $(function() {
   });
 
   
-  // ------モーダル-------
-
+  // ------モーダル-------  
  $(function () {
   $(".modal-open-01").click(
     function() {
       $(".modal-area-01").show()
-    }
-  );
+      $('body').addClass('modal-open')
+      // ↑（01～04）モーダル開いた時、scssのmodal-open追加
+      // scssに書いたmodal-openとコンビ
+    } );
   $(".modal-close").click(
     function() {
       $(".modal-area-01").hide()
+      $('body').removeClass('modal-open')
+      // ↑（01～04）モーダル開いた時、背景のスクロールをさせない措置
     }
   );
  });
@@ -104,11 +89,13 @@ $(function() {
   $(".modal-open-02").click(
     function() {
       $(".modal-area-02").show()
+      $('body').addClass('modal-open')
     }
   );
   $(".modal-close").click(
     function() {
       $(".modal-area-02").hide()
+      $('body').removeClass('modal-open')
     }
   );
  });
@@ -117,11 +104,13 @@ $(function() {
   $(".modal-open-03").click(
     function() {
       $(".modal-area-03").show()
+      $('body').addClass('modal-open')
     }
   );
   $(".modal-close").click(
     function() {
       $(".modal-area-03").hide()
+      $('body').removeClass('modal-open')
     }
   );
  });
@@ -130,11 +119,13 @@ $(function() {
   $(".modal-open-04").click(
     function() {
       $(".modal-area-04").show()
+      $('body').addClass('modal-open')
     }
   );
   $(".modal-close").click(
     function() {
       $(".modal-area-04").hide()
+      $('body').removeClass('modal-open')
     }
   );
  });
