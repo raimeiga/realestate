@@ -769,16 +769,16 @@ header {
 
 .green-box-right {  
   // padding: 50px 0 42px 220px ;  
-  padding-top: 50px;  
+  padding-top: 50px;
+  padding-right: 5%;
   padding-bottom: 42px;
   padding-left: 23.9%;
   // margin-left:420px;  
   margin-left: 45.6%;
  }
- @include c-width(1024px) {
+ @include c-width(920px) {
   .green-box-right {
-    padding-right: 4.2%;
-    // padding-left: 21.8%;
+    padding-left: 21.8%;
   }  
  }
  @include c-width(767px) {
@@ -789,14 +789,12 @@ header {
    }
  }
 
-
-
 .green-box-left {  
   // padding: 50px 220px 42px 40px ; 
   padding-top: 50px;
   padding-right: 0;
   padding-bottom: 42px;
-  padding-left: 4.3%;
+  padding-left: 40px;
   // margin-right:420px; 
   margin-right: 45.6%;
  }
@@ -808,22 +806,12 @@ header {
    }
  }
 
-
-
 .green-box h3 {
   font-size: 2.5rem;
   font-weight: 500;
   // font-size: calc(25 / 1080 * 100vw);
   line-height: calc(33 / 25);  
 }
-@include c-width(890px) {
-  .get-small {
-    font-size: 2.1rem;
-  }
-  .gb-br {
-    display: none;
-   }
- }
 @include c-width(767px) {
   .green-box h3 {
     font-size: 2rem;
@@ -837,13 +825,29 @@ header {
   font-weight: 600;
   line-height: calc(25 / 16);
 }
-
+@include c-width(966px) {
+.ib-max966 {
+  display: inline-block;
+ }
+}
 @include c-width(767px) {
   .green-box p {
     font-size: 1.6rem;    
     line-height: calc(25 / 16);
   }
 }
+
+@include c-width(966px) {
+  .ib-max966 {
+    display: inline-block;
+   }
+  }
+  
+  // @media (max-width: 767px) {
+  //   .if-sp-none {
+  //     display: none;
+  //    }
+  // }
   
 .align-right {
   text-align: end;
@@ -1218,7 +1222,7 @@ iframe {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    aspect-ratio: 600 / 400;
+    aspect-ratio: 600 / 400;  
   }
 }
 

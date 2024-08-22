@@ -708,14 +708,15 @@ header {
 }
 .green-box-right {
   padding-top: 50px;
+  padding-right: 5%;
   padding-bottom: 42px;
   padding-left: 23.9%;
   margin-left: 45.6%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 920px) {
   .green-box-right {
-    padding-right: 4.2%;
+    padding-left: 21.8%;
   }
 }
 @media (max-width: 767px) {
@@ -729,7 +730,7 @@ header {
   padding-top: 50px;
   padding-right: 0;
   padding-bottom: 42px;
-  padding-left: 4.3%;
+  padding-left: 40px;
   margin-right: 45.6%;
 }
 
@@ -746,14 +747,6 @@ header {
   line-height: 1.32;
 }
 
-@media (max-width: 890px) {
-  .get-small {
-    font-size: 2.1rem;
-  }
-  .gb-br {
-    display: none;
-  }
-}
 @media (max-width: 767px) {
   .green-box h3 {
     font-size: 2rem;
@@ -766,10 +759,20 @@ header {
   line-height: 1.5625;
 }
 
+@media (max-width: 966px) {
+  .ib-max966 {
+    display: inline-block;
+  }
+}
 @media (max-width: 767px) {
   .green-box p {
     font-size: 1.6rem;
     line-height: 1.5625;
+  }
+}
+@media (max-width: 966px) {
+  .ib-max966 {
+    display: inline-block;
   }
 }
 .align-right {
@@ -2012,4 +2015,4 @@ footer {
   height: 18px; /* 高さ */
   text-align: center; /* 文字を中央揃え */
   line-height: 18px; /* 行の高さ */
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style-LAPTOP-L4DS4JRP.css.map */
