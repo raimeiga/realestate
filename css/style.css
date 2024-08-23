@@ -928,12 +928,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-column-gap: 16.6%;
      -moz-column-gap: 16.6%;
           column-gap: 16.6%;
+  padding-block: 13px 12px;
   border-bottom: solid 1px #55A500;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -944,9 +942,6 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-column-gap: 4.7%;
        -moz-column-gap: 4.7%;
             column-gap: 4.7%;
@@ -955,20 +950,8 @@ header {
 }
 .date {
   width: 57px;
-  padding-block: 13px 36px;
 }
 
-@media (max-width: 767px) {
-  .date {
-    width: 57px;
-    padding-block: 13px 36px;
-  }
-}
-@media (max-width: 574px) {
-  .date {
-    width: 57px;
-  }
-}
 .date time {
   font-size: 1.6rem;
   line-height: 2.0625;
@@ -976,7 +959,7 @@ header {
 }
 
 .text {
-  padding-block: 20px 12px;
+  padding-top: 6px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -984,7 +967,6 @@ header {
 
 @media (max-width: 767px) {
   .text {
-    padding-block: 20px 12px;
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
