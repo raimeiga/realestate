@@ -25,20 +25,14 @@ a {
   cursor: pointer;
 }
 
-.js-scroll.anima-fade-in {
+.js-scroll {
   opacity: 0;
-  -webkit-transform: translateY(5rem);
-          transform: translateY(5rem);
 }
 
-.js-scroll.anima-fade-in.js-active {
+.js-scroll.js-active {
   opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-transition: opacity 4s ease, -webkit-transform 2s ease;
-  transition: opacity 4s ease, -webkit-transform 2s ease;
-  transition: opacity 4s ease, transform 2s ease;
-  transition: opacity 4s ease, transform 2s ease, -webkit-transform 2s ease;
+  -webkit-transition: opacity 3s ease;
+  transition: opacity 3s ease;
 }
 
 @media (max-width: 767px) {
@@ -221,6 +215,8 @@ header {
 
 .scroll-change .menu-border::after {
   border-bottom-color: #000;
+  -webkit-transition: border-bottom-color 0.4s ease;
+  transition: border-bottom-color 0.4s ease;
 }
 
 /* ハンバーガーメニュー */

@@ -7,25 +7,35 @@ $(function() {
   });  
 });
 
-  $(window).scroll(function() {
-    var scrollValue = $(window).scrollTop();
-    var aboutOffset = $('#about').offset().top;
 
-    // #aboutまでスクロールしたら特定のCSSを適用する
-    if (scrollValue >= aboutOffset) {
-      $('.header-name,.header-nav-btn').css({
-        'color': '#000',
-      });
-      $('.header-nav-btn').addClass('scroll-change'); // scroll-changeクラスを追加
+$(window).scroll(function() {
+  // ヘッダーの高さを取得
+  var headerHeight = $('.header-inner').outerHeight();
+  // 現在のスクロール位置を取得
+  var scrollValue = $(window).scrollTop();
+  // #about セクションの上端の位置を取得
+  var aboutOffset = $('#about').offset().top;
 
-    } else {
-      // スクロール位置が#aboutより上の場合はCSSをリセットする
-      $('.header-name,.header-nav-btn').css({
-        'color': '#fff',       
-      });    
-      $('.header-nav-btn').removeClass('scroll-change'); // scroll-changeクラスを削除
-    }
-  });
+  // ヘッダーの高さを考慮して位置を調整
+  var adjustedAboutOffset = aboutOffset - headerHeight;
+
+  // スクロール位置が調整後の #about の位置を超えた場合
+  if (scrollValue >= adjustedAboutOffset) {
+    $('.header-name, .header-nav-btn').css({
+      'color': '#000',
+    });
+    $('.header-nav-btn').addClass('scroll-change'); // scroll-changeクラスを追加
+  } else {
+    // スクロール位置が調整後の #about の位置より上の場合
+    $('.header-name, .header-nav-btn').css({
+      'color': '#fff',
+    });
+    $('.header-nav-btn').removeClass('scroll-change'); // scroll-changeクラスを削除
+  }
+});
+
+
+  
 
   //---------------mv----------------------
   $(window).scroll(function() {

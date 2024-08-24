@@ -81,15 +81,24 @@ $base-color: rgba(77, 150, 0, 0.102);
 
 // 各sectionに↓のclassを持たせてフワっと出現させる
 // main.jsとコンビ
-.js-scroll.anima-fade-in {
-  opacity: 0;
-  transform: translateY(5rem);
+.js-scroll {
+  opacity: 0;  
 }
-.js-scroll.anima-fade-in.js-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 4s ease, transform 2s ease;
+.js-scroll.js-active {
+  opacity: 1;  
+  transition: opacity 3s ease;  
 }
+
+
+// .js-scroll {
+//   opacity: 0;
+//   transform: translateY(5rem);
+// }
+// .js-scroll.js-active {
+//   opacity: 1;
+//   transform: translateY(0);  
+//   transition: opacity 4s ease,transform 2s ease;
+// }
 
 
 //------------common--------------
@@ -245,6 +254,7 @@ header {
 
 .scroll-change .menu-border::after {
   border-bottom-color: #000;  //スクロール時の下線の色 
+  transition: border-bottom-color 0.4s ease; //下線の色をスムーズに変更 */
 }
 // ↑ スクロール時の色変更に備えて下線の色を黒にするためのクラス
 // main.jsにaddClassで.scroll-changeを追加したときに、.menu-border::afterに
