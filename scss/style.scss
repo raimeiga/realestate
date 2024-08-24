@@ -265,6 +265,7 @@ header {
 /* ハンバーガーメニュー */
 .hamburger {
   position: fixed;
+  top:0;
   right: 0;
   width: 72px;
   height: 52px;
@@ -776,14 +777,14 @@ header {
     @include max(767px) {
       width: 100%;
       display: grid;
-      row-gap: 9px;
+      row-gap: 10px;
     }
 }
 .works-li-img-wrap {  
   overflow: hidden; // はみ出した部分を隠す
 }
 .works-list:hover .works-li-img-wrap img {
-  transform: scale(1.05); /* ホバー時に画像を1.05倍に拡大 */
+  transform: scale(1.2); /* ホバー時に画像を1.05倍に拡大 */
   filter: brightness(1.8); // 明るさを1.8倍（80%）増加
 }
 .works-list:hover:hover .works-li-text-wrap p {
@@ -885,7 +886,7 @@ header {
 }
 
 @include max(497px) {
-  .ib-max497 {
+  .ib-modal-03 {
     display: inline-block;
   }
 }
@@ -940,7 +941,7 @@ header {
 .green-area {
   padding-inline: 20px;  
   background-color: $main-color;
-  padding-block: 12px 5px;
+  padding-block: 8px;
 }
 .green-area p {
   color: #fff;  
@@ -984,7 +985,7 @@ header {
 }
 
 .text {  
-  padding-top: 7px; 
+  padding-top: 6px; 
   flex: 1;
 }
 
@@ -1308,7 +1309,7 @@ iframe {
   margin-block: 43px 41px;
     @include max(767px) {
         display: flex;
-        margin-block: 30px 31px;
+        margin-block: 30px 29px;
       }
 }
 
@@ -1543,20 +1544,22 @@ iframe {
   //padding: 40px 60px 40px 40px;  
   padding: 10px 10px 10px 40px;  
   //position: relative;  // スクロールバーの位置調整のため  
-    @include max(767px) {
-      height: 323px;           
+    @include max(767px) {             
       // padding: 30px 50px 30px 30px;  
-      padding: 10px 10px 10px 30px;  
+      padding: 10px 10px 23px 0px;  
     }
 }
 
 .privacy-policy-inner {
   width: 100%;
-    // height: 280px;
-    overflow-y: scroll;// height:220pxを指定した上で、y軸（縦）のスクロール設定
-    padding: 30px 40px 30px 0;
+    height: 280px;
+    overflow-y: scroll;// height:280pxを指定した上で、y軸（縦）のスクロール設定
+    //padding: 30px 40px 30px 0;
+    padding: 30px 5% 30px 0;
     @include max(767px) {
-      padding: 50px 27px 30px 0;
+      height: 290px;    
+      //padding: 20px 30px 0px 30px;
+      padding: 20px 9.5% 0px 30px;
 }
 }
 
@@ -1564,9 +1567,9 @@ iframe {
 .privacy-policy-inner::-webkit-scrollbar {
   width: 10px; // 縦スクロールバーの幅
   // height: 30px; // 横スクロールバーの幅  
-  height: 280px;
+  height: 280px;  
   @include max(767px) {
-    height: 280px;
+    height: 290px;
   }
 }
 
