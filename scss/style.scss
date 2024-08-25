@@ -460,21 +460,21 @@ header {
   // ↓いったん50%にした上で、transformで調整すれば、同じ比率を保つ
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 14%;
   transform: translateY(-48.5%);
-  margin-left: 14%;
+  //margin-left: 14%;
   display: flex;
-  flex-direction: row-reverse; 
+  flex-direction: row-reverse;
     @include max(767px) {
-      width: 100%; 
+      width: 100%;
       position: absolute;
       top: 50%;
       left: 0;
       transform: translateY(-50%);
-      margin-left: 0%;    
+      margin-left: 0%;
       display: flex;
       flex-direction: column;
-      row-gap: 24px;    
+      row-gap: 24px;
     }
 }
 
@@ -773,20 +773,27 @@ header {
   display: grid;
   row-gap: 19px; 
   cursor: pointer; /* カーソルを指マークに変更 */
-  transition: transform 0.3s ease;
     @include max(767px) {
       width: 100%;
       display: grid;
       row-gap: 10px;
     }
 }
+
 .works-li-img-wrap {  
   overflow: hidden; // はみ出した部分を隠す
 }
+
+.works-li-img-wrap img {
+  transition: transform 0.4s ease;
+  transition: filter 0.4s ease;
+}
+
 .works-list:hover .works-li-img-wrap img {
   transform: scale(1.2); /* ホバー時に画像を1.05倍に拡大 */
   filter: brightness(1.8); // 明るさを1.8倍（80%）増加
 }
+
 .works-list:hover:hover .works-li-text-wrap p {
   color: rgba(0, 0, 0, 0.5); //ホバー時に文字色を薄く。
 }

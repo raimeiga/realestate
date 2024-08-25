@@ -422,10 +422,9 @@ header {
 .about-v-catch {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 14%;
   -webkit-transform: translateY(-48.5%);
           transform: translateY(-48.5%);
-  margin-left: 14%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -807,10 +806,6 @@ header {
   display: grid;
   row-gap: 19px;
   cursor: pointer; /* カーソルを指マークに変更 */
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 @media only screen and (max-width: 767px) {
   .works-list {
@@ -822,6 +817,17 @@ header {
 
 .works-li-img-wrap {
   overflow: hidden;
+}
+
+.works-li-img-wrap img {
+  -webkit-transition: -webkit-transform 0.4s ease;
+  transition: -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+  -webkit-transition: -webkit-filter 0.4s ease;
+  transition: -webkit-filter 0.4s ease;
+  transition: filter 0.4s ease;
+  transition: filter 0.4s ease, -webkit-filter 0.4s ease;
 }
 
 .works-list:hover .works-li-img-wrap img {
