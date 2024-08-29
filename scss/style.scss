@@ -451,20 +451,22 @@ header {
 }
 
 // -----about-----
-.about-inner {
+.about-image {
   position: relative;
 }
 
-.about-v-catch {   
+.about-catch {   
   // width: 45.5%;  
   // ↓いったん50%にした上で、transformで調整すれば、同じ比率を保つ
   position: absolute;
   top: 50%;
-  left: 14%;
-  transform: translateY(-48.5%);
-  //margin-left: 14%;
-  display: flex;
-  flex-direction: row-reverse;
+  left: 34.4%;
+  transform: translate(-50%, -50%);
+  display: flex;  
+  padding-left: 40px;
+  // top: 50%;
+  // left: 14%;
+  // transform: translateY(-48.5%);
     @include max(767px) {
       width: 100%;
       position: absolute;

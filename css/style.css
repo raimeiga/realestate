@@ -415,26 +415,23 @@ header {
     padding-left: 12px;
   }
 }
-.about-inner {
+.about-image {
   position: relative;
 }
 
-.about-v-catch {
+.about-catch {
   position: absolute;
   top: 50%;
-  left: 14%;
-  -webkit-transform: translateY(-48.5%);
-          transform: translateY(-48.5%);
+  left: 34.4%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  padding-left: 40px;
 }
 @media only screen and (max-width: 767px) {
-  .about-v-catch {
+  .about-catch {
     width: 100%;
     position: absolute;
     top: 50%;
