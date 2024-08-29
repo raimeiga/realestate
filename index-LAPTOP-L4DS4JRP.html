@@ -25,10 +25,6 @@
    <!-- CDNで読み込むslickのファイル（slick-theme.css）の読み込み。slickのサイトにないコードだが、
     これがないと、画面上部に変な空白と「previous」という謎のテキストが出現してしまうので書いとく。-->
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
-  
-   <!--OverlayScrollbarsの読み込み -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars/css/OverlayScrollbars.min.css">
-
   </head>
    
  <body id="page-top">
@@ -120,41 +116,23 @@
         <!-- <h2>永遠も。<br class="if-pc-none"><span class="ib">瞬間も。</span><br>あなたと共に。</h2>  -->
       </div>      
     </div>    
+    <span id="mv-end" ></span>
   </div>
 
   <!-- about -->
-  <section id="about" class="about">
-    <div class="about-image">
-      <picture>  
-        <source media="(max-width: 767px)" srcset="./images/sp_about.jpg">
-        <img src="./images/about.jpg" alt="ABOUTの画像">         
-      </picture>
-      <div class="about-catch"> 
-        <div class="about-text-wrap right-to-left">
-          <p class="about-text first-line">古来から伝わる伝統文化</p>
-          <p class="about-text">昔からそこにある材料</p>
-          <p class="about-text">その土地に長い間かけて</p>
-          <p class="about-text">最適化してきた</p>
-          <p class="about-text">たくさんのヒントを</p>
-          <p class="about-text">イマを生きる私たちの</p>
-          <p class="about-text">心地よさに取り入れ</p>
-          <p class="about-text">新たな技術革新を</p>
-          <p class="about-text">起こし続ける会社です</p>
-        </div>
-        <h2 class="about-title right-to-left">伝統とイマを繋ぐ</h2>    
-      </div>
-    </div>
-  </section>
-
-  <!-- <section id="about">
+  <section id="about">
   <div class="about-inner ">
-    <div class="about-image">
+    <div class="about-v-image">
       <picture>  
         <source media="(max-width: 767px)" srcset="./images/sp_about.jpg">
         <img src="./images/about.jpg" alt="ABOUTの画像">         
       </picture>
     </div>
-      <div class="about-catch js-scroll">            
+    <!-- <div class="about-v-contents "> -->
+      <div class="about-v-catch js-scroll">     
+        <!-- <div class="about-v-catch-01 right-to-left">
+          <p>伝統とイマを繋ぐ</p>
+        </div> -->
         <h2 class="about-title right-to-left">伝統とイマを繋ぐ</h2>
         <div class="about-text-wrap right-to-left">
           <p class="about-text first-line">古来から伝わる伝統文化</p>
@@ -165,11 +143,21 @@
           <p class="about-text">イマを生きる私たちの</p>
           <p class="about-text">心地よさに取り入れ</p>
           <p class="about-text">新たな技術革新を</p>
-          <p class="about-text">起こし続ける会社です</p>          
+          <p class="about-text">起こし続ける会社です</p>
+          <!-- <div><p>古来から伝わる伝統文化</p></div>
+          <div><p>昔からそこにある材料</p></div>
+          <div><p>その土地に長い間かけて</p></div>
+          <div><p>最適化してきた</p></div>
+          <div><p>たくさんのヒントを</p></div>
+          <div><p>イマを生きる私たちの</p></div>
+          <div><p>心地よさに取り入れ</p></div>
+          <div><p>新たな技術革新を</p></div>
+          <div><p>起こし続ける会社です</p></div>       -->
         </div>
-      </div>    
+      </div>
+    <!-- </div> -->
   </div>
-  </section> -->
+  </section>
 
 <!-- SERVICE -->
 <section id="service">
@@ -829,11 +817,5 @@
     <script type="text/Javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- Javascript（main.jsファイル）の読み込み -->
     <script src="js/main.js"></script>
-
-    <!--OverlayScrollbarsの読み込み -->
-    <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars/js/OverlayScrollbars.min.js"></script>
-
-
-
  </body>
  </html>
