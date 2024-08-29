@@ -456,53 +456,53 @@ header {
 }
 
 .about-catch {   
-  // width: 45.5%;  
-  // ↓いったん50%にした上で、transformで調整すれば、同じ比率を保つ
-  position: absolute;
-  top: 50%;
-  left: 34.4%;
+  writing-mode: vertical-rl; //テキスト縦書き　　//　ココ
+  position: absolute; 
+  top: 51%;  // いったん50%にした上で、transformで細かい高さを調整すれば、画面幅変わっても同じ比率を保つ
+  left: 35%;
   transform: translate(-50%, -50%);
-  display: flex;  
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;      //　ココ
   padding-left: 40px;
-  // top: 50%;
-  // left: 14%;
-  // transform: translateY(-48.5%);
+    @include max(1024px) {      
+      left: 40%;      
+    }
     @include max(767px) {
       width: 100%;
       position: absolute;
       top: 50%;
       left: 0;
-      transform: translateY(-50%);
-      margin-left: 0%;
+      transform: translateY(-50%);      
       display: flex;
-      flex-direction: column;
-      row-gap: 24px;
+      flex-direction: row;  //　ココ
+      column-gap: 24px;     //　ココ
+      padding-left: 0px;
     }
 }
 
 .about-title {
- writing-mode: vertical-rl; //テキスト縦書き
- text-orientation: upright; //文字を通常の向きで表示 
- font-size: 3rem;
- line-height: 1.18;
- letter-spacing: 0.17em;
-  @include max(1024px) {
-    font-size: 2.8rem;
-    line-height: 1.18;
-    letter-spacing: 0.17em;
-  }
-  @include max(767px) {
-    margin: 0 auto;
-    font-size: 2.5rem;
-    line-height: 1.19;
-    letter-spacing: 0.2em;
-  }
+  //writing-mode: vertical-rl; //テキスト縦書き
+  //text-orientation: upright; //文字を通常の向きで表示 
+  font-size: 3rem;
+  line-height: 1;
+  letter-spacing: 0.16em;
+  margin-left: 30px;
+   @include max(1024px) {
+     font-size: 2.8rem;     
+   }
+   @include max(767px) {
+     margin: 0 auto;
+     font-size: 2.5rem;
+     line-height: 1.19;
+     letter-spacing: 0.2em;
+   }
 }
 
 .about-text-wrap {
-  writing-mode: vertical-rl; //テキスト縦書き
-  text-orientation: upright; //文字を通常の向きで表示
-  margin-right: 33px;
+  //writing-mode: vertical-rl; //テキスト縦書き
+  //text-orientation: upright; //文字を通常の向きで表示
+  //margin-right: 33px;
   // display: flex;
   // column-gap: 30px;
     @include max(767px) {
@@ -511,22 +511,23 @@ header {
 }
 
 .about-text {  
-  writing-mode: vertical-rl; //テキスト縦書き
-  text-orientation: upright; //文字を通常の向きで表示
+  //writing-mode: vertical-rl; //テキスト縦書き
+  // text-orientation: upright; //文字を通常の向きで表示
   font-size: 1.8rem;
-  line-height: 1.37;
-  letter-spacing: 0.41em;  
-  padding-right: 22.5px;
+  line-height: 1;
+  letter-spacing: 0.36em;  
+  padding-right: 30px;
     @include max(1024px) {
       font-size: 1.7rem;
-      line-height: 1.3;
-      letter-spacing: 0.41em;  
+      // line-height: 1.3;
+      // letter-spacing: 0.41em;  
     }
     @include max(767px) {
       font-size: 1.6rem;
       line-height: 1.25;
       letter-spacing: 0.23em;
       padding-right: 6px;    
+      
     }    
 }
 
