@@ -485,11 +485,6 @@ header {
   }
 }
 
-.about-text-wrap {
-  -webkit-writing-mode: vertical-rl;
-      -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
-}
 @media only screen and (max-width: 767px) {
   .about-text-wrap {
     margin: 0 auto;
