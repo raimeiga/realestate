@@ -25,16 +25,6 @@ a {
   cursor: pointer;
 }
 
-.js-scroll {
-  opacity: 0;
-}
-
-.js-scroll.js-active {
-  opacity: 1;
-  -webkit-transition: opacity 3s ease;
-  transition: opacity 3s ease;
-}
-
 @media (max-width: 767px) {
   .pc {
     display: none !important;
@@ -417,6 +407,22 @@ header {
 }
 .about-image {
   position: relative;
+}
+
+.js-scroll {
+  opacity: 0;
+  -webkit-transform: translateY(7rem);
+          transform: translateY(7rem);
+}
+
+.js-scroll.js-active {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: opacity 3s ease, -webkit-transform 1s ease;
+  transition: opacity 3s ease, -webkit-transform 1s ease;
+  transition: opacity 3s ease, transform 1s ease;
+  transition: opacity 3s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 
 .about-catch {

@@ -80,24 +80,15 @@ $base-color: rgba(77, 150, 0, 0.102);
 
 // 各sectionに↓のclassを持たせてフワっと出現させる
 // main.jsとコンビ
-.js-scroll {
-  opacity: 0;  
-}
-.js-scroll.js-active {
-  opacity: 1;  
-  transition: opacity 3s ease;  
-}
-
-
 // .js-scroll {
-//   opacity: 0;
-//   transform: translateY(5rem);
+//   opacity: 0;  
 // }
 // .js-scroll.js-active {
-//   opacity: 1;
-//   transform: translateY(0);  
-//   transition: opacity 4s ease,transform 2s ease;
+//   opacity: 1;  
+//   transition: opacity 3s ease;  
 // }
+
+
 
 
 //------------common--------------
@@ -455,7 +446,24 @@ header {
   position: relative;
 }
 
-.about-catch {   
+// .about-catch-p {
+//   width: 50%;
+//   height: auto;
+//   margin: auto;  
+// }
+
+
+.js-scroll {
+  opacity: 0;
+  transform: translateY(7rem);
+}
+.js-scroll.js-active {
+  opacity: 1;
+  transform: translateY(0);  
+  transition: opacity 3s ease,transform 1s ease;
+}
+
+.about-catch {  
   writing-mode: vertical-rl; //テキスト縦書き　　//　ココ
   position: absolute; 
   top: 51%;  // いったん50%にした上で、transformで細かい高さを調整すれば、画面幅変わっても同じ比率を保つ
@@ -481,6 +489,9 @@ header {
       padding-left: 0px;
     }
 }
+
+
+
 
 .about-title {
   //writing-mode: vertical-rl; //テキスト縦書き
