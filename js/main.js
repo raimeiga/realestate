@@ -1,13 +1,7 @@
 
-$(function() {
-  $(".mv-slider").slick({
-    autoplay: true,  //自動再生
-    autoplaySpeed: 5000,
-    arrows: false,
-  });  
-});
 
 
+// ------ヘッダー関係-------
 $(window).scroll(function() {
   // ヘッダーの高さを取得
   var headerHeight = $('.header-inner').outerHeight();
@@ -35,9 +29,45 @@ $(window).scroll(function() {
 });
 
 
-  
+// ------ハンバーガーメニュー-------
+// toggle=表示と非表示を切り替えるメソッド
+// 300=0.3秒で表示・非表示を切り替える
+
+$(function () {
+  $("#hamburger-block").click( 
+    function() {
+    // ハンバーガーアイコンの切り替え
+    $(this).toggleClass('is-active');
+
+    // メニューの表示切り替え
+      $(".ham-menu").toggle(300)     
+    }
+  );
+});
+
+// ハンバーガーメニュー内のメニュークリックすると、
+// 3秒後にメニューはfadeout。removeだと消えたまま、復活しない。
+$(function () {
+  $(".ham-menu-btn").click( 
+    function() {
+      $(".ham-menu").fadeOut(300);
+      $("#hamburger-block").removeClass('is-active'); // メニューが閉じられるときに☓を元に戻す
+    });
+});
+
+
 
   //---------------mv----------------------
+
+  $(function() {
+    $(".mv-slider").slick({
+      autoplay: true,  //自動再生
+      autoplaySpeed: 5000,
+      arrows: false,
+    });  
+  });
+
+  
   $(window).scroll(function() {
     var scrollValue = $(window).scrollTop();
     var mvOffset = $('.mv').offset().top;
@@ -139,33 +169,5 @@ $(window).scroll(function() {
     }
   );
  });
-
-// ------ハンバーガーメニュー-------
-// toggle=表示と非表示を切り替えるメソッド
-// 300=0.3秒で表示・非表示を切り替える
-
-$(function () {
-  $("#hamburger-block").click( 
-    function() {
-    // ハンバーガーアイコンの切り替え
-    $(this).toggleClass('is-active');
-
-    // メニューの表示切り替え
-      $(".ham-menu").toggle(300)     
-    }
-  );
-});
-
-
-// ハンバーガーメニュー内のメニュークリックすると、
-// 3秒後にメニューはfadeout。removeだと消えたまま、復活しない。
-$(function () {
-  $(".ham-menu-btn").click( 
-    function() {
-      $(".ham-menu").fadeOut(300);
-      $("#hamburger-block").removeClass('is-active'); // メニューが閉じられるときに☓を元に戻す
-    });
-});
-
 
 

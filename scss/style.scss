@@ -549,7 +549,7 @@ header {
 // -----service-----
 #service {
   background: $base-color;  
-  padding-block: 80px;
+  padding-block: 81px;
   @include max(767px) {
     background: $base-color;  
     padding-block: 52px;
@@ -766,7 +766,7 @@ header {
  padding-block: 80px 97px;
   @include max(767px){
     width: 100%; 
-    padding-block: 50px 42px;
+    padding-block: 52px 40px;
   }
 }
 
@@ -937,7 +937,7 @@ header {
   padding-block: 80px 80px;
     @include max(767px) {
       background: $base-color;
-      padding-block: 50px;
+      padding-block: 50px 52px;
     }
 }
 
@@ -946,7 +946,7 @@ header {
   column-gap: 6.5%;
     @include max(767px) {
       display: grid;
-      row-gap: 50px;
+      row-gap: 53px;
     }
 }
 
@@ -1071,7 +1071,7 @@ header {
 // -----company-----
 
 #company {  
-  padding-block: 80px 80px;
+  padding-block: 81px 80px;
     @include max(767px) { 
         padding-block: 50px;
       }
@@ -1573,38 +1573,117 @@ iframe {
   width: 100%;
     height: 280px;
     overflow-y: scroll;// height:280pxを指定した上で、y軸（縦）のスクロール設定
+    -ms-overflow-style: none;
+    /* IE, Edge 対応 */
+    scrollbar-width: none;
+    /* Firefox 対応 */
     //padding: 30px 40px 30px 0;
     padding: 30px 5% 30px 0;
-    @include max(767px) {
-      height: 290px;    
-      //padding: 20px 30px 0px 30px;
-      padding: 20px 9.5% 0px 30px;
-}
+      @include max(767px) {
+        height: 290px;    
+        //padding: 20px 30px 0px 30px;
+        padding: 20px 9.5% 0px 30px;
+      }
 }
 
-/// スクロールバーの場所（幅・高さ）
-.privacy-policy-inner::-webkit-scrollbar {
-  width: 10px; // 縦スクロールバーの幅
-  // height: 30px; // 横スクロールバーの幅  
-  height: 280px;  
+// スクロールバーのつまみ
+.simplebar-scrollbar::before {  
+  border-radius: 0 !important;
+  width: 10px;  // 
+  height: 33px; //  
+  margin-top: -2px;  //デフォルトだと上に隙間があったので調整
+  margin-left: -2px; //デフォルトだと左に隙間があったので調整
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+  background: #9B9B9B;
+ }
+
+/*スクロールバーのトラック (背景部分) のスタイル */
+.simplebar-track {
+  background: #E3E3E3; /* スクロールバーの背景色 */
+  width: 10px !important;  
+  height: 280px; //280pxにしない場合、スクロールの最後でつまみが沈んで短くなる?
   @include max(767px) {
     height: 290px;
   }
 }
 
- // スクロールバーのつまみ（動く部分・クリックしてつまむ部分）
- .privacy-policy-inner::-webkit-scrollbar-thumb {  
-  background-color: #9B9B9B;  
-  width: 10px; // 縦スクロールバーの幅
-  height: 30px;
-}
-
-// スクロールバーの背景
-.privacy-policy-inner::-webkit-scrollbar-track {
-  background-color: #E3E3E3;
-  // margin-block: 10px 10px;
+// .os-scrollbar {
+//   background-color: #E3E3E3; /* スクロールバーの背景色 */
+//  }
  
-}
+//  .os-scrollbar-handle {
+//   background-color: #9B9B9B; /* スクロールバーのつまみの色 */  
+//   width: 10px !important; /* 縦スクロールバーの幅 */
+//   height: 30px !important; /* 縦スクロールバーのつまみの高さ */  
+//   border-radius: 0 !important;  /* 角を丸くしない */
+//  }
+ 
+//  /* スクロールバーのトラック (背景部分) のスタイル */
+//  .os-scrollbar-track {
+//   background-color: #E3E3E3; /* スクロールバーの背景色 */
+//   width: 10px !important; 
+//   // height: 30px !important; 
+//   margin-top: -2px;  //背景とつまみのwidthを同じにしたが、ブラウザ上でズレていたので、修正
+//   margin-left: -2px; //背景とつまみのwidthを同じにしたが、ブラウザ上でズレていたので、修正
+// }
+
+//----------------------------------------------------------
+// #privacy-js {
+//   height: 200px;
+//   background-color: rgba(77, 150, 0, 0.149);
+//   border: 1px solid #000; 
+//  }
+ 
+//  .content-js {
+//   height: 500px;
+//   padding: 10px;
+//   background-color: #fff;
+//   white-space: wrap;
+//  }
+
+//  .os-scrollbar {
+//   background-color: #E3E3E3; /* スクロールバーの背景色 */
+//  }
+ 
+//  .os-scrollbar-handle {
+//   background-color: #9B9B9B; /* スクロールバーのつまみの色 */
+//   width: 10px !important; /* 縦スクロールバーの幅 */
+//   height: 30px !important; /* 縦スクロールバーのつまみの高さ */
+//   border-radius: 0 !important;  /* 角を丸くしない */
+//  }
+ 
+//  /* スクロールバーのトラック (背景部分) のスタイル */
+//  .os-scrollbar-track {
+//   background-color: #E3E3E3; /* スクロールバーの背景色 */
+//   width: 10px !important; 
+//  }
+//--------------------------------------------------------------
+
+
+// // スクロールバーの場所（幅・高さ）
+// .privacy-policy-inner::-webkit-scrollbar {
+//   width: 10px; // 縦スクロールバーの幅
+//   // height: 30px; // 横スクロールバーの幅  
+//   height: 280px;  
+//   @include max(767px) {
+//     height: 290px;
+//   }
+// }
+
+// // スクロールバーのつまみ（動く部分・クリックしてつまむ部分）
+//  .privacy-policy-inner::-webkit-scrollbar-thumb {  
+//   background-color: #9B9B9B;  
+//   width: 10px; // 縦スクロールバーの幅
+//   height: 30px;
+// }
+
+// // スクロールバーの背景
+// .privacy-policy-inner::-webkit-scrollbar-track {
+//   background-color: #E3E3E3;
+//   // margin-block: 10px 10px; 
+// }
 
 // // スクロールバーの上と下に隙間を作るためのマージン
 // .privacy-policy::-webkit-scrollbar-track {
@@ -1635,8 +1714,7 @@ iframe {
       }
 }
 
-.pp-space {
- 
+.pp-space { 
   margin-bottom: 31px;
     @include max(767px) {
       margin-bottom: 33px;
