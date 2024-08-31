@@ -245,6 +245,7 @@ header {
 .scroll-change .menu-border::after {
   border-bottom-color: #000;  //スクロール時の下線の色 
   transition: border-bottom-color 0.4s ease; //下線の色をスムーズに変更 */
+  transition: width 0.3s ease-out; // 幅変更のアニメーションの時間（0.3秒）
 }
 // ↑ スクロール時の色変更に備えて下線の色を黒にするためのクラス
 // main.jsにaddClassで.scroll-changeを追加したときに、.menu-border::afterに
