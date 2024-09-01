@@ -1,6 +1,3 @@
-
-
-
 // ------ヘッダー関係-------
 $(window).scroll(function() {
   // ヘッダーの高さを取得
@@ -15,19 +12,14 @@ $(window).scroll(function() {
 
   // スクロール位置が調整後の #about の位置を超えた場合
   if (scrollValue >= adjustedAboutOffset) {
-    $('.header-name, .header-nav-btn').css({
-      'color': '#000',
-    });
-    $('.header-nav-btn').addClass('scroll-change'); // scroll-changeクラスを追加
+    $('.header-name, .header-nav-btn').addClass('scroll-change-01'); // クラスを追加
+    $('.header-nav-btn').addClass('scroll-change-02');               // クラスを削除
   } else {
-    // スクロール位置が調整後の #about の位置より上の場合
-    $('.header-name, .header-nav-btn').css({
-      'color': '#fff',
-    });
-    $('.header-nav-btn').removeClass('scroll-change'); // scroll-changeクラスを削除
+    // スクロール位置が調整後の #about の位置より上の場合    
+    $('.header-name, .header-nav-btn').removeClass('scroll-change-01'); // クラスを追加
+    $('.header-nav-btn').removeClass('scroll-change-02');               // クラスを削除
   }
 });
-
 
 // ------ハンバーガーメニュー-------
 // toggle=表示と非表示を切り替えるメソッド
@@ -58,7 +50,6 @@ $(function () {
 
 
   //---------------mv----------------------
-
   $(function() {
     $(".mv-slider").slick({
       autoplay: true,  //自動再生
@@ -66,19 +57,18 @@ $(function () {
       arrows: false,
     });  
   });
-
   
   $(window).scroll(function() {
     var scrollValue = $(window).scrollTop();
     var mvOffset = $('.mv').offset().top;
 
-    // .mvまでスクロールしたら特定のCSSを適用する
+    // .mvまでスクロールしたら
     if (scrollValue > mvOffset) {
-      // フワッと表示する	$('.back-btn').css({
-      $('.back-btn').fadeIn(500); // 400ミリ秒で表示           
+      // フワッと表示する	
+      $('.back-btn').fadeIn(500); // 500ミリ秒で表示           
      } else {
-      // スクロール位置が.mvより上の場合はフワッと非表示にする	// スクロール位置が.mvより上の場合はCSSをリセットする
-     $('.back-btn').fadeOut(500); // 400ミリ秒で非表示
+      // スクロール位置が.mvより上の場合はフワッと非表示にする	
+     $('.back-btn').fadeOut(500); // 500ミリ秒で非表示
      }
     });
 

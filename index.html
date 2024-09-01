@@ -16,7 +16,7 @@
    <!-- スタイルシート-->
    <!-- <link rel="stylesheet" type="text/css" href="css/style.css">  -->
    <!-- スタイルシート読み込みに、キャッシュ削除のクエリを追記　style.css更新時に、ver=1.0.2とかに変更していくらしい　-->
-   <link rel="stylesheet" type="text/css" href="css/style.css?ver=1.0.9"/>
+   <link rel="stylesheet" type="text/css" href="css/style.css?ver=2.0.4"/>
 
    <!-- CDNで読み込むslickのファイル（slick.css）の読み込み-->
    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>  
@@ -343,8 +343,8 @@
       </div>
       <div class="works-wrap">
         <div class="works-list">
-          <div class="works-li-img-wrap">
-            <picture class="modal-open-01">    
+          <div class="works-li-img-wrap modal-open-01">
+            <picture>    
               <source media="(max-width: 767px)" srcset="./images/sp_works_01.jpg">                                                              
               <img src="./images/works_01.jpg" alt="施工事例の画像01" >
             </picture>
@@ -356,8 +356,8 @@
           </div>
         </div>
         <div class="works-list">
-          <div class="works-li-img-wrap">
-            <picture class="modal-open-02">   
+          <div class="works-li-img-wrap modal-open-02">
+            <picture>   
               <source media="(max-width: 767px)" srcset="./images/sp_works_02.jpg">                                                              
               <img src="./images/works_02.jpg" alt="施工事例の画像02" >
             </picture>
@@ -369,21 +369,21 @@
           </div>
         </div>
         <div class="works-list">
-          <div class="works-li-img-wrap">
-            <picture class="modal-open-03">    
+          <div class="works-li-img-wrap modal-open-03">
+            <picture>    
               <source media="(max-width: 767px)" srcset="./images/sp_works_03.jpg">                                                              
               <img src="./images/works_03.jpg" alt="施工事例の画像03" >
             </picture>
           </div>
           <div class="works-li-text-wrap modal-open-03">
             <p>【新築】<br>
-              東京都A.F様自兼事務所
+              東京都A.F様自宅兼事務所
             </p>
           </div>
         </div>
         <div class="works-list">
-          <div class="works-li-img-wrap">
-            <picture class="modal-open-04">    
+          <div class="works-li-img-wrap modal-open-04">
+            <picture>    
               <source media="(max-width: 767px)" srcset="./images/sp_works_04.jpg">                                                              
               <img src="./images/works_04.jpg" alt="施工事例の画像04" >
             </picture>
@@ -539,7 +539,7 @@
               </div>
               
               <div class="com-gb-tel">
-                <a href="tel:000-0000-0000" class="tel">
+                <a href="tel:000-000-0000" class="tel">
                   <p>TEL <span>000-000-0000</span></p>
                 </a>
               </div>
@@ -581,7 +581,6 @@
              <input type="text" name="your-name" placeholder="例：北村太郎" id="your-name" class="form-control">
             </dd>
           </dl>
-
           <dl class="form-gender">
             <dt class="item short-767">
               <label class="name-label">性別</label> 
@@ -623,7 +622,7 @@
           
           <dl class="form-text-content">
             <dt class="item">
-              <label for="your-message">内容 *</label>
+              <label for="your-message" class="name-label">内容 *</label>
             </dt>
             <dd class="space-or-btn">
               <textarea name="your-message" id="your-message" class="form-control form-textarea" cols="30" rows="10"></textarea>
