@@ -826,19 +826,15 @@ header {
 }
 
 .works-li-img-wrap img {
-  -webkit-transition: -webkit-transform 0.4s ease;
-  transition: -webkit-transform 0.4s ease;
-  transition: transform 0.4s ease;
-  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
-  -webkit-transition: -webkit-filter 0.4s ease;
-  transition: -webkit-filter 0.4s ease;
-  transition: filter 0.4s ease;
-  transition: filter 0.4s ease, -webkit-filter 0.4s ease;
+  -webkit-transition: -webkit-transform 0.4s ease, -webkit-filter 0.4s ease;
+  transition: -webkit-transform 0.4s ease, -webkit-filter 0.4s ease;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  transition: transform 0.4s ease, filter 0.4s ease, -webkit-transform 0.4s ease, -webkit-filter 0.4s ease;
 }
 
 .works-list:hover .works-li-img-wrap img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2); /* ホバー時に画像を1.05倍に拡大 */
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05); /* ホバー時に画像を拡大 */
   -webkit-filter: brightness(1.8);
           filter: brightness(1.8);
 }
@@ -1795,6 +1791,7 @@ iframe {
   background-color: #fff;
   color: rgb(77, 150, 0);
   border: solid 1px rgb(77, 150, 0);
+  cursor: pointer;
 }
 
 footer {

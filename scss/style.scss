@@ -778,16 +778,15 @@ header {
 }
 
 .works-li-img-wrap {  
-  overflow: hidden; // はみ出した部分を隠す
+  overflow: hidden; // はみ出した部分を隠す  
 }
 
-.works-li-img-wrap img {
-  transition: transform 0.4s ease;
-  transition: filter 0.4s ease;
+.works-li-img-wrap img { 
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .works-list:hover .works-li-img-wrap img {
-  transform: scale(1.2); /* ホバー時に画像を1.05倍に拡大 */
+  transform: scale(1.05); /* ホバー時に画像を拡大 */
   filter: brightness(1.8); // 明るさを1.8倍（80%）増加
 }
 
@@ -1724,6 +1723,7 @@ iframe {
   background-color: #fff;
   color: $main-color;
   border: solid 1px $main-color;
+  cursor: pointer;
 }
 
 // -----footer-----
