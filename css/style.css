@@ -330,13 +330,6 @@ header {
   position: relative;
 }
 
-.mv-slider > div {
-  background: url("images/fv-01.jpg");
-  background-size: cover;
-  position: relative;
-  height: 100%;
-}
-
 .mv-slider div::before {
   content: "";
   position: absolute;
