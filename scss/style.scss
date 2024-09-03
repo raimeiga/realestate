@@ -87,10 +87,20 @@ $base-color: rgba(77, 150, 0, 0.102);
   }
 }
 
-// 中級編課題では、
-// font-size: rem
-// 幅・高さ（width,height,padding,marginなど）は、%とpxで書く
-// calcを使用するのは、mvくらいってかんじ。
+//------------フワっと出現--------------
+// 各sectionに↓のclassを持たせてフワっと出現させる
+// main.jsのjs-activeとコンビ
+
+.js-scroll {
+  opacity: 0;
+  transform: translateY(7rem);
+}
+.js-scroll.js-active {
+  opacity: 1;
+  transform: translateY(0);  
+  transition: opacity 3s ease,transform 1s ease;
+}
+
 
 // -------header-------
 header {  
@@ -432,22 +442,7 @@ header {
   position: relative;
 }
 
-// .about-catch-p {
-//   width: 50%;
-//   height: auto;
-//   margin: auto;  
-// }
 
-
-.js-scroll {
-  opacity: 0;
-  transform: translateY(7rem);
-}
-.js-scroll.js-active {
-  opacity: 1;
-  transform: translateY(0);  
-  transition: opacity 3s ease,transform 1s ease;
-}
 
 .about-catch {  
   writing-mode: vertical-rl; //テキスト縦書き　　//　ココ
