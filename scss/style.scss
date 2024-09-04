@@ -1,3 +1,4 @@
+@charset "UTF-8";
 
 html {
   -webkit-appearance: none;
@@ -194,9 +195,10 @@ header {
   padding-inline: 14.5px 0;
 }
 
+// header（↑）の8remを継承して高さを持たせ、
+// リンク（aタグ）の範囲がヘッダーの高さいっぱいになる
 .header-nav-btn {  
-  // background-color: #000;
-  height: inherit;
+  height: inherit; 
   display: flex;
   align-items: center;
   font-size: 1.8rem;
@@ -259,7 +261,6 @@ header {
   background-color: #fff;
   // border: 2px solid #000;
   cursor: pointer;
-
   transition: 0.3s; /* スムーズなアニメーション */
 }
 /* 三本線 */
