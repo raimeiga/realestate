@@ -53,8 +53,9 @@ $(function () {
   $(function() {
     $(".mv-slider").slick({
       autoplay: true,  //自動再生
-      autoplaySpeed: 5000,
-      arrows: false,
+      autoplaySpeed: 5000, //5秒に1回画像が切り替わる
+      speed: 3000, // 画面が切り替わる動作のスピード
+      arrows: false, // 画面の左右に矢印マークを非表示
     });  
   });
   
