@@ -1,0 +1,767 @@
+@use '../global/variable' as *;
+@use '../global/mixin' as *;
+
+// about
+.about {
+  width: 100%;
+  height: vw(500, 1080);
+  background: url(../img/about-sec-bg-pc.jpg) center center / cover;
+  @include sp {
+    height: 58.4rem;
+    background: url(../img/about-sec-bg-sp.jpg) center center / cover;
+  }
+  &__contents {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: vw(135, 1080);
+    padding-top: vw(10, 1080);
+    @include sp {
+      padding-left: 0;
+      justify-content: center;
+    }
+  }
+  .about-item {
+    writing-mode: vertical-rl;
+    display: flex;
+    flex-direction: column;
+    row-gap: vw(45, 1080);
+    @include sp {
+      flex-direction: initial;
+      align-items: center;
+      column-gap: 2.4rem;
+    }
+    &__title {
+      h2 {
+        font-size: vw(30, 1080);
+        line-height: 1;
+        letter-spacing: 0.18em;
+        @include sp {
+          font-size: 2.5rem;
+          letter-spacing: 0.19em;
+        }
+      }
+    }
+    &__text {
+      p {
+        font-size: vw(18, 1080);
+        line-height: calc(48 / 18);
+        letter-spacing: 0.37em;
+        @include sp {
+          font-size: 1.6rem;
+          letter-spacing: 0.25em;
+          line-height: calc(26 / 16);
+        }
+      }
+    }
+  }
+}
+
+// service
+.service {
+  padding: 8.2rem 0 8rem;
+  @include sp {
+    padding: 5rem 0;
+  }
+  &__contents {
+    margin-top: 6.6rem;
+    @include sp {
+      margin-top: 3.6rem;
+    }
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8rem;
+    @include sp {
+      row-gap: 5rem;
+    }
+  }
+  .service-item {
+    display: flex;
+    align-items: flex-start;
+    @include sp {
+      flex-direction: column;
+      align-items: initial;
+      row-gap: 0.6rem;
+    }
+    &__image-area {
+      width: 60rem;
+      position: relative;
+      z-index: 10;
+      @include sp {
+        width: 100%;
+      }
+    }
+    &__capture {
+      margin-top: 1.9rem;
+      @include sp {
+        margin-top: 0.5rem;
+      }
+    }
+    &__text-area {
+      flex: 1;
+      margin-top: 14.5rem;
+      padding: 5rem 4rem 4.2rem;
+      padding-right: 0;
+      color: #fff;
+      position: relative;
+      @include sp {
+        margin-top: 0;
+        padding: 2rem 2rem 1.2rem;
+      }
+      &::before {
+        content: '';
+        width: 50rem;
+        height: 100%;
+        background: $color-green;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include sp {
+          width: 100%;
+        }
+      }
+    }
+    &__title {
+      position: relative;
+      h3 {
+        font-size: 2.5rem;
+        line-height: calc(33 / 25);
+        font-weight: 600;
+        @include sp {
+          font-size: 2rem;
+          line-height: calc(25 / 20);
+        }
+      }
+    }
+    &__text {
+      margin-top: 1.7rem;
+      position: relative;
+      @include sp {
+        margin-top: 1.4rem;
+      }
+      p {
+        font-weight: 600;       
+      }
+    }
+    &:nth-of-type(2) {
+      flex-direction: row-reverse;
+      @include sp {
+        flex-direction: column;
+      }
+      .service-item__capture {
+        text-align: right;
+        @include sp {
+          text-align: left;
+        }
+      }
+      .service-item__text-area {
+        &::before {
+          right: initial;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+
+// works
+.works {
+  padding: 8rem 0 9.7rem;
+  @include sp {
+    padding: 5rem 0 4.2rem;
+  }
+  &__contents {
+    margin-top: 6.8rem;
+    @include sp {
+      margin-top: 3.8rem;
+    }
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+      flex-direction: column;
+      row-gap: 2.2rem;
+    }
+  }
+  .works-item {
+    width: 20rem;
+    cursor: pointer;
+    @include sp {
+      width: 100%;
+    }
+    &__text {
+      margin-top: 1.9rem;
+      @include sp {
+        margin-top: 0.9rem;
+      }
+    }
+  }
+  .works-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: none;
+    &__wrap {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      display: grid;
+      place-content: center;
+    }
+    &__bg {
+      width: 100%;
+      height: 100%;
+      background: #00000080;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .works-modal-item {
+      width: 45rem;
+      position: relative;
+      padding: 1.5rem 1.5rem 0.6rem;
+      background: #fff;
+      @include sp {
+        width: 31.5rem;
+        padding: 2rem 2rem 1.4rem;
+      }
+      &__close-btn {
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        cursor: pointer;
+        span {
+          display: block;
+          width: 100%;
+          height: 0.1rem;
+          background: #000;
+          position: absolute;
+          top: 0.7rem;
+          left: 0;
+          &:nth-of-type(1) {
+            transform: rotate(45deg);
+          }
+          &:nth-of-type(2) {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+      &__text {
+        margin-top: 0.9rem;
+        @include sp {
+          margin-top: 0.7rem;
+        }
+      }
+    }
+  }
+}
+
+// news
+.news {
+  padding: 8rem 0;
+  @include sp {
+    padding: 5rem 0;
+  }
+  &__contents {
+    margin-top: 6.8rem;
+    @include sp {
+      margin-top: 3.8rem;
+    }
+  }
+  &__blocks {
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+      flex-direction: column;
+      row-gap: 5rem;
+    }
+  }
+  .news-block {
+    width: 43rem;
+    background: #fff;
+    @include sp {
+      width: 100%;
+    }
+    &__title {
+      width: 100%;
+      height: 5rem;
+      background: $color-green;
+      padding-top: 1.2rem;
+      padding-left: 2rem;
+      color: #fff;
+      @include sp {
+        height: 4.9rem;
+      }
+      h3 {
+        font-size: 2rem;
+        line-height: calc(33 / 20);
+        font-weight: 600;
+      }
+    }
+    &__contents {
+      padding: 1.1rem 2rem 2.4rem;
+    }
+    .news-block-item {
+      padding: 1.3rem 0 1.2rem;
+      display: flex;
+      column-gap: 6.9rem;
+      border-bottom: 0.1rem solid $color-green;
+      @include sp {
+        column-gap: 1.9rem;
+        padding-bottom: 1.2rem;
+      }
+      &__date {
+        line-height: calc(33 / 16);
+      }
+      &__title {
+        flex: 1;
+        margin-top: 0.7rem;
+        @include sp {
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+        }
+        h4 {
+          font-size: 1.8rem;
+          line-height: calc(25 / 18);
+        }
+      }
+    }
+    &__link {
+      margin-top: 1.7rem;
+      display: flex;
+      justify-content: flex-end;
+      a {
+        display: block;
+        font-size: 2rem;
+        line-height: calc(33 / 20);
+        font-weight: 600;
+        color: $color-green;
+        margin-right: 3.3rem;
+        position: relative;
+        transition: transform .5s;
+        .arrow {
+          width: 8rem;
+          height: 0.1rem;
+          background: $color-green;
+          position: absolute;
+          bottom: 0.4rem;
+          left: 0;
+          span {
+            width: 1.7rem;
+            height: 0.1rem;
+            background: $color-green;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: rotate(45deg);
+            transform-origin: right center;
+          }
+          &::before {
+            content: '';
+            width: 0.1rem;
+            height: 1.8rem;
+            background: $color-green;
+            position: absolute;
+            top: -1.2rem;
+            right: 1.2rem;
+          }
+        }
+        &:hover {
+          transform: translateX(1rem);
+        }
+      }
+    }
+  }
+}
+
+// company
+.company {
+  padding: 8rem 0;
+  @include sp {
+    padding: 5rem 0;
+  }
+  &__contents {
+    margin-top: 6.8rem;
+    @include sp {
+      margin-top: 3.8rem;
+    }
+  }
+  .company-item {
+    display: flex;
+    align-items: flex-start;
+    @include sp {
+      flex-direction: column;
+      align-items: initial;
+      row-gap: 2rem;
+    }
+    &__map {
+      width: 60rem;
+      position: relative;
+      z-index: 10;
+      @include sp {
+        width: 100%;
+      }
+      iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 600 / 400;
+        @include sp {
+          aspect-ratio: 315 / 300;
+        }
+      }
+    }
+    &__info {
+      flex: 1;
+      background: #f66;
+      margin-top: 20rem;
+      padding: 4.9rem 4rem 4rem;
+      padding-right: 0;
+      font-weight: 600;
+      color: #fff;
+      position: relative;
+      @include sp {
+        margin-top: 0;
+        padding: 1.9rem 2rem 1rem;
+      }
+      &::before {
+        content: '';
+        width: 50rem;
+        height: 100%;
+        background: $color-green;
+        position: absolute;
+        top: 0;
+        right: 0;
+        @include sp {
+          width: 100%;
+        }
+      }
+    }
+    &__info-inner {
+      position: relative;
+    }
+    &__name {
+      p {
+        font-size: 2rem;
+        line-height: calc(33 / 20);
+      }
+    }
+    &__address {
+      margin-top: 0.7rem;
+    }
+    &__tel {
+      margin-top: 1.2rem;
+      p {
+        span {
+          font-size: 2.5rem;
+          line-height: 1;
+        }
+      }
+    }
+    &__mail {
+      margin-top: 1.7rem;
+    }
+  }
+}
+
+// contact
+.contact {
+  padding: 8rem 0;
+  @include sp {
+    padding: 5rem 0;
+  }
+  .inner {
+    width: 80rem;
+    @include sp {
+      width: 31.5rem;
+    }
+  }
+  &__contents {
+    margin-top: 3.5rem;
+    @include sp {
+      margin-top: 3.7rem;
+    }
+  }
+  &__text {
+    p {
+      font-size: 2rem;
+      line-height: calc(33 / 20);
+    }
+  }
+  &__form-block {
+    margin-top: 7rem;
+    @include sp {
+      margin-top: 4rem;
+    }
+    dl {
+      &:not(:first-of-type) {
+        margin-top: 5rem;
+        @include sp {
+          margin-top: 3rem;
+        }
+      }
+      dt {
+        font-size: 2rem;
+        line-height: calc(33 / 20);
+      }
+      dd {
+        margin-top: 1rem;
+        @include sp {
+          margin-top: 0;
+        }
+        .form-control {
+          width: 100%;
+          height: 5rem;
+          background: #fff;
+          padding: 0 2rem;
+          &::placeholder {
+            color: #A0A0A0;
+          }
+        }
+        .form-textarea {
+          height: 20rem;
+          padding: 2rem;
+        }
+      }
+      &:has(.form-checkbox) {
+        dt {
+          @include sp {
+            line-height: calc(27 / 20);
+          }
+        }
+      }
+    }
+    .form-flex {
+      display: flex;
+      align-items: center;
+      @include sp {
+        display: block;
+      }
+      dt {
+        width: 17rem;
+      }
+      dd {
+        flex: 1;
+        margin-top: 0;
+      }
+      &.sp-flex {
+        @include sp {
+          display: flex;
+        }
+        dt {
+          @include sp {
+            width: 9rem;
+          }
+        }
+        .form-radio {
+          @include sp {
+            column-gap: 3rem;
+          }
+        }
+      }
+    }
+    // radio
+    .form-radio {
+      display: flex;
+      column-gap: 7.4rem;
+      font-size: 1.8rem;
+      line-height: calc(25 / 18);
+      .radio-item {
+        display: flex;
+        input[type="radio"] {
+          & + span {
+            display: block;
+            padding-left: 4rem;
+            position: relative;
+            &::before {
+              content: '';
+              width: 2rem;
+              height: 2rem;
+              background: #fff;
+              border-radius: 50%;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+            }
+            &::after {
+              content: '';
+              width: 0.6rem;
+              height: 0.6rem;
+              background: #000;
+              border-radius: 50%;
+              position: absolute;
+              top: 50%;
+              left: 0.7rem;
+              transform: translateY(-50%);
+              display: none;
+            }
+          }
+          &:checked + span {
+            &::after {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    // select
+    .form-select {
+      position: relative;
+      font-size: 1.8rem;
+      line-height: calc(25 / 18);
+      @include sp {
+        font-size: 1.6rem;
+      }
+      &::before {
+        content: '';
+        width: 2rem;
+        height: 1.6rem;
+        background: $color-green;
+        position: absolute;
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%);
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+        pointer-events: none;
+      }
+    }
+    // checkbox
+    .form-checkbox {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 1.5rem;
+      font-size: 1.8rem;
+      line-height: calc(25 / 18);
+      @include sp {
+        font-size: 1.6rem;
+        line-height: calc(25 / 16);
+        row-gap: 0.5rem;
+      }
+      .checkbox-item {
+        display: flex;
+        width: 25%;
+        @include sp {
+          width: 50%;
+        }
+        input[type="checkbox"] {
+          & + span {
+            display: block;
+            padding-left: 4rem;
+            position: relative;
+            @include sp {
+              padding-left: 3rem;
+            }
+            &::before {
+              content: '';
+              width: 2rem;
+              height: 2rem;
+              background: #fff;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+            }
+            &::after {
+              content: '';
+              width: 1.8rem;
+              height: 1rem;
+              border-left: 0.4rem solid $color-green;
+              border-bottom: 0.3rem solid $color-green;
+              position: absolute;
+              top: 45%;
+              left: 0.1rem;
+              transform: translateY(-50%) rotate(-55deg);
+              display: none;
+            }
+          }
+          &:checked + span {
+            &::after {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    // privacy-policy
+    .privacy-policy {
+      padding: 1rem;
+      background: #fff;
+      &__inner {
+        width: 100%;
+        height: 28rem;
+        overflow-y: scroll;
+        @include sp {
+          height: 30.3rem;
+        }
+        &::-webkit-scrollbar {
+          width: 1rem;
+          background: #E3E3E3;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: #9B9B9B;
+          height: 3rem;
+        }
+      }
+      &__contents {
+        padding: 3rem;
+        line-height: calc(31 / 16);
+        @include sp {
+          padding: 2rem;
+        }
+        h3 {
+          font-size: 1.8rem;
+          line-height: calc(31/ 18);
+          @include sp {
+            line-height: calc(33 / 18);
+          }
+          &:not(:first-of-type) {
+            margin-top: 3.1rem;
+          }
+        }
+        li {
+          padding-left: 1em;
+          text-indent: -1em;
+        }
+      }
+    }
+    // submit-btn
+    .submit-btn {
+      margin-top: 8rem;
+      display: flex;
+      justify-content: center;
+      @include sp {
+        margin-top: 4.8rem;
+      }
+      button {
+        width: 30rem;
+        height: 5rem;
+        background: $color-green;
+        font-size: 2rem;
+        color: #fff;
+        font-weight: 600;
+        display: grid;
+        place-content: center;
+        border: 0.1rem solid $color-green;
+        transition: all .4s;
+        @include sp {
+          width: 31.5rem;
+        }
+        &:hover {
+          background: #fff;
+          color: $color-green;
+        }
+      }
+    }
+  }
+}
+
