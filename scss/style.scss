@@ -783,7 +783,7 @@ header {
 
 .works-list:hover .works-li-img-wrap img {
   transform: scale(1.05); /* ホバー時に画像を拡大 */
-  filter: brightness(1.3); // 明るさを1.8倍（80%）増加
+  filter: brightness(1.3); // 明るさを1.3倍（30%）増加
 }
 
 .works-list:hover:hover .works-li-text-wrap p {
