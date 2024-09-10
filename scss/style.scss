@@ -138,6 +138,7 @@ header {
 
  .scroll-bg {
   background: rgba(151, 141, 141, 0.3);
+  background-color: $main-color;
 }
 
 .header-logo-box {
@@ -150,10 +151,16 @@ header {
  }
 }
 
+.link-to-top {
+  height: inherit; 
+  display: flex;
+  align-items: center;
+}
+
 .header-name,
 .header-name-sp-scroll {  
   //  font-size: 2rem;
-  height: inherit;
+  height: inherit; 
   color:#fff;
   padding-top: 28px;
   @include text-style; 
@@ -1459,9 +1466,8 @@ iframe {
   // position: relative;
   // margin: 0 0;
   //margin-top: 1px;
-  // padding-left: calc(40 / 800);
-  //padding-left: 5%;
-  //margin-bottom: 13px;
+  //padding-left: calc(40 / 200);
+  padding-left: 20%;  
   cursor: pointer;
   user-select: none; /* テキストの選択を防ぐ */
   font-size: 1.8rem;
@@ -1469,19 +1475,17 @@ iframe {
     @include max(767px) {
       font-size: 1.6rem;
       line-height: calc(25 / 16);
+      padding-left: 19%;    
     }
 }
 
-.hisoka {
-  //background-color: yellow;
+.media-check-wrap {
+  // background-color: yellow;
   width: 25%;
-  //padding-left: calc(40 / 800);
-  padding-left: 5%;
   margin-bottom: 13px;
   position: relative;
   @include max(767px) {
-    width: 50%;                
-    padding-left: 9.5%;    
+    width: 50%;           
     margin-bottom: 5.5px;               
     font-size: 1.6rem;
     line-height: calc(25 / 16);
@@ -1814,11 +1818,12 @@ footer {
 }
 
 .sns-icon-wrap { 
+  //background-color: yellow;
   width: 100%;  
   display: flex;
   column-gap: 30px;  
-  justify-content: center; 
-  
+  justify-content: center;  
+  align-items: center;
   margin-bottom: 78px;
     @include max(767px) {     
       margin-top: 23px;
@@ -1836,9 +1841,7 @@ footer {
   transform: scale(1.2);
  }
 
- .sns-icon-wrap a:nth-child(3) {
-  margin-top: -1px;
- }
+
 
 .copy-right {
   width: 100%;
