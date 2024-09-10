@@ -153,6 +153,7 @@ header {
   color:#fff;
   padding-top: 28px;
   @include text-style; 
+  transition: opacity 0.4s;
    @include max(1020px){       
     font-size: 1.7rem;    
     line-height: calc(33 / 20);    
@@ -161,6 +162,10 @@ header {
     font-size: 2rem;    
     padding-top: 8px;
    }
+}
+
+.header-name:hover {
+  opacity: 0.5;
 }
 
 .header-nav-wrap {
@@ -1728,8 +1733,7 @@ footer {
   width: 100%;  
 }
 
-.footer-company-name {
-  // background-color: yellow;
+.footer-company-name {  
   padding-block: 80px 28px;
   padding-block: 78px 26px;
   text-align: center;
@@ -1743,8 +1747,34 @@ footer {
     }
 }
 
-.footer-company-name p {
-  @include text-style;  
+.footer-company-name a {
+ background-color: yellow;
+ display: block;
+ width: 34%;
+ text-align: center;
+ margin: 0 auto; 
+ transition: opacity 0.4s;
+  @include max(767px) {
+    width: 66%;
+  }
+}
+
+.footer-company-name a:hover {
+  opacity: 0.5;
+}
+
+.footer-company-name p {   
+  background-color: yellow;
+ display: block;
+ width: 34%;
+ text-align: center;
+ margin: 0 auto; 
+ transition: opacity 0.4s;
+ @include text-style; 
+  @include max(767px) {
+    width: 66%;
+  }
+  
 }
 
 .footer-nav-wrap {
@@ -1855,6 +1885,7 @@ footer {
     position: fixed;
     bottom: 60px;
     right: 60px;
+    transition: opacity 0.4s;
       @include max(767px){  
         width: 50px;
         height: 50px;
@@ -1862,5 +1893,9 @@ footer {
         padding: 13px 13px;             
         right: 20px;
       }
+  }
+
+  .back-btn:hover {
+   opacity: 0.6;
   }
 
