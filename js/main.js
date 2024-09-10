@@ -12,12 +12,14 @@ $(window).scroll(function() {
 
   // スクロール位置が調整後の #about の位置を超えた場合
   if (scrollValue >= adjustedAboutOffset) {
+    $('.header-inner').addClass('scroll-bg'); // クラスを追加
     $('.header-name, .header-nav-btn').addClass('scroll-change-01'); // クラスを追加
-    $('.header-nav-btn').addClass('scroll-change-02');               // クラスを削除
+    $('.header-nav-btn').addClass('scroll-change-02 scroll-change-03');               // クラスを削除
   } else {
     // スクロール位置が調整後の #about の位置より上の場合    
+    $('.header-inner').removeClass('scroll-bg'); // クラスを追加
     $('.header-name, .header-nav-btn').removeClass('scroll-change-01'); // クラスを追加
-    $('.header-nav-btn').removeClass('scroll-change-02');               // クラスを削除
+    $('.header-nav-btn').removeClass('scroll-change-02 scroll-change-03');               // クラスを削除
   }
 });
 
@@ -161,4 +163,10 @@ $(function () {
   );
  });
 
+ $(function () {
+   // モーダル内部のクリックイベントがバブリングしないように
+   $(".modal-content").click(function(event) {
+    event.stopPropagation(); // クリックイベントのバブリングを停止
+  });
+});
 

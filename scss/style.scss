@@ -108,11 +108,11 @@ header {
  width: 100%;
  height: 8rem;  
  position: fixed;
- z-index: 999;
+ z-index: 90;
  top: 0;
  left: 0;
   @include max(767px) {
-      height: 5rem;     
+      height: 5.2rem;     
   }
 }
 
@@ -135,6 +135,10 @@ header {
     position: relative;
   }
  }
+
+ .scroll-bg {
+  background: rgba(151, 141, 141, 0.3);
+}
 
 .header-logo-box {
   // background-color: red;
@@ -254,6 +258,8 @@ header {
 // スタイルをあてる書き方。既述の.menu-border::after{}内でなく、.scroll-change
 // 追加時にスタイルをあてる書き方にしている。
 // hover＋半角スペース＋子要素の書き方
+
+
 
 
 /* ハンバーガーメニュー */
@@ -1448,32 +1454,38 @@ iframe {
 }
 
 .media-check {   
-  width: 25%;
+  // width: 25%;
   // display: block;
-  position: relative;
-  margin: 0 0;
-  padding-top: 1px;
+  // position: relative;
+  // margin: 0 0;
+  //margin-top: 1px;
   // padding-left: calc(40 / 800);
-  padding-left: 5%;
-  padding-bottom: 13px;
+  //padding-left: 5%;
+  //margin-bottom: 13px;
   cursor: pointer;
   user-select: none; /* テキストの選択を防ぐ */
   font-size: 1.8rem;
   line-height: calc(25 / 18);
     @include max(767px) {
-        width: 50%;                
-        padding-left: 9.5%;
-        padding-bottom: 4px;               
-        font-size: 1.6rem;
-        line-height: calc(25 / 16);
-      }
+      font-size: 1.6rem;
+      line-height: calc(25 / 16);
+    }
 }
 
-.pad-left-little {
-  padding-left: 5.5%;
-    @include max(767px) {
-      padding-left: 9.5%;
-    }
+.hisoka {
+  //background-color: yellow;
+  width: 25%;
+  //padding-left: calc(40 / 800);
+  padding-left: 5%;
+  margin-bottom: 13px;
+  position: relative;
+  @include max(767px) {
+    width: 50%;                
+    padding-left: 9.5%;    
+    margin-bottom: 5.5px;               
+    font-size: 1.6rem;
+    line-height: calc(25 / 16);
+  }
 }
 
 /* inputは非表示にする */
@@ -1714,9 +1726,12 @@ iframe {
       background-color: $main-color;
       width: 315px;
       margin: 50px auto 0;
-      display: flex;
-      justify-content: center;
       padding: 8px 0;
+      display: flex;
+      justify-content: center;      
+        @include max(374px) {
+          width: 100%;
+        }
     }
 }
 
@@ -1734,11 +1749,12 @@ footer {
 }
 
 .footer-company-name {  
-  padding-block: 80px 28px;
+  // padding-block: 80px 28px;
   padding-block: 78px 26px;
-  text-align: center;
-  margin-inline: auto;
-  width: 79%;
+  display: flex;
+  justify-content: center;
+  // margin-inline: auto;
+  // width: 209px;
   border-bottom: solid 1px #000;
     @include max(767px) {
       padding-block: 50px 20px;      
@@ -1747,34 +1763,13 @@ footer {
     }
 }
 
-.footer-company-name a {
- background-color: yellow;
- display: block;
- width: 34%;
- text-align: center;
- margin: 0 auto; 
- transition: opacity 0.4s;
-  @include max(767px) {
-    width: 66%;
-  }
-}
-
-.footer-company-name a:hover {
+.footer-company-name p:hover {
   opacity: 0.5;
 }
 
 .footer-company-name p {   
-  background-color: yellow;
- display: block;
- width: 34%;
- text-align: center;
- margin: 0 auto; 
- transition: opacity 0.4s;
- @include text-style; 
-  @include max(767px) {
-    width: 66%;
-  }
-  
+  transition: opacity 0.4s;  
+ @include text-style;    
 }
 
 .footer-nav-wrap {
@@ -1790,7 +1785,7 @@ footer {
  display: flex;
 //  column-gap: 50px;
  column-gap: 5.3%;
- justify-content: center;
+ justify-content: center; 
   @include max(767px) {
     display: flex;
     //  column-gap: 50px;
@@ -1818,11 +1813,12 @@ footer {
   opacity: 0.4;
 }
 
-.sns-icon-wrap {
+.sns-icon-wrap { 
   width: 100%;  
   display: flex;
   column-gap: 30px;  
   justify-content: center; 
+  
   margin-bottom: 78px;
     @include max(767px) {     
       margin-top: 23px;
@@ -1841,7 +1837,7 @@ footer {
  }
 
  .sns-icon-wrap a:nth-child(3) {
-  padding-top: 2px;
+  margin-top: -1px;
  }
 
 .copy-right {
