@@ -13,13 +13,17 @@ $(window).scroll(function() {
   // スクロール位置が調整後の #about の位置を超えた場合
   if (scrollValue >= adjustedAboutOffset) {
     $('.header-inner').addClass('scroll-bg'); // クラスを追加
-    $('.header-name, .header-nav-btn').addClass('scroll-change-01'); // クラスを追加
-    $('.header-nav-btn').addClass('scroll-change-02 scroll-change-03');               // クラスを削除
+    //最後のきたしょーさんチェックでヘッダーに固定で緑の背景を設定したら、
+    // 背景が緑ならスクロール#about の位置を超えても文字色は白のままとオーダーされた
+    // ので、↓の2行はコメントアウト。scssファイルに書いたscroll-change-01と
+    // scroll-change-02のスタイルもあたらない。
+    // $('.header-name, .header-nav-btn').addClass('scroll-change-01'); // クラスを追加
+    // $('.header-nav-btn').addClass('scroll-change-02 scroll-change-03');  // クラスを削除
   } else {
     // スクロール位置が調整後の #about の位置より上の場合    
     $('.header-inner').removeClass('scroll-bg'); // クラスを追加
-    $('.header-name, .header-nav-btn').removeClass('scroll-change-01'); // クラスを追加
-    $('.header-nav-btn').removeClass('scroll-change-02 scroll-change-03');               // クラスを削除
+    // $('.header-name, .header-nav-btn').removeClass('scroll-change-01'); // クラスを追加
+    // $('.header-nav-btn').removeClass('scroll-change-02 scroll-change-03');  // クラスを削除
   }
 });
 

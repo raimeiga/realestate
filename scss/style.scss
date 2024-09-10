@@ -162,7 +162,7 @@ header {
   //  font-size: 2rem;
   height: inherit; 
   color:#fff;
-  padding-top: 28px;
+  padding-top: 25px;
   @include text-style; 
   transition: opacity 0.4s;
    @include max(1020px){       
@@ -171,7 +171,7 @@ header {
    }
    @include max(767px){
     font-size: 2rem;    
-    padding-top: 8px;
+    padding-top: 11px;
    }
 }
 
@@ -221,7 +221,7 @@ header {
   line-height: calc(33 / 18);     
   color:#fff;
   transition: all 0.4s ease-out;
-  padding-top: 10px; 
+  padding-top: 5px; 
   padding-inline: 14.5px;
   @include max(1020px){
    font-size: 1.4rem;  
@@ -251,15 +251,14 @@ header {
   opacity: 0.5;
 }
 
-.scroll-change-01 {
-  color: #000;
-}
-
-.scroll-change-02 .menu-border::after {
-  border-bottom-color: #000;  //スクロール時の下線の色 
-  transition: border-bottom-color 0.4s ease; //下線の色をスムーズに変更 */
-  transition: width 0.3s ease-out; // 幅変更のアニメーションの時間（0.3秒）
-}
+// .scroll-change-01 {
+//   color: #000;
+// }
+// .scroll-change-02 .menu-border::after {
+//   border-bottom-color: #000;  //スクロール時の下線の色 
+//   transition: border-bottom-color 0.4s ease; //下線の色をスムーズに変更 */
+//   transition: width 0.3s ease-out; // 幅変更のアニメーションの時間（0.3秒）
+// }
 // ↑ スクロール時の色変更に備えて下線の色を黒にするためのクラス
 // main.jsにaddClassで.scroll-changeを追加したときに、.menu-border::afterに
 // スタイルをあてる書き方。既述の.menu-border::after{}内でなく、.scroll-change
